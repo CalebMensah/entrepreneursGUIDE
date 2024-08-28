@@ -1,4 +1,4 @@
-baseURL = 'https://cheerful-bombolone-4c0b8f.netlify.app/'
+baseURL = 'https://entrepreneurs-guide.netlify.app/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 canonifyURLs = true
