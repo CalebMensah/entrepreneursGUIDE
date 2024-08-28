@@ -1,0 +1,43 @@
+{{ define "main"}}
+<div class="main-container1">
+    <div class="post-page-single">
+        <h1>{{ .Title }}</h1>
+        <img src="{{ .Params.image}}" alt="entrepreneur" class="post-img">
+        
+    <div class="post-page-sub-container">
+        <div class="single-page">
+            {{ .Content }}
+        </div>
+
+<!--- ads comes here -->
+      
+    </div>
+
+    <section class="latest-post">
+        <div class="latest-post-container">
+            <h1>Latest post</h1>
+            <div class="post-rows">
+            {{range first 5 (where .Site.RegularPages "Section" "post") }}
+            <div class="post-summary1">
+                <div class="post-image1">
+                    <a href="{{ .Permalink }}">
+                        <img src="{{ .Params.image }}" alt="{{ .Title }}">
+                    </a>
+                </div>
+                <div class="post-content1">
+                    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                    <h3> <a href="{{ .Permalink }}">read more</a></h3>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+        </div>
+    </section>
+
+    </div>
+
+</div>
+
+
+
+{{ end }}

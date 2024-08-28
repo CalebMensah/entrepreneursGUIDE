@@ -1,0 +1,420 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+.sub-button {
+    margin-right: 20px;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.home-img {
+    margin-top: 100px;
+    height: 500px;
+    max-width: auto;
+    width: 95%;
+    margin-left: 2.5%;
+}
+
+header {
+    background: rgb(10, 10, 63);
+    color: #fff;
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+header h3 {
+    color: #ccc;
+    margin-left: 10px;
+}
+nav {
+    text-align: center;
+    margin-top: 18px;
+}
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+}
+.toggle-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+}
+footer {
+    background: rgb(10, 10, 63);
+    color: #fff;
+    padding: 5px 0;
+    text-align: center;
+    padding: 18px;
+}
+.subscribe {
+    margin-right: 70px;
+}
+.home-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+h1,h2,h3 {
+    color: blue;
+}
+span {
+    color: black;
+    font-style: Italic;
+    font-weight: 600;
+}
+
+/* about page */
+.about-page, .contact-page {
+    padding: 50px 30px;
+}
+.container {
+    margin-top: 50px;
+}
+.container h1, .contact-container h1 {
+    text-align: center;
+}
+.sub-container, .contact-page-sub-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+.contact-container {
+    margin-top: 50px;
+}
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+input {
+    width: 300px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+}
+label {
+    font-size: 18px;
+    font-weight: 500px;
+}
+textarea {
+    width: 300px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    height: 150px;
+}
+button {
+    padding: 10px;
+    color: #ccc;
+    background: rgb(44, 44, 218);
+    border:  1px solid rgb(44, 44, 218);
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background: rgb(26, 26, 128);
+}
+.post-container1 {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+.post-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.post-grid a{
+    text-decoration: none;
+}
+.post-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: inherit;
+    margin-top: 100px;
+}
+.post-card:hover {
+    transform: translateY(-5px);
+}
+.post-image img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.post-content {
+    padding: 1rem;
+}
+.post-content h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+}
+.post-content p {
+    margin: 0;
+    color: #555;
+}
+
+/* latest post */
+.latest-post {
+    padding: 2rem 0;
+}
+.latest-post h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+.post-rows {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin:  20px;
+}
+.post-summary1 {
+    margin-bottom: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    flex: 1;
+    align-items: stretch; 
+}
+.post-summary1:hover {
+    transform: translateY(-5px);
+}
+.post-image1{
+flex-shrink: 0;
+width: 200px;
+height: 100%;
+}
+.post-image1 img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 8px 0 0 8px;
+    object-fit: cover;
+}
+.post-content1 {
+    padding: 1rem;
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+}
+.post-content1 h2{
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+}
+.post-content1 h3 a{
+  color: blue;
+}
+.post-content1 h3 a:hover{
+    color: #0056b3
+  }
+.post-page-single h1 {
+    margin-top: 0px;
+    text-align: center;
+    padding-top: 100px;
+}
+.post-img {
+    width: 95%;
+    height: 300px;
+    margin-left: 2.5%;
+}
+.post-page-sub-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    padding-top: -40px;
+}
+/* signup form */
+.signup-container {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.signup-text3{
+    text-align: center;
+}
+.signup-form label {
+    margin: 10px 0 5px;
+}
+.signup-form input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+.signup-form button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.signup-form button:hover{
+    background: #0056b3;
+}
+
+
+
+/* for small screens */
+@media (max-width: 720px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #333;
+        width: 100%;
+        text-align: center;
+        height: 100vh;
+        color: white;
+    }
+    nav a {
+        margin: 0;
+        padding: 1rem;
+        border-bottom: 1px solid #444;
+    }
+    header {
+        padding: 20px;
+    }
+    .toggle-menu{
+        display: block;
+        margin-right: 25px;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .post-grid {
+        margin-top: 50px;
+    }
+    .post-rows{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .post-summary1 {
+        display: flex;
+        align-items: stretch;
+        width: 100%;
+        max-width: 100%;
+    }
+    .post-content1 p {
+        display: none;
+    }
+   
+    .post-card {
+        margin-top: 50px;
+    }
+    .post-content1 h2{
+        margin: 0 0 0.5rem 0;
+        font-size: 1.0rem;
+    }
+    .post-page-sub-container {
+        max-width: 600px;
+        padding-top: -30px;
+    }
+    .post-page-single h1 {
+        font-size: 20px;
+    }
+    .post-img {
+        height: 200px;
+    }
+    .latest-post-container h1 {
+        margin-top: -70px;
+    }
+    header h3 {
+        margin-left: 5px;
+        font-size: 18px;
+        color: #ccc;
+    }
+    .home-img {
+        height: 200px;
+        margin-top: 120px;
+    }
+    .about-page, .contact-page {
+        padding: 30px 10px;
+    }
+    .sub-container, .contact-page-sub-container {
+        max-width: 600px;
+        padding: 20px;
+    }
+    .contact-container, .container {
+        margin-top: 100px;
+    }
+    .signup-form {
+        display: flex;
+        flex-direction: column;
+        max-width: 400px;
+        margin: auto;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .signup-text3{
+        text-align: center;
+    }
+    .signup-form label {
+        margin: 10px 0 5px;
+    }
+    .signup-form input {
+        padding: 5px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        
+    }
+    .signup-container {
+        margin-top: 200px;
+    }
+    .sub-button {
+        background: none;
+        border: none;
+        margin-right: 0px;
+        font-size: 18px;
+        font-weight: 700;
+    }
+}

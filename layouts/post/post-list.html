@@ -1,0 +1,23 @@
+{{ define "main" }}
+<section class="post-list">
+    <div class="post-container1">
+        <div class="post-grid">
+            {{ range .Pages }}
+            <article class="post-card">
+                <a href="{{ .Permalink }}">
+                    <div class="post-image">
+                        <img src="{{ .Params.image}}" alt="{{ .Title}}">
+                    </div>
+                    <div class="post-content">
+                        <h3>{{ .Title }}</h3>
+                        <p>{{ .Params.description }}
+                            <span>read more</span>
+                        </p>
+                    </div>
+                </a>
+            </article>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}
