@@ -35,3 +35,20 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     })
 })
+
+// asking users to subscribe when they click on the subscribe button
+document.addEventListener('DOMContentLoaded', function () {
+    const subscribeButton = document.getElementById('subscribe-button');
+
+    subscribeButton.addEventListener('click', function (){
+        OneSignal.push(function() {
+            OneSignal.isPushNotificationsSupported().then(function(supported) {
+                if (supported) {
+                    OneSignal.showNativePrompt();
+                }else {
+                    alert("Your browser does not support push notifications");
+                }
+            })
+        })
+    })
+})
