@@ -1,5 +1,17 @@
 {
   "dependencies": {
     "node-fetch": "^3.3.2"
-  }
+  },
+  "name": "entrepreneursguide",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postbuild": "netlify functions:invoke sendNotifications"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

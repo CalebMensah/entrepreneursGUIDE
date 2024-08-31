@@ -1,7 +1,13 @@
 [build]
  command = "hugo"
  publish = "public"
- functions = "netlify/functions/sendNotifications.js"
+
 
 [[plugins]]
-package = "./netlify/plugins/notify-plugins.js"
+package = "@netlify/plugin-functions-core"
+
+[functions]
+ directory = "functions"
+
+[[plugins]]
+ package = "@netlify/plugin-build-steps"
