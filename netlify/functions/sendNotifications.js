@@ -43,7 +43,7 @@ exports.handler = async function (event, context) {
         }
         
     } catch(error){
-        console.error('Error sending notification')
+        console.error('Error sending notifications')
         return {
             statusCode: 500,
             body: JSON.stringify({error: 'Failed to send notification'})
