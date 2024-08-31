@@ -1,0 +1,7 @@
+[build]
+ command = "hugo"
+ publish = "public"
+ functions = "netlify/functions/sendNotifications.js
+
+[[plugins]]
+package = "./netlify/plugins/notify-plugins.js

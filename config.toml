@@ -2,3 +2,13 @@ baseURL = 'https://entrepreneurs-guide.netlify.app/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 canonifyURLs = true
+
+[outputFormats]
+ [outputFormats.JSON]
+   name = 'JSON'
+   mediaType = 'application/json'
+   isPlainText = true
+   isHTML = false
+
+[outputs]
+  home = ["HTML", "JSON"]

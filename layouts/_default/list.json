@@ -1,0 +1,10 @@
+{
+    "posts-urls": [
+        {{- $pages := (where .Site.RegularPages "Section" "post") -}}
+        {{- $sortedPages := sort $pages "Date" "desc" -}}
+        {{- range $index, $page := $sortedPages -}}
+        {{- if $index }}, {{ end -}}
+        "{{ $page.Permalink }}"
+        {{- end -}}
+    ]
+}

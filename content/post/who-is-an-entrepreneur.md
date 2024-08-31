@@ -1,6 +1,7 @@
 ---
 title: " Who is an entrepreneur? What are the qualities of an entrepreneur? What are their roles?"
 image: "/images/business.jpg"
+date: 2024-08-27
 description: " Entrepreneurs are innovators, creators, and leaders. They are individuals who take the leap into the unknown ... "
 ---
 

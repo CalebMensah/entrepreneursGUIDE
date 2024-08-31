@@ -346,6 +346,9 @@ height: 100%;
     .post-content1 p {
         display: none;
     }
+    .post-content h3 {
+        font-size: 20px;
+    }
    
     .post-card {
         margin-top: 50px;
