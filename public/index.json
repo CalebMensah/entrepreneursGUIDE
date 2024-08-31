@@ -1,3 +1,3 @@
 {
-    "posts-urls": ["http://localhost:1313/post/making-another-post/", "http://localhost:1313/post/mindset-examples/", "http://localhost:1313/post/who-is-an-entrepreneur/", "http://localhost:1313/post/entrepreneur-mindset/", "http://localhost:1313/post/myth-challenges/"]
+    "posts-urls": ["https://entrepreneurs-guide.netlify.app/post/making-another-post/", "https://entrepreneurs-guide.netlify.app/post/mindset-examples/", "https://entrepreneurs-guide.netlify.app/post/who-is-an-entrepreneur/", "https://entrepreneurs-guide.netlify.app/post/entrepreneur-mindset/", "https://entrepreneurs-guide.netlify.app/post/myth-challenges/"]
 }
