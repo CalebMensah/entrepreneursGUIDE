@@ -6,8 +6,15 @@
     <description>Recent content in All Post on My New Hugo Site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 29 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 31 Aug 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://entrepreneurs-guide.netlify.app/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title> trying another post </title>
+      <link>https://entrepreneurs-guide.netlify.app/post/try/</link>
+      <pubDate>Sat, 31 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://entrepreneurs-guide.netlify.app/post/try/</guid>
+      <description></description>
+    </item>
     <item>
       <title> making another post </title>
       <link>https://entrepreneurs-guide.netlify.app/post/making-another-post/</link>

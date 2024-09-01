@@ -1,52 +1,41 @@
 const fetch = require('node-fetch')
 
 exports.handler = async function (event, context) {
-    // fetch the latest post from url from hugo's generated list.json file
-    const baseUrl = process.env.URL;
-    const latestPostUrl = `${baseUrl}/list.json`;
+   try {
+    // fetch the latest post
+    const response = await fetch (`${process.env.URL}/list.json`);
+    const data = await response.json();
 
-    try {
-        // fetch the json containing the latest post url
-        const response = await fetch(latestPostUrl);
-        const data = await response.json();
+    if (data.length > 0) {
+      const latestPost = data[0]
 
-        // extract the latest post url
-        const latestUrl = data['posts-url'][0];
-
-        // send a notification using oneSignal api
-        const oneSignalApiKey = process.env.ONE_SIGNAL_API_KEY;
-        const oneSignalAppId = process.env.ONE_SIGNAL_APP_ID;
-
-        const notificationData = {
-            app_id: oneSignalAppId,
-            contents: {
-                en: "A new post is available!"
-            },
-            include_player_ids: ["All"],
-            url: latestUrl
-        };
-        const notificationResponse =await fetch ('https://oneSignal.com/api/v1/notifications', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Basic ${oneSignalApiKey}`
-            },
-            body: JSON.stringify(notificationData)
+      // send a notification via onesignal
+      const notificationResponse = await fetch('https://onesignal.com/api/v1/notifications', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Basic ${process.env.ONE_SIGNAL_API_KEY}`
+        },
+        body: JSON.stringify({
+            app_id: process.env.ONE_SIGNAL_APP_ID,
+            included_segments:['All'],
+            headings: {"en": `"New Post": ${latestPost.title}` },
+            contents: {"en": latestPost.summary},
+            url: latestPost.url
         })
-        if (!notificationResponse.ok) {
-            throw new Error ('Failed to send notification')
-        }
-
-        return {
-            statusCode: 200,
-            body: JSON.stringify({message: 'Notification sent successfully'})
-        }
-        
-    } catch(error){
-        console.error('Error sending notifications')
-        return {
-            statusCode: 500,
-            body: JSON.stringify({error: 'Failed to send notification'})
-        }
+      })
+      const notificationData = await notificationResponse.json();
+      console.log('Notification sent:', notificationData)
     }
+    return {
+        statusCode: 200,
+        body: JSON.stringify({ message: 'Notifications sent successfully'})
+    };
+   } catch(error) {
+    console.error('Error sending notification:', error)
+    return {
+        statusCode: 500,
+        body: JSON.stringify({error: 'Failed to send notification'})
+    }
+   }
 }

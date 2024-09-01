@@ -1,3 +1,6 @@
-{
-    "posts-urls": ["https://entrepreneurs-guide.netlify.app/post/making-another-post/", "https://entrepreneurs-guide.netlify.app/post/mindset-examples/", "https://entrepreneurs-guide.netlify.app/post/who-is-an-entrepreneur/", "https://entrepreneurs-guide.netlify.app/post/entrepreneur-mindset/", "https://entrepreneurs-guide.netlify.app/post/myth-challenges/"]
-}
+[{
+    "title": " trying another post ",
+    "url": "https://entrepreneurs-guide.netlify.app/post/try/",
+    "summary": " Entrepreneurship is often surrounded by a cloud of myths and misconceptions that can mislead aspiring entrepreneurs ..."
+ }]
+
