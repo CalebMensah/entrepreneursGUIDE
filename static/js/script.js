@@ -38,13 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // asking users to subscribe when they click on the subscribe button
 document.getElementById('subscribe-button').addEventListener('click', function() {
-    OneSignal.push(function(){
-        OneSignal.isPushNotificationsEnabled(function(isEnabled) {
-            if (!isEnabled) {
-                OneSignal.registerForPushNotifications();
-            }else {
-                alert('You are already subscribed for daily updates')
-            }
-        })
+    OneSignal.push(function() {
+        OneSignal.showSlidePrompt()
     })
 })
