@@ -39,6 +39,6 @@ document.addEventListener('DOMContentLoaded', function () {
 // asking users to subscribe when they click on the subscribe button
 document.getElementById('subscribe-button').addEventListener('click', function() {
     OneSignal.push(function() {
-        OneSignal.showSlidePrompt()
+        OneSignal.showSlidedownPrompt()
     })
 })
