@@ -22,17 +22,18 @@ body {
 }
 
 header {
-    background: rgb(10, 10, 63);
-    color: #fff;
+    background: white;
+    color: black;
     padding: 5px 0;
     display: flex;
     justify-content: space-between;
     position: fixed;
     z-index: 1;
     width: 100%;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
 }
 header h3 {
-    color: #ccc;
+    color: black;
     margin-left: 10px;
 }
 nav {
@@ -40,11 +41,14 @@ nav {
     margin-top: 18px;
 }
 nav a {
-    color: #fff;
+    color: black;
     margin: 0 15px;
     text-decoration: none;
     text-align: center;
     font-size: 20px;
+}
+nav a:hover {
+    color: #007bff;
 }
 .toggle-menu {
     display: none;
@@ -71,6 +75,13 @@ footer {
     font-size: 18px;
     line-height: 1.6;
 }
+.home-container1 {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 100px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
 h1,h2,h3 {
     color: blue;
 }
@@ -79,7 +90,15 @@ span {
     font-style: Italic;
     font-weight: 600;
 }
-
+.txt{
+    margin-top: 50px;
+    text-align: center;
+}
+.post-image4 {
+    width: 95%;
+    height: 300px;
+    margin-left: 2.5%;
+}
 /* about page */
 .about-page, .contact-page {
     padding: 50px 30px;
@@ -319,13 +338,19 @@ height: 100%;
         margin: 0;
         padding: 1rem;
         border-bottom: 1px solid #444;
+        color: white;
     }
     header {
         padding: 20px;
     }
+    header h3 {
+    color: black;
+    margin-left: 10px;
+}
     .toggle-menu{
         display: block;
         margin-right: 25px;
+        color: #333;
     }
     .nav-links.active {
         display: flex;
@@ -373,7 +398,7 @@ height: 100%;
     header h3 {
         margin-left: 5px;
         font-size: 18px;
-        color: #ccc;
+        color: black;
     }
     .home-img {
         height: 200px;
@@ -419,5 +444,17 @@ height: 100%;
         margin-right: 0px;
         font-size: 18px;
         font-weight: 700;
+    }
+    .txt{
+        margin-top: 70px;
+        text-align: center;
+    }
+    .post-image4 {
+        width: 95%;
+        height: 200px;
+        margin-left: 2.5%;
+    }
+    #introduction {
+        margin-top: -10px;
     }
 }

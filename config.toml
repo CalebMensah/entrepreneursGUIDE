@@ -1,7 +1,9 @@
 baseURL = 'https://entrepreneurs-guide.netlify.app/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'My Entrepreneurship and Business Blog'
+author = "Caleb Agyekum Mensah"
 canonifyURLs = true
+enableXMLSitemap = true
 
 [outputFormats]
  [outputFormats.JSON]
