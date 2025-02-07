@@ -1,7 +1,7 @@
 ---
 title: "  How to Validate Your Business Idea Before Launching"
 date: 2025-01-05
-image: "/images/barriers-to-entrepreneurship1.jpg"
+image: "/images/validate.png"
 description: "Learn how to validate your business idea before launching."
 tags:
   - entrepreneurship
@@ -100,4 +100,5 @@ Here are some tools and resources to streamline the validation process:
  - [The Entrepreneurial Mindset](/post/entrepreneur-mindset)
  - [Who is an Entrepreneur?](/post/who-is-an-entrepreneur)
 
- 
+ <!-- Subscription form -->
+{{< subscribe >}}

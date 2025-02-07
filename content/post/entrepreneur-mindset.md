@@ -1,6 +1,6 @@
 ---
 title: " The Entrepreneurial Mindset! What It Is and How to Cultivate It"
-image: "/images/mindset2.png"
+image: "/images/mindset1.png"
 date: 2024-08-26
 description: "The entrepreneurial mindset is characterized by a set of attitudes and skills that enable individuals to identify opportunities, take initiative ..."
 layout: "post"
@@ -82,3 +82,6 @@ The entrepreneurial mindset is not just for business owners—it’s a powerful 
  - [Mindset Examples](/post/mindset-examples)
  - [Who is an Entrepreneur?](/post/who-is-an-entrepreneur)
  - [Validating your business idea](/post/validating-your-business-idea)
+
+<!-- Subscription form -->
+{{< subscribe >}}

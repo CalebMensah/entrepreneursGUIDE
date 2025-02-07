@@ -2,6 +2,8 @@
  command = "hugo"
  publish = "public"
 
+[context.production.image]
+name="hugo:0.133.0"
 
 [[plugins]]
 package = "@netlify/plugin-functions-install-core"
@@ -12,7 +14,7 @@ package = "@netlify/plugin-functions-install-core"
 [build.environment]
  ONESIGNAL_API_KEY = "MWUzNDYzNWItMmUzMi00NjFiLThlMzEtNzE2MmFkZmQ2MDY5"
  ONESIGNAL_APP_ID = "f4992cb9-d32a-419b-a018-efcec04673c4"
- URL = "https://entrepreneurs-guide.netlify.app/"
+ URL = ""
 
 [build.post-processing]
  commands= [

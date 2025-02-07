@@ -14,3 +14,4 @@ enableXMLSitemap = true
 
 [outputs]
   home = ["HTML", "JSON"]
+
