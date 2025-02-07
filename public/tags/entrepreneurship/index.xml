@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Entrepreneurship on My Entrepreneurship and Business Blog</title>
-    <link>http://localhost:1313/tags/entrepreneurship/</link>
+    <link>https://entrepreneurs-guide.netlify.app/tags/entrepreneurship/</link>
     <description>Recent content in Entrepreneurship on My Entrepreneurship and Business Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 05 Jan 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/entrepreneurship/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://entrepreneurs-guide.netlify.app/tags/entrepreneurship/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>  How to Validate Your Business Idea Before Launching</title>
-      <link>http://localhost:1313/post/validating-your-business-idea/</link>
+      <link>https://entrepreneurs-guide.netlify.app/post/validating-your-business-idea/</link>
       <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/validating-your-business-idea/</guid>
+      <guid>https://entrepreneurs-guide.netlify.app/post/validating-your-business-idea/</guid>
       <description>Introduction Starting a business without validating your idea can be risky. According to CB Insights, 42% of startups fail because there&amp;rsquo;s no market need. Validating your business idea ensures that your product or service solves a real problem for your target audience, reducing the risk of failure and increasing your chances of success.&#xA;In this comprehensive guide, we&amp;rsquo;ll walk you through the step-by-step process of validating your business idea, complete with actionable tips,tools, and real-world examples.</description>
     </item>
   </channel>
