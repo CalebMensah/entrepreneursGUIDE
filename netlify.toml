@@ -14,3 +14,9 @@ package = "@netlify/plugin-functions-install-core"
 [build.environment]
  ONESIGNAL_API_KEY = "MWUzNDYzNWItMmUzMi00NjFiLThlMzEtNzE2MmFkZmQ2MDY5"
  ONESIGNAL_APP_ID = "f4992cb9-d32a-419b-a018-efcec04673c4"
+ URL = ""
+
+[build.post-processing]
+ commands= [
+    "curl -X POST -d '{}' ${URL}/.netlify/functions/sendNotifications"
+ ]
