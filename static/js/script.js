@@ -46,7 +46,7 @@ document.getElementById('subscribe-button').addEventListener('click', function()
 
 // modal pop up
 const modal = document.getElementById('modal');
-const span = document.getElementsByClassName('colse')
+const span = document.getElementsByClassName('close')
 
 // show modal after 5 secs
 setTimeout(function(){
@@ -59,13 +59,13 @@ span.onclick = function() {
 }
 
 // close modal when clicking outside the box
-window.onclick = function () {
+window.onclick = function (event) {
     if(event.target == modal) {
         modal.style.display = 'none';
     }
 }
 
-// ensure modal doesnt appear repeatedly
+// ensure modal doesn't appear repeatedly
 if(!localStorage.getItem('hasSeenModal')) {
     setTimeout(function() {
         modal.style.display = 'block';
