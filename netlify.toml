@@ -2,8 +2,8 @@
  command = "hugo"
  publish = "public"
 
- [context.production.image]
- name = "hugo:0.133.0"
+ [context.production.environment]
+ HUGO_VERSION = "0.140.1"
 
 
 [[plugins]]
