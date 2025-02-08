@@ -42,3 +42,40 @@ document.getElementById('subscribe-button').addEventListener('click', function()
         OneSignal.showSlidedownPrompt()
     })
 })
+
+
+// modal pop up
+const modal = document.getElementById('modal');
+const span = document.getElementsByClassName('colse')
+
+// show modal after 5 secs
+setTimeout(function(){
+    modal.style.display = 'block';
+}, 5000);
+
+// close modal when clicked the close
+span.onclick = function() {
+    modal.style.display = 'none';
+}
+
+// close modal when clicking outside the box
+window.onclick = function () {
+    if(event.target == modal) {
+        modal.style.display = 'none';
+    }
+}
+
+// ensure modal doesnt appear repeatedly
+if(!localStorage.getItem('hasSeenModal')) {
+    setTimeout(function() {
+        modal.style.display = 'block';
+        localStorage.setItem('hasSeenModal', true)
+    }, 5000)
+}
+
+// exit intent trigger
+document.addEventListener('mousemove', function(event) {
+    if(event.clientY <=0 ) {
+        modal.style.display = "block"
+    }
+})
