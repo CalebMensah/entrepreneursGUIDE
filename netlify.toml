@@ -2,6 +2,9 @@
  command = "hugo"
  publish = "public"
 
+ [context.production.image]
+ name = "hugo:0.133.0"
+
 
 [[plugins]]
 package = "@netlify/plugin-functions-install-core"
