@@ -1,6 +1,7 @@
 {{ define "main"}}
 <div class="main-container1">
     <div class="post-page-single">
+        
         <h1 class="page-header">{{ .Title }}</h1>
         <img src="{{ .Params.image}}" alt="entrepreneur" class="post-img">
        
@@ -27,7 +28,7 @@
                 </div>
                 <div class="post-content1">
                     <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-                    <h3> <a href="{{ .Permalink }}">read more</a></h3>
+                    
                 </div>
             </div>
             {{ end }}

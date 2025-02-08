@@ -5,7 +5,7 @@
 }
 
 .subscribe-form {
-    background: #f9f9f9;
+    background: #f9cd52;
     padding: 20px;
     border-radius: 8px;
     margin: 20px 0;
@@ -15,24 +15,24 @@
 .subscribe-form h3 {
     font-size: 1.2rem;
     margin-bottom: 10px;
-    color: #333;
+    color: #051e58;
 }
 .subscribe-form p {
     font-size: 0.9rem;
     margin-bottom: 10px;
-    color: #666;
+    color: #051e58;
 }
 .subscribe-form input[type="email"] {
     width: 100%;
     max-width: 300px;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #051e58;
     border-radius: 4px;
     font-size: 0.9rem;
 }
 .subscribe-form button {
-    background: #007bff;
+    background: #051e58;
     color: white;
     border: none;
     padding: 10px 20px;
