@@ -2,9 +2,15 @@
 <div class="main-container1">
     <div class="post-page-single">
         
+        <div class="ebook-download-section">
+            <p class="ebook-download-text">
+                <a href="#" id="download-ebook-trigger">Download Our Free eBook: From Idea To Launch: A Step-By-Step Guide For Startups</a>
+            </p>
+        </div>
+
         <h1 class="page-header">{{ .Title }}</h1>
         <img src="{{ .Params.image}}" alt="entrepreneur" class="post-img">
-       
+        <p class="post-date">Published on {{ .Date.Format "January 2, 2006" }}</p>
         
     <div class="post-page-sub-container">
         <div class="single-page">
@@ -35,10 +41,23 @@
         </div>
         </div>
     </section>
-
     </div>
-
 </div>
 
+<!--- pop up form for email collection -->
+<div id="ebook-popup" class="ebook-popup" style="display: none;">
+    <div class="popup-content">
+        <span class="close-popup">&times;</span>
+        <h2>Enter Your Email Address</h2>
+        <form action="" id="ebook-download-form">
+            <input type="email" id="user-email" placeholder="Your Email Address">
+            <button type="submit">Download eBook</button>
+        </form>
+        <p id="thank-you-message" style="display: none;">Thank you! Your download will start automatically.</p>
+    </div>
+</div>
+
+<!-- link to external javascript file -->
+ <script src="/js/ebook.js"></script>
 
 {{ end }}

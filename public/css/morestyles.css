@@ -44,3 +44,219 @@
 .subscribe-form button:hover{
     background-color: #0056b3;
 }
+
+/* modal background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 300px;
+    max-width: 90%;
+    text-align: center;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+.modal-content input[type="text"],
+.modal-content input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: -5px;
+}
+.modal-content button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+.modal-content button:hover{
+    background-color: #0056b3;
+}
+
+/* News Page Styles */
+.news-page {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.news-page h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#news-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.news-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.news-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.news-card h2 {
+    font-size: 1.2rem;
+    margin: 10px;
+    color: #007bff;
+}
+
+.news-card p {
+    font-size: 0.9rem;
+    margin: 10px;
+    line-height: 1.6;
+}
+
+.news-card small {
+    font-size: 0.8rem;
+    margin: 10px;
+    color: #666;
+}
+
+/*filter section */
+.filter-section {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+.filter-section label {
+    font-size: 1rem;
+    margin-right: 10px;
+}
+.filter-section select {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* ebook popup */
+
+.ebook-download-text {
+    margin-top: 100px;
+    text-align: center;
+    color: red;
+}
+.ebook-download-text a {
+    text-align: center;
+    color: red;
+    font-size: large;
+}
+
+.popup-content h2 {
+    margin-bottom: 15px;
+}
+
+.popup-content input {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: -8px;
+}
+.popup-content button {
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.popup-content button:hover {
+    background-color: #0056b3;
+}
+#thank-you-message {
+    margin-top: 15px;
+    color: green;
+}
+.ebook-popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    overflow: auto;
+}
+.popup-content {
+    background: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+    text-align: center;
+}
+.close-popup {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close-popup:hover,
+.close-popup:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.post-page-single small {
+    margin-top: 5px
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .txt{
+        margin-top: 100px;
+        text-align: center;
+    }
+}

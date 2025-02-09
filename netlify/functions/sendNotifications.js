@@ -1,6 +1,6 @@
-const fetch = require('node-fetch')
+import fetch from 'node-fetch';
 
-exports.handler = async function (event, context) {
+export async function handler (event, context) {
    try {
     // fetch the latest post
     const response = await fetch (`${process.env.URL}/list.json`);

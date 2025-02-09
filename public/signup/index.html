@@ -1,45 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signups</title>
-    <link rel="stylesheet" href="https://entrepreneurs-guide.netlify.app/css/style.css">
+    <link rel="stylesheet" href="http://localhost:1313/css/style.css">
+    <link rel="stylesheet" href="http://localhost:1313/css/morestyles.css">
+
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+
+    <script async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2859143237615606'crossorigin='anonymous'></script>
+     <meta name='google-adsense-account' content='ca-pub-2859143237615606'>
+
+    <script>
+      window.OneSignalDeferred = window.OneSignalDeferred || [];
+      OneSignalDeferred.push(async function(OneSignal) {
+        await OneSignal.init({
+          appId: "f4992cb9-d32a-419b-a018-efcec04673c4",
+          safari_web_id: "web.onesignal.auto.5ccade99-0f35-4775-9ae0-5e2c3bfd110b",
+          notifyButton: {
+            enable: false,
+          },
+          promptOptions: {
+            slidedown: {
+                enabled: true,
+                actionMessage: "We would like to show you notifications for the latest updates.",
+                acceptButton: "Allow",
+                cancelButton: "No Thanks"
+            }
+          }
+        });
+      });
+    </script>
+
+    
 </head>
 <body>
     <header>
-        <h3>entrepreneursGUIDE</h3>
+        <img src="http://localhost:1313/images/logo3.png" alt="">
         <button class="toggle-menu" aria-label="Toggle menu">
             &#9776
         </button>
         <nav class="nav-links">
-            <a href="https://entrepreneurs-guide.netlify.app/">Home</a>
-            <a href="https://entrepreneurs-guide.netlify.app/about">About</a>
-            <a href="https://entrepreneurs-guide.netlify.app/contact">Contact</a>
-            <a href="https://entrepreneurs-guide.netlify.app/post">Post</a>
-            <a href="https://entrepreneurs-guide.netlify.app/signup" >Join</a>
-            <button id="subscribe-button" class="sub-button">Subscribe</button>
+            <a href="http://localhost:1313/">Home</a>
+            <a href="http://localhost:1313/post">Post</a>
+            <a href="http://localhost:1313/news">News</a>
+            <a href="http://localhost:1313/about">About</a>
+            <a href="http://localhost:1313/contact">Contact Us</a>
         </nav>
     </header>
-
+    
     <main class="wrapper">
-       <div class="signup-container">
-        <p class="signup-text3">Please fill the form bellow to join our community and embark on a journey of growth, learning and success. </p>
-        <form method="POST" class="signup-form" id="signup-form" action="https://formspree.io/f/xyzgojrz">
-            <label for="name">Name:</label>
-            <input type="name" id="name" name="name" required>
+        
+<section>
+    
+    <div >
+        <h2><a href="http://localhost:1313/signup/signup/">Sign Up </a></h2>
+        <p></p>
+    </div>
+    
+</section>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <button type="submit">Sign Up</button>
-        </form>
-       </div>
     </main>
-    <footer>
-        <p>&copy; 2024 entrepreneursGUIDE</p>
-    </footer>
 
-    <script src="https://entrepreneurs-guide.netlify.app/js/script.js"></script>
+    <footer>
+        
+        <div class="subscribe-form1">
+          <p>Subscribe to our newsletter and get exclusive tips delivered to your inbox</p>
+          <form id="subscribeForm">
+          <input type="email" name="email" placeholder="Enter your email here"/>
+          <button type="submit">Subscribe Now</button>
+          </form>
+          </div>
+
+          <p>&copy; 2024 entrepreneursGUIDE</p>
+    </footer>
+    
+    <script src="http://localhost:1313/js/script.js" type="module"></script>
 </body>
 </html>

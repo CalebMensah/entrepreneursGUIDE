@@ -11,7 +11,7 @@ tags:
 layout: "post"
 ---
 
-# Introduction
+### Introduction
 Starting a business without validating your idea can be risky. According to CB Insights, 42% of startups fail because there's no market need. Validating your business idea ensures that your product or service solves a real problem for your target audience, reducing the risk of failure and increasing your chances of success.
 
 In this comprehensive guide, we'll walk you through the step-by-step process of validating your business idea, complete with actionable tips,tools, and real-world examples.

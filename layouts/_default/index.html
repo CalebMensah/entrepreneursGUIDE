@@ -44,7 +44,7 @@
 <!-- modal pop up -->
  <div id="modal" class="modal">
     <div class="modal-content">
-        <span class="close">&times;</span>
+        <span class="close" id="close">&times;</span>
         <h2>Get Our Free Guide to Entrepreneurial Success!</h2>
         <p>Subscribe to our newsletter and receive exclusive tips delivered to your inbox.</p>
         <input type="text" name="name" placeholder="Your Name" required>
@@ -52,4 +52,34 @@
         <button type="submit">Subscribe</button>
     </div>
  </div>
+
+ <script>
+    // modal pop up
+const modal = document.getElementById('modal');
+const closeButton = document.getElementById('close')
+
+
+// show modal after 5 secs if not seen before
+if(!localStorage.getItem('hasSeenModal')) {
+    setTimeout(function() {
+        modal.style.display = 'block';
+        localStorage.setItem('hasSeenModal', true)
+    }, 5000)
+}
+
+// close modal when clicked the close
+   if(closeButton) {
+    closeButton.addEventListener("click", function() {
+        modal.style.display= 'none'
+    })
+   }
+
+
+// close modal when clicking outside the box
+window.onclick = function (event) {
+    if(event.target == modal) {
+        modal.style.display = 'none';
+    }
+}
+ </script>
 {{ end }}
