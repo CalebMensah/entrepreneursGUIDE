@@ -24,7 +24,7 @@ document.getElementById('ebook-download-form').addEventListener('submit', functi
 
     // stimulate the download process
     setTimeout(function () {
-        const pdfUrl = '';
+        const pdfUrl = '/files/ebook.pdf';
         const link = document.createElement('a');
         link.href = pdfUrl;
         link.download = 'ebook.pdf';

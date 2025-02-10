@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Function to fetch news by category
 function fetchNewsByCategory(category) {
-    const apiKey = '745481b87ecc4f849fb7d7d3ae7c1fa0'; // Replace with your actual API key
-    const url = `https://newsapi.org/v2/top-headlines?category=${category}&country=gh&pageSize=10&apiKey=${apiKey}`;
+    //const apiKey = '745481b87ecc4f849fb7d7d3ae7c1fa0'; // Replace with your actual API key
+    const url = `https://newsapi.org/v2/top-headlines?category=${category}&country=us&pageSize=10&apiKey=745481b87ecc4f849fb7d7d3ae7c1fa0`;
     const cacheKey = `cachedNews-${category}`;
 
     const cachedNews = getFromLocalStorage(cacheKey);

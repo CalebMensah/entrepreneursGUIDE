@@ -41,6 +41,12 @@
     <loc>http://localhost:1313/</loc>
     <lastmod>2024-08-21T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/news/</loc>
+    <lastmod>2023-02-20T06:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/news/news/</loc>
+    <lastmod>2023-02-20T06:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/about/</loc>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>

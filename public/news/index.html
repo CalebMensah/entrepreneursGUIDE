@@ -3,7 +3,7 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrepreneurship</title>
+    <title>News</title>
     <link rel="stylesheet" href="http://localhost:1313/css/style.css">
     <link rel="stylesheet" href="http://localhost:1313/css/morestyles.css">
 
@@ -53,15 +53,23 @@
     
     <main class="wrapper">
         
-<section>
+<section class="news-page">
+    <h1>Latest Business and Entrepreneurship News</h1>
+
     
-    <div >
-        <h2><a href="http://localhost:1313/post/validating-your-business-idea/">  How to Validate Your Business Idea Before Launching</a></h2>
-        <p>Introduction Starting a business without validating your idea can be risky. According to CB Insights, 42% of startups fail because there&rsquo;s no market need. Validating your business idea ensures that your product or service solves a real problem for your target audience, reducing the risk of failure and increasing your chances of success.
-In this comprehensive guide, we&rsquo;ll walk you through the step-by-step process of validating your business idea, complete with actionable tips,tools, and real-world examples.</p>
+    <div class="filter-section">
+        <label for="category-filtering">Filter by Category</label>
+        <select id="category-filter">
+            <option value="business" selected>Business</option>
+            <option value="technology">Technology</option>
+            <option value="general">General</option>
+            <option value="startups">Startups</option>
+        </select>
     </div>
-    
+
+    <div id="news-container"></div>
 </section>
+<script src="http://localhost:1313/js/news.js"></script>
 
     </main>
 

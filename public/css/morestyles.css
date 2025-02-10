@@ -185,6 +185,9 @@
     color: red;
     font-size: large;
 }
+.news-page h1 {
+    margin-top: 100px;
+}
 
 .popup-content h2 {
     margin-bottom: 15px;
@@ -252,6 +255,15 @@
 }
 .post-page-single small {
     margin-top: 5px
+}
+.icons {
+    display: flex;
+    color: white;
+    font-size: 20px;
+    gap: 8px;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {

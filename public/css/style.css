@@ -473,7 +473,7 @@ height: 100%;
         font-weight: 700;
     }
     .txt{
-        margin-top: 80px;
+        margin-top: 40px;
         text-align: center;
     }
     .post-image4 {
@@ -511,10 +511,15 @@ height: 100%;
     .subscribe-form button {
         margin-right: 10px;
         padding: 10px 10px;
-        
     }
     .modal-content {
         width: 200px;
         padding: 10px;
+    }
+    #index-ebook-p {
+        margin-top: 50px;
+    }
+    .subscribe-form1 button{
+        margin-top: 7px;
     }
 }

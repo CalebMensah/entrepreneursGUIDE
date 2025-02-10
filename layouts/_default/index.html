@@ -5,6 +5,11 @@
         {{ $latestPost := first 1 (where .Site.RegularPages "Type" "post") }}
         {{ range $latestPost }}
         <article><!-- display image if available -->
+            <div class="ebook-download-section" id="index-ebook">
+                <p class="ebook-download-text" id="index-ebook-p">
+                    <a href="#" id="download-ebook-trigger">Download Our Free eBook: From Idea To Launch: A Step-By-Step Guide For Startups</a>
+                </p>
+            </div>
             <h2 class="txt">{{ .Title }}</h2>
             {{ if .Params.image }}
             
@@ -47,11 +52,26 @@
         <span class="close" id="close">&times;</span>
         <h2>Get Our Free Guide to Entrepreneurial Success!</h2>
         <p>Subscribe to our newsletter and receive exclusive tips delivered to your inbox.</p>
-        <input type="text" name="name" placeholder="Your Name" required>
+        <form action="https://formspree.io/f/xanwpdrp" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
         <button type="submit">Subscribe</button>
+        </form>
     </div>
  </div>
+
+ <!--- pop up form for email collection -->
+<div id="ebook-popup" class="ebook-popup" style="display: none;">
+    <div class="popup-content">
+        <span class="close-popup">&times;</span>
+        <h2>Enter Your Email Address</h2>
+        <form action="https://formspree.io/f/xanwpdrp" id="ebook-download-form" method='post'>
+            <input type="email" id="user-email" placeholder="Your Email Address">
+            <button type="submit">Download eBook</button>
+        </form>
+        <p id="thank-you-message" style="display: none;">Thank you! Your download will start automatically.</p>
+    </div>
+</div>
 
  <script>
     // modal pop up
@@ -82,4 +102,7 @@ window.onclick = function (event) {
     }
 }
  </script>
+
+ <!-- link to external javascript file -->
+ <script src="/js/ebook.js"></script>
 {{ end }}
