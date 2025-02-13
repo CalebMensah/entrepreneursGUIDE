@@ -1,8 +1,15 @@
 ---
 title: " Who is an entrepreneur? What are the qualities of an entrepreneur? "
-image: "/images/entrepreneurship2.jpg"
+image: "/images/entrepreneurship2.webp"
 date: 2024-08-27
 description: " Entrepreneurs are innovators, creators, and leaders. They are individuals who take the leap into the unknown ... "
+tags:
+  - entrepreneurship
+  - startups
+  - business ideas
+  - validate
+author: "John Doe"
+readingTime: 5
 ---
 
 ### Introduction

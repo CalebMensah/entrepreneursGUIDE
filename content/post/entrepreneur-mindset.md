@@ -1,8 +1,15 @@
 ---
 title: " The Entrepreneurial Mindset! What It Is and How to Cultivate It"
-image: "/images/mindset1.png"
+image: "/images/mindset1.webp"
 date: 2024-08-26
 description: "The entrepreneurial mindset is characterized by a set of attitudes and skills that enable individuals to identify opportunities, take initiative ..."
+tags:
+  - entrepreneurship
+  - startups
+  - business ideas
+  - validate
+author: "John Doe"
+readingTime: 5
 layout: "post"
 ---
 

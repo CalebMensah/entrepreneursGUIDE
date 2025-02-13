@@ -2,7 +2,7 @@
 <section class="post-list">
     <div class="post-container1">
         <div class="post-grid">
-            {{ range .Pages }}
+            {{ range .Paginator.Pages }}
             <article class="post-card">
                 <a href="{{ .Permalink }}">
                     <div class="post-image">
@@ -19,5 +19,15 @@
             {{ end }}
         </div>
     </div>
+
+    <!---pagination links -->
+    <nav class="pagination">
+        {{ if .Paginator.HasPrev }}
+        <a href="{{ .Paginator.Prev.URL }}" class="prev">Previous</a>
+        {{ end }}
+        {{ if .Paginator.HasNext }}
+        <a href="{{ .Paginator.Next.URL }}" class="next">Next</a>
+        {{ end }}
+    </nav>
 </section>
 {{ end }}

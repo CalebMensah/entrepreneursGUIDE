@@ -3,6 +3,13 @@ title: " Common Myths About Entrepreneurs and Challenges Faced By Entrepreneurs 
 date: 2024-08-22
 image: "/images/biggestmyths.png"
 description: " Entrepreneurship is often surrounded by a cloud of myths and misconceptions that can mislead aspiring entrepreneurs ..."
+tags:
+  - entrepreneurship
+  - startups
+  - business ideas
+  - validate
+author: "John Doe"
+readingTime: 5
 layout: "post"
 ---
 

@@ -13,8 +13,8 @@ package = "@netlify/plugin-functions-install-core"
  directory = "netlify/functions"
 
 [build.environment]
- ONESIGNAL_API_KEY = "MWUzNDYzNWItMmUzMi00NjFiLThlMzEtNzE2MmFkZmQ2MDY5"
- ONESIGNAL_APP_ID = "f4992cb9-d32a-419b-a018-efcec04673c4"
+WEB_PUSH_PUBLIC_KEY = BKyqUk5qZG9yT8LOoktxaZr_-eW_5sMsLbtORzFeIaa6DiDemFNmIL4hMKGQ72QaRcAPQJWaIrvXL_gkIQVyAPU
+WEB_PUSH_PRIVATE_KEY = F5JhW_qZA2fyd79sklA0KHOzJZRcgsCEuSKPwWnWlv0
  URL = "https://businessmasters.netlify.app/"
 
 [build.post-processing]

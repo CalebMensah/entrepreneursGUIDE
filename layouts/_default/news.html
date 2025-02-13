@@ -1,5 +1,6 @@
 {{ define "main" }}
 <section class="news-page">
+ <div class="news-page-header">
     <h1>Latest Business and Entrepreneurship News</h1>
 
     <!--- category filtering -->
@@ -9,9 +10,12 @@
             <option value="business" selected>Business</option>
             <option value="technology">Technology</option>
             <option value="general">General</option>
-            <option value="startups">Startups</option>
         </select>
     </div>
+ </div>
+
+ <!--- loading indicator -->
+ <div id="loading-indicator" style="display: none; text-align: center; margin: 20px;">Loading news...</div>
 
     <div id="news-container"></div>
 </section>

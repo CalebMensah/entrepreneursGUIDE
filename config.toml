@@ -5,6 +5,8 @@ author = "Caleb Agyekum Mensah"
 canonifyURLs = true
 enableXMLSitemap = true
 
+paginate = 5
+
 [outputFormats]
  [outputFormats.JSON]
    name = 'JSON'

@@ -1,41 +1,48 @@
-import fetch from 'node-fetch';
+const fs = require("fs")
+const path = require("path")
+const webpush = require("web-push")
+const fetch = require("node-fetch")
 
-export async function handler (event, context) {
-   try {
-    // fetch the latest post
-    const response = await fetch (`${process.env.URL}/list.json`);
-    const data = await response.json();
 
-    if (data.length > 0) {
-      const latestPost = data[0]
+const publicVapidKey = "BKyqUk5qZG9yT8LOoktxaZr_-eW_5sMsLbtORzFeIaa6DiDemFNmIL4hMKGQ72QaRcAPQJWaIrvXL_gkIQVyAPU"
+const privateVapidKey = "F5JhW_qZA2fyd79sklA0KHOzJZRcgsCEuSKPwWnWlv0"
 
-      // send a notification via onesignal
-      const notificationResponse = await fetch('https://onesignal.com/api/v1/notifications', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Basic ${process.env.ONE_SIGNAL_API_KEY}`
-        },
-        body: JSON.stringify({
-            app_id: process.env.ONE_SIGNAL_APP_ID,
-            included_segments:['All'],
-            headings: {"en": `"New Post": ${latestPost.title}` },
-            contents: {"en": latestPost.summary},
+webpush.setVapidDetails(
+    "mailto:mensahkhalib25@gmail.com",
+    publicVapidKey,
+    privateVapidKey
+)
+
+exports.handler = async () => {
+    try {
+        const filePath = path.resolve(__dirname, "subscriptions.json");
+        if(!fs.existsSync(filePath)) {
+            return { statusCode: 404, bod: "No subscriptions found"}
+        }
+
+        const subscriptions = JSON.parse(fs.readFileSync(filePath));
+        const response = await fetch("https://businessmasters.netlify.app/index.json") // add Website URL
+        const posts = await response.json();
+        const latestPost = posts[0];
+
+        if(!latestPost) {
+            return { statusCode: 404, bod: "No posts found"}
+        }
+
+        const payload = JSON.stringify({
+            title: "New Blog Post!",
+            body: "Click to read the latest post!",
+            icon: latestPost.image,
             url: latestPost.url
         })
-      })
-      const notificationData = await notificationResponse.json();
-      console.log('Notification sent:', notificationData)
+
+        const sendPromises = subscriptions.map(sub => webpush.sendNotification(sub, payload));
+
+        await Promise.all(sendPromises)
+
+        return { statusCode: 200, bod: "Notifications sent successfully."}
+    } catch (error) {
+        console.error("Error sending notifications:", error)
+        return { statusCode: 500, bod: "Failed to send notifications"}
     }
-    return {
-        statusCode: 200,
-        body: JSON.stringify({ message: 'Notifications sent successfully'})
-    };
-   } catch(error) {
-    console.error('Error sending notification:', error)
-    return {
-        statusCode: 500,
-        body: JSON.stringify({error: 'Failed to send notification'})
-    }
-   }
 }

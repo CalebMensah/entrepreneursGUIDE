@@ -8,6 +8,8 @@ tags:
   - startups
   - business ideas
   - validate
+author: "John Doe"
+readingTime: 5
 layout: "post"
 ---
 

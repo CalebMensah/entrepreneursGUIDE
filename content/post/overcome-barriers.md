@@ -3,6 +3,13 @@ title: "  Overcoming Barriers to Developing an Entrepreneurial Mindset"
 date: 2024-09-01
 image: "/images/overcome.jpg"
 description: " Developing an entrepreneurial mindset is crucial for anyone aspiring to create, innovate, and lead successfully. However, various barriers ..."
+tags:
+  - entrepreneurship
+  - startups
+  - business ideas
+  - validate
+author: "John Doe"
+readingTime: 5
 layout: "post"
 ---
 
