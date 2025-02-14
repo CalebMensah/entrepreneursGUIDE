@@ -1,23 +1,27 @@
 [build]
- command = "hugo"
- publish = "public"
+command = "hugo"
+publish = "public"
 
- [context.production.environment]
- HUGO_VERSION = "0.140.1"
-
+[context.production.environment]
+HUGO_VERSION = "0.140.1"
 
 [[plugins]]
 package = "@netlify/plugin-functions-install-core"
 
 [functions]
- directory = "netlify/functions"
+directory = "netlify/functions"
 
 [build.environment]
-WEB_PUSH_PUBLIC_KEY = BKyqUk5qZG9yT8LOoktxaZr_-eW_5sMsLbtORzFeIaa6DiDemFNmIL4hMKGQ72QaRcAPQJWaIrvXL_gkIQVyAPU
-WEB_PUSH_PRIVATE_KEY = F5JhW_qZA2fyd79sklA0KHOzJZRcgsCEuSKPwWnWlv0
- URL = "https://businessmasters.netlify.app/"
+WEB_PUSH_PUBLIC_KEY = "BKyqUk5qZG9yT8LOoktxaZr_-eW_5sMsLbtORzFeIaa6DiDemFNmIL4hMKGQ72QaRcAPQJWaIrvXL_gkIQVyAPU"
+WEB_PUSH_PRIVATE_KEY = "F5JhW_qZA2fyd79sklA0KHOzJZRcgsCEuSKPwWnWlv0"
+SITE_URL = "https://businesmasters.netlify.app"
 
-[build.post-processing]
- commands= [
-    "curl -X POST -d '{}' ${URL}/.netlify/functions/sendNotifications"
- ]
+[build.processing]
+skip_processing = true
+
+
+[[plugins]]
+package = "@netlify/plugin-on-success"
+  [plugins.inputs]
+  command = "curl -X POST -d '{}' ${SITE_URL}/.netlify/functions/sendNotifications"
+  
