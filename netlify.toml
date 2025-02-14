@@ -21,7 +21,5 @@ skip_processing = true
 
 
 [[plugins]]
-package = "@netlify/plugin-on-success"
-  [plugins.inputs]
   command = "curl -X POST -d '{}' ${SITE_URL}/.netlify/functions/sendNotifications"
   
