@@ -17,8 +17,6 @@ WEB_PUSH_PRIVATE_KEY = "F5JhW_qZA2fyd79sklA0KHOzJZRcgsCEuSKPwWnWlv0"
 SITE_URL = "https://businesmasters.netlify.app"
 
 [build.processing]
-skip_processing = true
-
 
 [[plugins]]
   command = "curl -X POST -d '{}' ${SITE_URL}/.netlify/functions/sendNotifications"
