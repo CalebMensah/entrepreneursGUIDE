@@ -21,7 +21,7 @@ exports.handler = async () => {
         }
 
         const subscriptions = JSON.parse(fs.readFileSync(filePath));
-        const response = await fetch("https://businessmasters.netlify.app/index.json") // add Website URL
+        const response = await fetch("https://businesmasters.netlify.app/index.json") // add Website URL
         const posts = await response.json();
         const latestPost = posts[0];
 

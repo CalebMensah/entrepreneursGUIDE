@@ -46,7 +46,7 @@ async function requestNotificationPermission() {
 async function registerServiceWorker() {
     if("serviceWorker" in navigator && "PushManager" in window ) {
         try {
-            const registration = await navLinks.serviceWorker.register("/sw.js");
+            const registration = await navigator.serviceWorker.register("/sw.js");
             const subscription = await registration.pushManager.subscribe({
                 userVisibleOnly: true,
                 applicationServerKey: "BKyqUk5qZG9yT8LOoktxaZr_-eW_5sMsLbtORzFeIaa6DiDemFNmIL4hMKGQ72QaRcAPQJWaIrvXL_gkIQVyAPU"

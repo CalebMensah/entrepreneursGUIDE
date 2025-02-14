@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://businesmasters.netlify.app/sitemap.xml
