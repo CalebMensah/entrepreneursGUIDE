@@ -19,5 +19,3 @@ WEB_PUSH_PUBLIC_KEY = "BKyqUk5qZG9yT8LOoktxaZr_-eW_5sMsLbtORzFeIaa6DiDemFNmIL4hM
 WEB_PUSH_PRIVATE_KEY = "F5JhW_qZA2fyd79sklA0KHOzJZRcgsCEuSKPwWnWlv0"
  SITE_URL = "https://businessmasters.netlify.app/"
 
-[build.processing]
-skip_processing = true
