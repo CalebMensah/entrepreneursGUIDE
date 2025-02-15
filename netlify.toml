@@ -5,9 +5,6 @@
  [context.production.environment]
  HUGO_VERSION = "0.140.1"
 
-[context.production.environment]
-HUGO_VERSION = "0.140.1"
-
 [[plugins]]
 package = "@netlify/plugin-functions-install-core"
 
@@ -17,5 +14,6 @@ directory = "netlify/functions"
 [build.environment]
 WEB_PUSH_PUBLIC_KEY = "BKyqUk5qZG9yT8LOoktxaZr_-eW_5sMsLbtORzFeIaa6DiDemFNmIL4hMKGQ72QaRcAPQJWaIrvXL_gkIQVyAPU"
 WEB_PUSH_PRIVATE_KEY = "F5JhW_qZA2fyd79sklA0KHOzJZRcgsCEuSKPwWnWlv0"
- SITE_URL = "https://businessmasters.netlify.app/"
 
+[build.process]
+skip_processing = true
