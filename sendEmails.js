@@ -1,6 +1,6 @@
-require('dotenv'.config)
-const { default: axios } = require("axios")
-const { google } = require("googleapis")
+require('dotenv').config()
+const axios = require("axios")
+const {google} = require("googleapis")
 const nodemailer = require("nodemailer")
 
 const CLIENT_ID = process.env.OAUTH_CLIENT_ID
@@ -9,10 +9,10 @@ const REDIRECT_URL = "https://developers.google.com/oauthplayground"
 const REFRESH_TOKEN = process.env.OAUTH_REFRESH_TOKEN
 const SPREADSHEET_ID = process.env.SPREADSHEET_ID
 
-const LATEST_POST_URL = "https://businesmasters.netlify.app/latest.json";
+const LATEST_POST_URL = "https://businessmasters.netlify.app/latest.json";
 async function fetchLatestPost() {
     try {
-        const res = await axios.get(LATEST_POST_URL);
+        const response = await axios.get(LATEST_POST_URL);
         return response.data[0]
     } catch (error) {
         console.error("Error fetching latest post:", error)

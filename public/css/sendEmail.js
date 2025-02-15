@@ -1,7 +1,7 @@
 require('dotenv'.config)
-const { default: axios } = require("axios")
-const { google } = require("googleapis")
-const nodemailer = require("nodemailer")
+import { default as axios } from "axios"
+import { google } from "googleapis"
+import { createTransport } from "nodemailer"
 
 const CLIENT_ID = process.env.OAUTH_CLIENT_ID
 const CLIENT_SECRET = process.env.OAUTH_CLIENT_SECRET
@@ -43,7 +43,7 @@ async function sendEmails() {
 
         // email setup
 
-        const transporter = nodemailer.createTransport({
+        const transporter = createTransport({
             service: "gmail",
             auth: {
                 type: "OAuth2",

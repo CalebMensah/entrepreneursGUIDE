@@ -1,6 +1,9 @@
 [build]
-command = "hugo"
-publish = "public"
+ command = "hugo && node scripts/postBuild.js"
+ publish = "public"
+
+ [context.production.environment]
+ HUGO_VERSION = "0.140.1"
 
 [context.production.environment]
 HUGO_VERSION = "0.140.1"
@@ -14,14 +17,7 @@ directory = "netlify/functions"
 [build.environment]
 WEB_PUSH_PUBLIC_KEY = "BKyqUk5qZG9yT8LOoktxaZr_-eW_5sMsLbtORzFeIaa6DiDemFNmIL4hMKGQ72QaRcAPQJWaIrvXL_gkIQVyAPU"
 WEB_PUSH_PRIVATE_KEY = "F5JhW_qZA2fyd79sklA0KHOzJZRcgsCEuSKPwWnWlv0"
-SITE_URL = "https://businesmasters.netlify.app"
+ SITE_URL = "https://businessmasters.netlify.app/"
 
 [build.processing]
 skip_processing = true
-
-
-[[plugins]]
-package = "@netlify/plugin-on-success"
-  [plugins.inputs]
-  command = "curl -X POST -d '{}' ${SITE_URL}/.netlify/functions/sendNotifications"
-  
