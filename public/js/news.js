@@ -30,8 +30,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // function to fetch news from news API
 async function fetchNews(category) {
-    const apiKey = '745481b87ecc4f849fb7d7dd3ae7c1fao'
-    const url = `https://newsapi.org/v2/top-headlines?category=${category}&country=us&pageSize=10&apiKey=${apiKey};`
+    //const apiKey = '745481b87ecc4f849fb7d7dd3ae7c1fao'
+    const url = `https://newsapi.org/v2/top-headlines?category=${category}&country=us&pageSize=10&apiKey=745481b87ecc4f849fb7d7d3ae7c1fa0`
 
     try {
         const res = await fetch(url);

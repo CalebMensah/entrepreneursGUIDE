@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Title}}</title>
+
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/morestyles.css">
 
@@ -12,12 +13,40 @@
     <script async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2859143237615606'crossorigin='anonymous'></script>
      <meta name='google-adsense-account' content='ca-pub-2859143237615606'>
 
+     <script type="application/ld+json">
+      {
+          "@context": "https://schema.org",
+          "@type":"Article",
+          "mainEntityOfPage": {
+              "@type": "webPage",
+              "@id": {{ .Permalink }}
+          },
+          "headline": "{{ .Title }}",
+          "image": [
+          "{{ .Params.image }}"
+          ],
+          "datePublished": "{{ .Date.Format "2006-1-02T15:04:05Z" }}",
+          "dateModified": "{{.Lastmod.Format "2006-1-02T15:04:05Z" }}",
+          "author": {
+              "@type": 'Organization',
+              "name": "businessMasters",
+              "logo": {
+                  "@type": "ImageObject",
+                  "url": "/images/logo1.png",
+                  "width": 192,
+                  "height": 60
+              }
+          },
+          "description": "{{ .Description }}"
+      }
+  </script>
+
     
 </head>
 <body>
 
     <header>
-        <img src="/images/logo.webp" alt="">
+        <img src="/images/logo.webp" alt="businessmasters" loading="lazy">
         <button class="toggle-menu" aria-label="Toggle menu">
             &#9776
         </button>

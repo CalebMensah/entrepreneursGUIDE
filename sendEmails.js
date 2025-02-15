@@ -9,7 +9,7 @@ const REDIRECT_URL = "https://developers.google.com/oauthplayground"
 const REFRESH_TOKEN = process.env.OAUTH_REFRESH_TOKEN
 const SPREADSHEET_ID = process.env.SPREADSHEET_ID
 
-const LATEST_POST_URL = "https://businessmasters.netlify.app/latest.json";
+const LATEST_POST_URL = "https://businessmasters.netlify.app/index.json";
 async function fetchLatestPost() {
     try {
         const response = await axios.get(LATEST_POST_URL);
@@ -32,7 +32,7 @@ async function sendEmails() {
 
     const sheets = google.sheets({ version: "v4", auth});
     const response = sheets.spreadsheets.values.get({
-        spreedsheetId: SPREADSHEET_ID,
+        spreadsheetId: SPREADSHEET_ID,
         range: "Emails!A:A"
     })
 

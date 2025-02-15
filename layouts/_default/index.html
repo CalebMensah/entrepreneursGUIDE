@@ -40,7 +40,7 @@
             <h2 class="txt">{{ .Title }}</h2>
             {{ if .Params.image }}
             
-                <img src="{{ .Params.image }}" alt="{{ .Title }}" class="post-image4">
+                <img src="{{ .Params.image }}" alt="{{ .Title }}" class="post-image4" loading="lazy">
            
             {{ end }}
             
@@ -97,5 +97,5 @@
 
  <!-- link to external javascript file -->
  <script src="/js/ebook.js"></script>
- <script src="/js/script.js"></script>
+ <script src="script.js"></script>
 {{ end }}

@@ -343,6 +343,47 @@
 #deny-notifications:hover {
     background: #e53935;
 }
+
+/* breadcrumbs */
+nav[aria-label ="breadcrumb"] {
+    font-size: 16px;
+    margin: 10px 0;
+    padding: 8px 15px;
+    background: #f8f9fa;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+nav[aria-label ="breadcrumb"] ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+nav[aria-label ="breadcrumb"] li {
+    display:  flex;
+    align-items: center;
+}
+nav[aria-label ="breadcrumb"] li a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+nav[aria-label ="breadcrumb"] li a:hover {
+    color: #0056b3;
+}
+nav[aria-label ="breadcrumb"] li a::after {
+    content: "";
+    color: #6c757d;
+    margin: 0 8px;
+}
+nav[aria-label ="breadcrumb"] li:last-child::after {
+    content: "";
+}
+
+
 @media (min-width: 768px) and (max-width: 1024px) {
     .txt{
         margin-top: 100px;

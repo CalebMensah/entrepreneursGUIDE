@@ -272,7 +272,7 @@ border-radius: 8px 0 0 8px;
     padding: 20px;
   }
   .post-page-single {
-    text-align: center;
+    
     margin-top: 40px;
   }
 .post-header {
@@ -572,5 +572,9 @@ border-radius: 8px 0 0 8px;
         opacity: 1;
         transform: scale(1);
     }
+}
+nav[aria-label ="breadcrumb"] {
+    font-size: 14px;
+    padding: 6px 10px;
 }
 }
