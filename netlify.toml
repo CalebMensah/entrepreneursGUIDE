@@ -2,6 +2,9 @@
  command = "hugo && node scripts/postBuild.js"
  publish = "public"
 
+[dev]
+command = "hugo server -w"
+
  [context.production.environment]
  HUGO_VERSION = "0.140.1"
 

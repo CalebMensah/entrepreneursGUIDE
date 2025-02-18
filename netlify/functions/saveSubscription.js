@@ -1,4 +1,4 @@
-import fs from "fs";
+const fs = require('fs')
 const path = require("path")
 
 exports.handler = async (event) => {

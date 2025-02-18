@@ -1,9 +1,28 @@
 <div class="subscribe-form">
     <p>Subscribe to our newsletter and get exclusive tips delivered to your inbox</p>
-    <form id="subscribeForm" action="https://formsubmit.co/https://script.google.com/macros/s/AKfycbzp1KAJTYD0DAz1KzxytxmSQbnXt34yZ-KqWTHphAuE8X2LwkiX6iQMQuAS28CQa19R/exec" method="POST">
-    <input type="email" name="email" placeholder="Enter your email here"/>
+    <form id="subscribeForm" action="https://script.google.com/macros/s/AKfycbzp1KAJTYD0DAz1KzxytxmSQbnXt34yZ-KqWTHphAuE8X2LwkiX6iQMQuAS28CQa19R/exec" method="POST">
+    <input type="email" name="email" placeholder="Enter your email here" required id="email"/>
     <button type="submit">Subscribe Now</button>
+    <p id="responseMessage"></p>
     </form>
     </div>
 </div>
 </div>
+
+<script>
+    function validateForm(event) {
+        event.preventDefault();
+
+        const email = document.getElementById("email").value.trim()
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailPattern.test(email)) {
+            responseMessage.innerHTML = "Enter a valid email address."
+            responseMessage.style.color = 'red'
+        }
+        responseMessage.innerHTML = "Submitting..."
+         responseMessage.style.color = 'green'
+
+         event.target.submit()
+    }
+</script>

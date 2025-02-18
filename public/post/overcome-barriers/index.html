@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=49806&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>  Overcoming Barriers to Developing an Entrepreneurial Mindset</title>
 
-    <link rel="stylesheet" href="http://localhost:1313/css/style.css">
-    <link rel="stylesheet" href="http://localhost:1313/css/morestyles.css">
+    <link rel="stylesheet" href="http://localhost:49806/css/style.css">
+    <link rel="stylesheet" href="http://localhost:49806/css/morestyles.css">
 
     <script src="https://kit.fontawesome.com/8749291112.js" crossorigin="anonymous"></script>
 
@@ -19,7 +19,7 @@
           "@type":"Article",
           "mainEntityOfPage": {
               "@type": "webPage",
-              "@id": "http://localhost:1313/post/overcome-barriers/"
+              "@id": "http://localhost:49806/post/overcome-barriers/"
           },
           "headline": "  Overcoming Barriers to Developing an Entrepreneurial Mindset",
           "image": [
@@ -46,16 +46,16 @@
 <body>
 
     <header>
-        <img src="http://localhost:1313/images/logo.webp" alt="businessmasters" loading="lazy">
+        <img src="http://localhost:49806/images/logo.webp" alt="businessmasters" loading="lazy">
         <button class="toggle-menu" aria-label="Toggle menu">
             &#9776
         </button>
         <nav class="nav-links">
-            <a href="http://localhost:1313/">Home</a>
-            <a href="http://localhost:1313/post">Post</a>
-            <a href="http://localhost:1313/news">News</a>
-            <a href="http://localhost:1313/about">About</a>
-            <a href="http://localhost:1313/contact">Contact Us</a>
+            <a href="http://localhost:49806/">Home</a>
+            <a href="http://localhost:49806/post">Post</a>
+            <a href="http://localhost:49806/news">News</a>
+            <a href="http://localhost:49806/about">About</a>
+            <a href="http://localhost:49806/contact">Contact Us</a>
         </nav>
     </header>
 
@@ -63,32 +63,7 @@
     
     <main class="wrapper">
         
-    {
-        "@context": "https://schema.org",
-        "@type":"Article",
-        "mainEntityOfPage": {
-            "@type": "webPage",
-            "@id": http://localhost:1313/post/overcome-barriers/
-        },
-        "headline": "  Overcoming Barriers to Developing an Entrepreneurial Mindset",
-        "image": [
-        "/images/overcome.jpg"
-        ],
-        "datePublished": "2024-9-01T00:00:00Z",
-        "dateModified": "2024-9-01T00:00:00Z",
-        "author": {
-            "@type": 'Organization',
-            "name": "businessMasters",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "/images/logo1.png",
-                "width": 192,
-                "height": 60
-            }
-        },
-        "description": " Developing an entrepreneurial mindset is crucial for anyone aspiring to create, innovate, and lead successfully. However, various barriers ..."
-    }
-</script>
+
 <div class="main-container1">
     <div class="post-page-single">
         
@@ -99,7 +74,7 @@
         </div>
 
         <h1 class="page-header">  Overcoming Barriers to Developing an Entrepreneurial Mindset</h1>
-        <img src="http://localhost:1313/images/overcome.jpg" alt="entrepreneur" class="post-img" loading="lazy">
+        <img src="http://localhost:49806/images/overcome.jpg" alt="entrepreneur" class="post-img" loading="lazy">
        
         <div class="post-metadata">
             <small>Published on September 1, 2024</small>
@@ -189,21 +164,40 @@
 <p>By recognizing and addressing these barriers, aspiring entrepreneurs can cultivate the mindset necessary to overcome challenges, seize opportunities, and achieve their goals. Developing an entrepreneurial mindset is an ongoing process that requires self-awareness, resilience, and a commitment to continuous growth.</p>
 <h2 id="related-articles">Related Articles</h2>
 <ul>
-<li><a href="http://localhost:1313/post/myth-challenges">Common Myths About Entrepreneurs</a></li>
-<li><a href="http://localhost:1313/post/entrepreneur-mindset">The Entrepreneurial Mindset</a></li>
-<li><a href="http://localhost:1313/post/who-is-an-entrepreneur">Who is an Entrepreneur?</a></li>
-<li><a href="http://localhost:1313/post/validating-your-business-idea">Validating your business idea</a></li>
+<li><a href="http://localhost:49806/post/myth-challenges">Common Myths About Entrepreneurs</a></li>
+<li><a href="http://localhost:49806/post/entrepreneur-mindset">The Entrepreneurial Mindset</a></li>
+<li><a href="http://localhost:49806/post/who-is-an-entrepreneur">Who is an Entrepreneur?</a></li>
+<li><a href="http://localhost:49806/post/validating-your-business-idea">Validating your business idea</a></li>
 </ul>
 <!-- raw HTML omitted -->
 <div class="subscribe-form">
     <p>Subscribe to our newsletter and get exclusive tips delivered to your inbox</p>
-    <form id="subscribeForm" action="https://formsubmit.co/https://script.google.com/macros/s/AKfycbzp1KAJTYD0DAz1KzxytxmSQbnXt34yZ-KqWTHphAuE8X2LwkiX6iQMQuAS28CQa19R/exec" method="POST">
-    <input type="email" name="email" placeholder="Enter your email here"/>
+    <form id="subscribeForm" action="https://script.google.com/macros/s/AKfycbzp1KAJTYD0DAz1KzxytxmSQbnXt34yZ-KqWTHphAuE8X2LwkiX6iQMQuAS28CQa19R/exec" method="POST">
+    <input type="email" name="email" placeholder="Enter your email here" required id="email"/>
     <button type="submit">Subscribe Now</button>
+    <p id="responseMessage"></p>
     </form>
     </div>
 </div>
 </div>
+
+<script>
+    function validateForm(event) {
+        event.preventDefault();
+
+        const email = document.getElementById("email").value.trim()
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailPattern.test(email)) {
+            responseMessage.innerHTML = "Enter a valid email address."
+            responseMessage.style.color = 'red'
+        }
+        responseMessage.innerHTML = "Submitting..."
+         responseMessage.style.color = 'green'
+
+         event.target.submit()
+    }
+</script>
 
         </div>
       
@@ -215,60 +209,60 @@
             
             <div class="post-summary1">
                 <div class="post-image1">
-                    <a href="http://localhost:1313/post/validating-your-business-idea/">
-                        <img src="http://localhost:1313/images/validate.png" alt="  How to Validate Your Business Idea Before Launching" loading="lazy">
+                    <a href="http://localhost:49806/post/validating-your-business-idea/">
+                        <img src="http://localhost:49806/images/validate.png" alt="  How to Validate Your Business Idea Before Launching" loading="lazy">
                     </a>
                 </div>
                 <div class="post-content1">
-                    <h2><a href="http://localhost:1313/post/validating-your-business-idea/">  How to Validate Your Business Idea Before Launching</a></h2>
+                    <h2><a href="http://localhost:49806/post/validating-your-business-idea/">  How to Validate Your Business Idea Before Launching</a></h2>
                     
                 </div>
             </div>
             
             <div class="post-summary1">
                 <div class="post-image1">
-                    <a href="http://localhost:1313/post/overcome-barriers/">
-                        <img src="http://localhost:1313/images/overcome.jpg" alt="  Overcoming Barriers to Developing an Entrepreneurial Mindset" loading="lazy">
+                    <a href="http://localhost:49806/post/overcome-barriers/">
+                        <img src="http://localhost:49806/images/overcome.jpg" alt="  Overcoming Barriers to Developing an Entrepreneurial Mindset" loading="lazy">
                     </a>
                 </div>
                 <div class="post-content1">
-                    <h2><a href="http://localhost:1313/post/overcome-barriers/">  Overcoming Barriers to Developing an Entrepreneurial Mindset</a></h2>
+                    <h2><a href="http://localhost:49806/post/overcome-barriers/">  Overcoming Barriers to Developing an Entrepreneurial Mindset</a></h2>
                     
                 </div>
             </div>
             
             <div class="post-summary1">
                 <div class="post-image1">
-                    <a href="http://localhost:1313/post/mindset-examples/">
-                        <img src="http://localhost:1313/images/realmindset.webp" alt="Real life examples of entrepreneur mindset" loading="lazy">
+                    <a href="http://localhost:49806/post/mindset-examples/">
+                        <img src="http://localhost:49806/images/realmindset.webp" alt="Real life examples of entrepreneur mindset" loading="lazy">
                     </a>
                 </div>
                 <div class="post-content1">
-                    <h2><a href="http://localhost:1313/post/mindset-examples/">Real life examples of entrepreneur mindset</a></h2>
+                    <h2><a href="http://localhost:49806/post/mindset-examples/">Real life examples of entrepreneur mindset</a></h2>
                     
                 </div>
             </div>
             
             <div class="post-summary1">
                 <div class="post-image1">
-                    <a href="http://localhost:1313/post/who-is-an-entrepreneur/">
-                        <img src="http://localhost:1313/images/entrepreneurship2.webp" alt=" Who is an entrepreneur? What are the qualities of an entrepreneur? " loading="lazy">
+                    <a href="http://localhost:49806/post/who-is-an-entrepreneur/">
+                        <img src="http://localhost:49806/images/entrepreneurship2.webp" alt=" Who is an entrepreneur? What are the qualities of an entrepreneur? " loading="lazy">
                     </a>
                 </div>
                 <div class="post-content1">
-                    <h2><a href="http://localhost:1313/post/who-is-an-entrepreneur/"> Who is an entrepreneur? What are the qualities of an entrepreneur? </a></h2>
+                    <h2><a href="http://localhost:49806/post/who-is-an-entrepreneur/"> Who is an entrepreneur? What are the qualities of an entrepreneur? </a></h2>
                     
                 </div>
             </div>
             
             <div class="post-summary1">
                 <div class="post-image1">
-                    <a href="http://localhost:1313/post/entrepreneur-mindset/">
-                        <img src="http://localhost:1313/images/mindset1.webp" alt=" The Entrepreneurial Mindset! What It Is and How to Cultivate It" loading="lazy">
+                    <a href="http://localhost:49806/post/entrepreneur-mindset/">
+                        <img src="http://localhost:49806/images/mindset1.webp" alt=" The Entrepreneurial Mindset! What It Is and How to Cultivate It" loading="lazy">
                     </a>
                 </div>
                 <div class="post-content1">
-                    <h2><a href="http://localhost:1313/post/entrepreneur-mindset/"> The Entrepreneurial Mindset! What It Is and How to Cultivate It</a></h2>
+                    <h2><a href="http://localhost:49806/post/entrepreneur-mindset/"> The Entrepreneurial Mindset! What It Is and How to Cultivate It</a></h2>
                     
                 </div>
             </div>
@@ -284,8 +278,8 @@
     <div class="popup-content">
         <span class="close-popup">&times;</span>
         <h2>Enter Your Email Address</h2>
-        <form action="https://formsubmit.co/https://script.google.com/macros/s/AKfycbzp1KAJTYD0DAz1KzxytxmSQbnXt34yZ-KqWTHphAuE8X2LwkiX6iQMQuAS28CQa19R/exec" id="ebook-download-form" method='POST'>
-            <input type="email" id="user-email" placeholder="Your Email Address">
+        <form id="ebook-download-form" method='POST' action="https://script.google.com/macros/s/AKfycbzp1KAJTYD0DAz1KzxytxmSQbnXt34yZ-KqWTHphAuE8X2LwkiX6iQMQuAS28CQa19R/exec">
+            <input type="email" id="user-email" placeholder="Your Email Address" required>
             <button type="submit">Download eBook</button>
         </form>
         <p id="thank-you-message" style="display: none;">Thank you! Your download will start automatically.</p>
@@ -294,7 +288,7 @@
 
 
 
- <script src="http://localhost:1313/js/ebook.js"></script>
+ <script src="http://localhost:49806/js/ebook.js"></script>
 
 
     </main>
@@ -303,7 +297,7 @@
         
         <div class="subscribe-form1">
           <p>Subscribe to our newsletter and get exclusive tips delivered to your inbox</p>
-          <form id="subscribeForm" action="https://formsubmit.co/https://script.google.com/macros/s/AKfycbzp1KAJTYD0DAz1KzxytxmSQbnXt34yZ-KqWTHphAuE8X2LwkiX6iQMQuAS28CQa19R/exec" method="POST">
+          <form id="subscribeForm" action="https://script.google.com/macros/s/AKfycbzp1KAJTYD0DAz1KzxytxmSQbnXt34yZ-KqWTHphAuE8X2LwkiX6iQMQuAS28CQa19R/exec" method="POST">
           <input type="email" name="email" placeholder="Enter your email here"/>
           <button type="submit">Subscribe Now</button>
           </form>
@@ -321,6 +315,6 @@
 
     
     
-    <script src="http://localhost:1313/js/script.js" type="module"></script>
+    <script src="http://localhost:49806/js/script.js" type="module"></script>
 </body>
 </html>

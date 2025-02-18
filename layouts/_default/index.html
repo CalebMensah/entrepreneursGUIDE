@@ -5,36 +5,10 @@
         {{ $featuredPost := first 1 (where .Site.RegularPages "Section" "post") }}
         {{ range $featuredPost }}
         <article><!-- display image if available -->
-            <script type="application/ld+json">
-                {
-                    "@context": "https://schema.org",
-                    "@type":"Article",
-                    "mainEntityOfPage": {
-                        "@type": "webPage",
-                        "@id": {{ .Permalink }}
-                    },
-                    "headline": "{{ .Title }}",
-                    "image": [
-                    "{{ .Params.image }}"
-                    ],
-                    "datePublished": "{{ .Date.Format "2006-1-02T15:04:05Z" }}",
-                    "dateModified": "{{.Lastmod.Format "2006-1-02T15:04:05Z" }}",
-                    "author": {
-                        "@type": 'Organization',
-                        "name": "businessMasters",
-                        "logo": {
-                            "@type": "ImageObject",
-                            "url": "/images/logo1.png",
-                            "width": 192,
-                            "height": 60
-                        }
-                    },
-                    "description": "{{ .Description }}"
-                }
-            </script>
+
             <div class="ebook-download-section" id="index-ebook">
                 <p class="ebook-download-text" id="index-ebook-p">
-                    <a href="#" id="download-ebook-trigger">Download Our Free eBook: From Idea To Launch: A Step-By-Step Guide For Startups</a>
+                    <a href="/files/ebook.pdf" id="download-ebook-trigger">Download Our Free eBook: From Idea To Launch: A Step-By-Step Guide For Startups</a>
                 </p>
             </div>
             <h2 class="txt">{{ .Title }}</h2>
@@ -86,7 +60,7 @@
     <div class="popup-content">
         <span class="close-popup">&times;</span>
         <h2>Enter Your Email Address</h2>
-        <form action="https://formsubmit.co/https://script.google.com/macros/s/AKfycbzp1KAJTYD0DAz1KzxytxmSQbnXt34yZ-KqWTHphAuE8X2LwkiX6iQMQuAS28CQa19R/exec" id="ebook-download-form" method='POST'>
+        <form action="https://script.google.com/macros/s/AKfycbzp1KAJTYD0DAz1KzxytxmSQbnXt34yZ-KqWTHphAuE8X2LwkiX6iQMQuAS28CQa19R/exec" id="ebook-download-form" method='POST'>
             <input type="email" id="user-email" placeholder="Your Email Address">
             <button type="submit">Download eBook</button>
         </form>
@@ -97,5 +71,5 @@
 
  <!-- link to external javascript file -->
  <script src="/js/ebook.js"></script>
- <script src="script.js"></script>
+ <script src="/js/script.js"></script>
 {{ end }}

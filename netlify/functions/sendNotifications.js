@@ -1,8 +1,8 @@
 const fs = require("fs")
 const path = require("path")
 const webpush = require("web-push")
-const fetch = require("node-fetch")
-
+//const fetch = (await import("node-fetch")).default
+const axios = require("axios")
 
 const publicVapidKey = "BKyqUk5qZG9yT8LOoktxaZr_-eW_5sMsLbtORzFeIaa6DiDemFNmIL4hMKGQ72QaRcAPQJWaIrvXL_gkIQVyAPU"
 const privateVapidKey = "F5JhW_qZA2fyd79sklA0KHOzJZRcgsCEuSKPwWnWlv0"
@@ -21,8 +21,8 @@ exports.handler = async () => {
         }
 
         const subscriptions = JSON.parse(fs.readFileSync(filePath));
-        const response = await fetch("https://businesmasters.netlify.app/index.json") // add Website URL
-        const posts = await response.json();
+        const response = await axios.get("https://businesmasters.netlify.app/index.json") // add Website URL
+        const posts = await response.data;
         const latestPost = posts[0];
 
         if(!latestPost) {

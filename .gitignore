@@ -1,2 +1,4 @@
 .env
 echo "node_modules" >> .gitignore
+# Local Netlify folder
+.netlify

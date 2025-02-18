@@ -70,36 +70,10 @@
         
         
         <article>
-            <script type="application/ld+json">
-                {
-                    "@context": "https://schema.org",
-                    "@type":"Article",
-                    "mainEntityOfPage": {
-                        "@type": "webPage",
-                        "@id": "http://localhost:1313/post/validating-your-business-idea/"
-                    },
-                    "headline": "  How to Validate Your Business Idea Before Launching",
-                    "image": [
-                    "\/images\/validate.png"
-                    ],
-                    "datePublished": "2025-1-05T00:00:00Z",
-                    "dateModified": "2025-1-05T00:00:00Z",
-                    "author": {
-                        "@type": 'Organization',
-                        "name": "businessMasters",
-                        "logo": {
-                            "@type": "ImageObject",
-                            "url": "/images/logo1.png",
-                            "width": 192,
-                            "height": 60
-                        }
-                    },
-                    "description": "Learn how to validate your business idea before launching."
-                }
-            </script>
+
             <div class="ebook-download-section" id="index-ebook">
                 <p class="ebook-download-text" id="index-ebook-p">
-                    <a href="#" id="download-ebook-trigger">Download Our Free eBook: From Idea To Launch: A Step-By-Step Guide For Startups</a>
+                    <a href="http://localhost:1313/files/ebook.pdf" id="download-ebook-trigger">Download Our Free eBook: From Idea To Launch: A Step-By-Step Guide For Startups</a>
                 </p>
             </div>
             <h2 class="txt">  How to Validate Your Business Idea Before Launching</h2>
@@ -218,13 +192,32 @@ Here&rsquo;s how to do it:</p>
 <!-- raw HTML omitted -->
 <div class="subscribe-form">
     <p>Subscribe to our newsletter and get exclusive tips delivered to your inbox</p>
-    <form id="subscribeForm" action="https://formsubmit.co/https://script.google.com/macros/s/AKfycbzp1KAJTYD0DAz1KzxytxmSQbnXt34yZ-KqWTHphAuE8X2LwkiX6iQMQuAS28CQa19R/exec" method="POST">
-    <input type="email" name="email" placeholder="Enter your email here"/>
+    <form id="subscribeForm" action="https://script.google.com/macros/s/AKfycbzp1KAJTYD0DAz1KzxytxmSQbnXt34yZ-KqWTHphAuE8X2LwkiX6iQMQuAS28CQa19R/exec" method="POST">
+    <input type="email" name="email" placeholder="Enter your email here" required id="email"/>
     <button type="submit">Subscribe Now</button>
+    <p id="responseMessage"></p>
     </form>
     </div>
 </div>
 </div>
+
+<script>
+    function validateForm(event) {
+        event.preventDefault();
+
+        const email = document.getElementById("email").value.trim()
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailPattern.test(email)) {
+            responseMessage.innerHTML = "Enter a valid email address."
+            responseMessage.style.color = 'red'
+        }
+        responseMessage.innerHTML = "Submitting..."
+         responseMessage.style.color = 'green'
+
+         event.target.submit()
+    }
+</script>
 </div>
         </article>
         
@@ -306,7 +299,7 @@ Here&rsquo;s how to do it:</p>
     <div class="popup-content">
         <span class="close-popup">&times;</span>
         <h2>Enter Your Email Address</h2>
-        <form action="https://formsubmit.co/https://script.google.com/macros/s/AKfycbzp1KAJTYD0DAz1KzxytxmSQbnXt34yZ-KqWTHphAuE8X2LwkiX6iQMQuAS28CQa19R/exec" id="ebook-download-form" method='POST'>
+        <form action="https://script.google.com/macros/s/AKfycbzp1KAJTYD0DAz1KzxytxmSQbnXt34yZ-KqWTHphAuE8X2LwkiX6iQMQuAS28CQa19R/exec" id="ebook-download-form" method='POST'>
             <input type="email" id="user-email" placeholder="Your Email Address">
             <button type="submit">Download eBook</button>
         </form>
@@ -317,7 +310,7 @@ Here&rsquo;s how to do it:</p>
 
  
  <script src="http://localhost:1313/js/ebook.js"></script>
- <script src="script.js"></script>
+ <script src="http://localhost:1313/js/script.js"></script>
 
     </main>
 
@@ -325,7 +318,7 @@ Here&rsquo;s how to do it:</p>
         
         <div class="subscribe-form1">
           <p>Subscribe to our newsletter and get exclusive tips delivered to your inbox</p>
-          <form id="subscribeForm" action="https://formsubmit.co/https://script.google.com/macros/s/AKfycbzp1KAJTYD0DAz1KzxytxmSQbnXt34yZ-KqWTHphAuE8X2LwkiX6iQMQuAS28CQa19R/exec" method="POST">
+          <form id="subscribeForm" action="https://script.google.com/macros/s/AKfycbzp1KAJTYD0DAz1KzxytxmSQbnXt34yZ-KqWTHphAuE8X2LwkiX6iQMQuAS28CQa19R/exec" method="POST">
           <input type="email" name="email" placeholder="Enter your email here"/>
           <button type="submit">Subscribe Now</button>
           </form>
