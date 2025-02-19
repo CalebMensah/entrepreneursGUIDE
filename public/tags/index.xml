@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on My Entrepreneurship and Business Blog</title>
-    <link>http://localhost:49806/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on My Entrepreneurship and Business Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 05 Jan 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:49806/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Business Ideas</title>
-      <link>http://localhost:49806/tags/business-ideas/</link>
+      <link>http://localhost:1313/tags/business-ideas/</link>
       <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49806/tags/business-ideas/</guid>
+      <guid>http://localhost:1313/tags/business-ideas/</guid>
       <description></description>
     </item>
     <item>
       <title>Entrepreneurship</title>
-      <link>http://localhost:49806/tags/entrepreneurship/</link>
+      <link>http://localhost:1313/tags/entrepreneurship/</link>
       <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49806/tags/entrepreneurship/</guid>
+      <guid>http://localhost:1313/tags/entrepreneurship/</guid>
       <description></description>
     </item>
     <item>
       <title>Startups</title>
-      <link>http://localhost:49806/tags/startups/</link>
+      <link>http://localhost:1313/tags/startups/</link>
       <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49806/tags/startups/</guid>
+      <guid>http://localhost:1313/tags/startups/</guid>
       <description></description>
     </item>
     <item>
       <title>Validate</title>
-      <link>http://localhost:49806/tags/validate/</link>
+      <link>http://localhost:1313/tags/validate/</link>
       <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49806/tags/validate/</guid>
+      <guid>http://localhost:1313/tags/validate/</guid>
       <description></description>
     </item>
   </channel>
