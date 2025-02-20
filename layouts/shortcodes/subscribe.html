@@ -1,7 +1,6 @@
 <div class="subscribe-form">
     <p>Subscribe to our newsletter and get exclusive tips delivered to your inbox</p>
-    <form id="subscribeForm" data-netlify="true" data-netlify-honeypot="bot-field" method="POST" name="subscribe">
-        <input type="text" name="bot-field" style="display: none;"/>
+    <form id="subscribeForm" action="" method="POST">
     <input type="email" name="email" placeholder="Enter your email here" required id="email"/>
     <button type="submit">Subscribe Now</button>
     <p id="responseMessage"></p>
@@ -27,4 +26,24 @@
          event.target.submit()
     }
 
+    document.getElementById("subscribeForm").addEventListener("submit", async function (e) {
+        e.preventDefault();
+        const formData = {
+            email: document.getElementById("email").value.trim()
+        }
+
+        try {
+            const response = await fetch("https://script.google.com/macros/s/AKfycbxMxyDGHx5R8ySZ5XkSK6OoZo_qLk_UUpHFumpaPgzSzgJjRce90RFZpPW4FZXdEtQ3/exec", {
+                method: "POST",
+                node: "cors",
+                body: JSON.stringify(formData),
+                headers: {"Content-Type": "application/json"}
+            })
+
+            const result = await response.text();
+            document.getElementById("responseMessage").innerHTML = result === "Success" ? "Subscription successful": "Error. Try again."
+        } catch(error){
+            document.getElementById("responseMessage").innerHTML = "Failed to submit"
+        }
+    })
 </script>
