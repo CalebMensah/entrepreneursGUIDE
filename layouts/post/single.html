@@ -56,7 +56,8 @@
     <div class="popup-content">
         <span class="close-popup">&times;</span>
         <h2>Enter Your Email Address</h2>
-        <form id="ebook-download-form" method='POST' action="https://script.google.com/macros/s/AKfycbzp1KAJTYD0DAz1KzxytxmSQbnXt34yZ-KqWTHphAuE8X2LwkiX6iQMQuAS28CQa19R/exec">
+        <form id="ebook-download-form" method='POST' data-netlify="true" data-netlify-honeypot="bot-field" name="subscribe">
+            <input type="text" name="bot-field" style="display: none;"/>
             <input type="email" id="user-email" placeholder="Your Email Address" required>
             <button type="submit">Download eBook</button>
         </form>
