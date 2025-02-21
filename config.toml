@@ -1,4 +1,5 @@
-baseURL = 'https://entrepreneurs-guide.netlify.app/'
+
+baseURL = "https://businessmasters.netlify.app"
 languageCode = 'en-us'
 title = 'My Entrepreneurship and Business Blog'
 author = "Caleb Agyekum Mensah"
