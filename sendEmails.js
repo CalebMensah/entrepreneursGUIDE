@@ -69,7 +69,8 @@ async function sendEmails() {
             html: `
                 <h2>${latestPost.title}</h2>
                 <p>${latestPost.summary}</p>
-                <img src="${latestPost.image_url}" alt="${latestPost.title}" style="width:100%;max-width:600px;">
+                <img src="${latestPost.image_url}" alt="${latestPost.title}" style="width:100%;max-width:600px;" />
+
                 <p><a href="${latestPost.url}" style="display:inline-block;padding:10px 15px;background:#007BFF;color:#fff;text-decoration:none;border-radius:5px;">Read More</a></p>
             `
         };
