@@ -3,6 +3,7 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="http://localhost:1313/images/favicon-32.png">
     <title>News</title>
 
     <link rel="stylesheet" href="http://localhost:1313/css/style.css">
@@ -76,7 +77,7 @@
         
         <div class="subscribe-form1">
           <p>Subscribe to our newsletter and get exclusive tips delivered to your inbox</p>
-          <form id="subscribeForm" method="POST" action="https://sheetdb.io/api/v1/w7eydswfjd972"> 
+          <form id="subscribeForm" method="POST" > 
           <input type="email" name="email" placeholder="Enter your email here"/>
           <button type="submit">Subscribe Now</button>
           </form>
@@ -93,6 +94,67 @@
     </footer>
 
     
+
+    <script>
+        document.getElementById("subscribeForm").addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const email = document.getElementById("email").value.trim();
+          const responseMessage = document.getElementById("responseMessage");
+      
+          
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailPattern.test(email)) {
+            responseMessage.innerHTML = "Enter a valid email address.";
+            responseMessage.style.color = "red";
+            return;
+          }
+      
+          responseMessage.innerHTML = "Checking...";
+          responseMessage.style.color = "green";
+      
+          try {
+            
+            const checkResponse = await fetch(
+              `https://sheetdb.io/api/v1/w7eydswfjd972/search?Email=${encodeURIComponent(email)}`
+            )
+            
+            if (!checkResponse.ok) throw new Error("Check failed");
+            
+            const existingData = await checkResponse.json();
+            console.log("API Response:", existingData); 
+            
+            if (existingData.length > 0) {
+              responseMessage.innerHTML = "Email already subscribed!";
+              responseMessage.style.color = "red";
+              return;
+            }
+      
+            
+            responseMessage.innerHTML = "Submitting...";
+            const postResponse = await fetch("https://sheetdb.io/api/v1/w7eydswfjd972", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                data: [{ 
+                  Email: email, 
+                  Joined_at: new Date().toLocaleString() 
+                }]
+              }),
+            });
+      
+            if (postResponse.ok) {
+              responseMessage.innerHTML = "Subscription successful!";
+              responseMessage.style.color = "green";
+            } else {
+              responseMessage.innerHTML = "Error. Try again.";
+              responseMessage.style.color = "red";
+            }
+          } catch (error) {
+            responseMessage.innerHTML = "Failed to submit. Please try again.";
+            responseMessage.style.color = "red";
+          }
+        });
+      </script>
     
     <script src="http://localhost:1313/js/script.js" type="module"></script>
 </body>

@@ -27,12 +27,13 @@
     try {
       // Check if email already exists
       const checkResponse = await fetch(
-        `https://sheetdb.io/api/v1/w7eydswfjd972?Email=${encodeURIComponent(email)}`
-      );
+        `https://sheetdb.io/api/v1/w7eydswfjd972/search?Email=${encodeURIComponent(email)}`
+      )
       
       if (!checkResponse.ok) throw new Error("Check failed");
       
       const existingData = await checkResponse.json();
+      console.log("API Response:", existingData); // Add this log to see the API response
       
       if (existingData.length > 0) {
         responseMessage.innerHTML = "Email already subscribed!";

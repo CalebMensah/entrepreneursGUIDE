@@ -1,5 +1,4 @@
-
-baseURL = "https://businessmasters.netlify.app"
+baseURL = "http://localhost:1313" # Default base URL for development
 languageCode = 'en-us'
 title = 'My Entrepreneurship and Business Blog'
 author = "Caleb Agyekum Mensah"
@@ -18,3 +17,8 @@ paginate = 5
 [outputs]
   home = ["HTML", "JSON"]
 
+[params]
+favicon = "/images/favicon-32.png"
+
+[production]
+baseURL = "https://businessmasters.netlify.app" # Base URL for production

@@ -1,36 +1,99 @@
-// trigger the popup when the ebook link is clicked
 document.getElementById('download-ebook-trigger').addEventListener('click', function(event) {
-    event.preventDefault();
-    document.getElementById('ebook-popup').style.display = 'block';
+  event.preventDefault();
+  document.getElementById('ebook-popup').style.display = 'block';
 });
 
-// close the modal when the close button is clicked
-document.querySelector('.close-popup').addEventListener('click', function () {
-    document.getElementById('ebook-popup').style.display = 'none'
-})
-// close the modal when they click on an empty space
+document.querySelector('.close-popup').addEventListener('click', function() {
+  document.getElementById('ebook-popup').style.display = 'none';
+});
+
 window.addEventListener('click', function(event) {
-  if(event.target === document.getElementById('ebook-popup')) {
-    this.document.getElementById('ebook-popup').style.display = 'none'
+  if (event.target === document.getElementById('ebook-popup')) {
+    document.getElementById('ebook-popup').style.display = 'none';
   }
-})
+});
 
-// handle form submission
-document.getElementById('ebook-download-form').addEventListener('submit', function(event) {
-    event.preventDefault();
+document.getElementById('ebook-download-form').addEventListener('submit', async function(event) {
+  event.preventDefault();
+  const email = document.getElementById('user-email').value.trim();
+  const responseMessage = document.getElementById('thank-you-message');
 
-    // show thank you message
-    document.getElementById('thank-you-message').style.display = "block";
+  // Email validation
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(email)) {
+    responseMessage.innerHTML = "Enter a valid email address.";
+    responseMessage.style.color = "red";
+    return;
+  }
 
-    // stimulate the download process
-    setTimeout(function () {
+  responseMessage.innerHTML = "Checking...";
+  responseMessage.style.display = "block";
+  responseMessage.style.color = "green";
+
+  try {
+    // Check if email already exists
+    const checkResponse = await fetch(
+      `https://sheetdb.io/api/v1/w7eydswfjd972/search?Email=${encodeURIComponent(email)}`
+    );
+    
+    if (!checkResponse.ok) throw new Error("Check failed");
+
+    const existingData = await checkResponse.json();
+    console.log("API Response:", existingData);
+
+    if (existingData.length > 0) {
+      // Email already exists, proceed with download
+      responseMessage.innerHTML = "Email already subscribed! Downloading...";
+      responseMessage.style.color = "blue";
+
+      // Simulate the download process
+      setTimeout(function() {
         const pdfUrl = '/files/ebook.pdf';
         const link = document.createElement('a');
         link.href = pdfUrl;
         link.download = 'ebook.pdf';
-        link.click()
+        link.click();
 
-        // close the popup after download
+        // Close the popup after download
         document.getElementById('ebook-popup').style.display = 'none';
-    }, 2000)
-})
+      }, 2000);
+    } else {
+      // Email does not exist, add to spreadsheet and proceed with download
+      responseMessage.innerHTML = "Adding email and downloading...";
+
+      const postResponse = await fetch("https://sheetdb.io/api/v1/w7eydswfjd972", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          data: [{ 
+            Email: email, 
+            Joined_at: new Date().toLocaleString() 
+          }]
+        }),
+      });
+
+      if (postResponse.ok) {
+        responseMessage.innerHTML = "Subscription successful! Downloading...";
+        responseMessage.style.color = "green";
+
+        setTimeout(function() {
+          const pdfUrl = '/files/ebook.pdf';
+          const link = document.createElement('a');
+          link.href = pdfUrl;
+          link.download = 'ebook.pdf';
+          link.click();
+
+          // Close the popup after download
+          document.getElementById('ebook-popup').style.display = 'none';
+        }, 2000);
+      } else {
+        responseMessage.innerHTML = "Error. Try again.";
+        responseMessage.style.color = "red";
+      }
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    responseMessage.innerHTML = "Failed to submit. Please try again.";
+    responseMessage.style.color = "red";
+  }
+});

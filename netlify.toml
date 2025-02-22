@@ -1,28 +1,38 @@
 [build]
- command = "hugo && node scripts/postBuild.js"
- publish = "public"
+  command = "hugo && node scripts/postBuild.js"
+  publish = "public"
+
+[dev]
+  command = "hugo server -w"
+  targetPort = 1313
+  port = 8888
+
+  [dev.proxy]
+    "/api/*" = "http://localhost:1313/api"
 
 [[headers]]
 for = "/js/*"
 [headers.values]
-Access-Control-Allow-Origin = "*"
+  Access-Control-Allow-Origin = "*"
 
+[context.production.headers]
+  [[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "https://businessmasters.netlify.app"
 
-[dev]
-command = "hugo server -w"
-
- [context.production.environment]
- HUGO_VERSION = "0.140.1"
+[context.production.environment]
+  HUGO_VERSION = "0.140.1"
 
 [[plugins]]
-package = "@netlify/plugin-functions-install-core"
+  package = "@netlify/plugin-functions-install-core"
 
 [functions]
-directory = "netlify/functions"
+  directory = "netlify/functions"
 
 [build.environment]
-WEB_PUSH_PUBLIC_KEY = "BKyqUk5qZG9yT8LOoktxaZr_-eW_5sMsLbtORzFeIaa6DiDemFNmIL4hMKGQ72QaRcAPQJWaIrvXL_gkIQVyAPU"
-WEB_PUSH_PRIVATE_KEY = "F5JhW_qZA2fyd79sklA0KHOzJZRcgsCEuSKPwWnWlv0"
+  WEB_PUSH_PUBLIC_KEY = "BKyqUk5qZG9yT8LOoktxaZr_-eW_5sMsLbtORzFeIaa6DiDemFNmIL4hMKGQ72QaRcAPQJWaIrvXL_gkIQVyAPU"
+  WEB_PUSH_PRIVATE_KEY = "F5JhW_qZA2fyd79sklA0KHOzJZRcgsCEuSKPwWnWlv0"
 
 [build.process]
-skip_processing = true
+  skip_processing = true
