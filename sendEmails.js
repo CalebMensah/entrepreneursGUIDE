@@ -65,11 +65,11 @@ async function sendEmails() {
             from: `"Your Blog" <${EMAIL}>`,
             to: email,
             subject: `New Blog Post: ${latestPost.title}`,
-            text: `Hi,\n\nCheck out our latest post: ${latestPost.title}.\n\n${latestPost.description}\n\nRead here: ${latestPost.url}`,
+            text: `Hi,\n\nCheck out our latest post: ${latestPost.title}.\n\n${latestPost.summary}\n\nRead here: ${latestPost.url}`,
             html: `
                 <h2>${latestPost.title}</h2>
-                <p>${latestPost.description}</p>
-                <img src="${latestPost.image}" alt="${latestPost.title}" style="width:100%;max-width:600px;">
+                <p>${latestPost.summary}</p>
+                <img src="${latestPost.image_url}" alt="${latestPost.title}" style="width:100%;max-width:600px;">
                 <p><a href="${latestPost.url}" style="display:inline-block;padding:10px 15px;background:#007BFF;color:#fff;text-decoration:none;border-radius:5px;">Read More</a></p>
             `
         };

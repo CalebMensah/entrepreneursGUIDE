@@ -425,7 +425,7 @@ border-radius: 8px 0 0 8px;
         font-size: 20px;
     }
     .post-page-single {
-        padding: 20px;
+        padding: 10px;
     }
     .post-page-single .post-img {
         height: 150px;
@@ -582,9 +582,9 @@ nav[aria-label ="breadcrumb"] {
     padding: 6px 10px;
 }
 .single-page {
-    padding: 30px;
+    padding: 10px;
 }
 .post-page-single {
-    padding: 30px;
+    padding: 10px;
 }
 }
