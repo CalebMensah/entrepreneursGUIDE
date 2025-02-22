@@ -180,52 +180,73 @@ Entrepreneurs believe that their abilities and intelligence can be developed thr
 </ul>
 <!-- raw HTML omitted -->
 <div class="subscribe-form">
-    <p>Subscribe to our newsletter and get exclusive tips delivered to your inbox</p>
-    <form id="subscribeForm">
-      <input type="email" name="email" placeholder="Enter your email here" required id="email">
-      <button type="submit">Subscribe Now</button>
-      <p id="responseMessage"></p>
-    </form>
-  </div>
-  
-  <script>
-    document.getElementById("subscribeForm").addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const email = document.getElementById("email").value.trim();
-      const responseMessage = document.getElementById("responseMessage");
-  
+  <p>Subscribe to our newsletter and get exclusive tips delivered to your inbox</p>
+  <form id="subscribeForm">
+    <input type="email" name="email" placeholder="Enter your email here" required id="email">
+    <button type="submit">Subscribe Now</button>
+    <p id="responseMessage"></p>
+  </form>
+</div>
+
+<script>
+  document.getElementById("subscribeForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const email = document.getElementById("email").value.trim();
+    const responseMessage = document.getElementById("responseMessage");
+
+    
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      responseMessage.innerHTML = "Enter a valid email address.";
+      responseMessage.style.color = "red";
+      return;
+    }
+
+    responseMessage.innerHTML = "Checking...";
+    responseMessage.style.color = "green";
+
+    try {
       
-      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailPattern.test(email)) {
-        responseMessage.innerHTML = "Enter a valid email address.";
+      const checkResponse = await fetch(
+        `https://sheetdb.io/api/v1/w7eydswfjd972?Email=${encodeURIComponent(email)}`
+      );
+      
+      if (!checkResponse.ok) throw new Error("Check failed");
+      
+      const existingData = await checkResponse.json();
+      
+      if (existingData.length > 0) {
+        responseMessage.innerHTML = "Email already subscribed!";
         responseMessage.style.color = "red";
         return;
       }
-  
+
+      
       responseMessage.innerHTML = "Submitting...";
-      responseMessage.style.color = "green";
-  
-      try {
-        
-        const response = await fetch("/.netlify/functions/submit", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ email }),
-        });
-  
-        const result = await response.json(); 
-        if (result.success) {
-          responseMessage.innerHTML = "Subscription successful!";
-        } else {
-          responseMessage.innerHTML = "Error. Try again.";
-          responseMessage.style.color = "red";
-        }
-      } catch (error) {
-        responseMessage.innerHTML = "Failed to submit. Please try again.";
+      const postResponse = await fetch("https://sheetdb.io/api/v1/w7eydswfjd972", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          data: [{ 
+            Email: email, 
+            Joined_at: new Date().toLocaleString() 
+          }]
+        }),
+      });
+
+      if (postResponse.ok) {
+        responseMessage.innerHTML = "Subscription successful!";
+        responseMessage.style.color = "green";
+      } else {
+        responseMessage.innerHTML = "Error. Try again.";
         responseMessage.style.color = "red";
       }
-    });
-  </script>
+    } catch (error) {
+      responseMessage.innerHTML = "Failed to submit. Please try again.";
+      responseMessage.style.color = "red";
+    }
+  });
+</script>
 
         </div>
       
@@ -302,18 +323,19 @@ Entrepreneurs believe that their abilities and intelligence can be developed thr
 </div>
 
 
+<a href="#" id="download-ebook-trigger">Download eBook</a>
 <div id="ebook-popup" class="ebook-popup" style="display: none;">
     <div class="popup-content">
         <span class="close-popup">&times;</span>
         <h2>Enter Your Email Address</h2>
-        <form id="ebook-download-form" method='POST' data-netlify="true" data-netlify-honeypot="bot-field" name="subscribe">
-            <input type="text" name="bot-field" style="display: none;"/>
-            <input type="email" id="user-email" placeholder="Your Email Address" required>
+        <form id="ebook-download-form" method='POST'>
+            <input type="email" id="user-email" placeholder="Your Email Address">
             <button type="submit">Download eBook</button>
         </form>
         <p id="thank-you-message" style="display: none;">Thank you! Your download will start automatically.</p>
     </div>
 </div>
+
 
 
 
@@ -326,7 +348,7 @@ Entrepreneurs believe that their abilities and intelligence can be developed thr
         
         <div class="subscribe-form1">
           <p>Subscribe to our newsletter and get exclusive tips delivered to your inbox</p>
-          <form id="subscribeForm" method="POST">
+          <form id="subscribeForm" method="POST" action="https://sheetdb.io/api/v1/w7eydswfjd972"> 
           <input type="email" name="email" placeholder="Enter your email here"/>
           <button type="submit">Subscribe Now</button>
           </form>

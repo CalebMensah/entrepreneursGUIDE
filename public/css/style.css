@@ -292,6 +292,7 @@ border-radius: 8px 0 0 8px;
     line-height: 1.6;
     font-size: 1rem;
     color: #555;
+    padding: 20px;
 }
 .single-page h1, .single-page h2, .single-page h3 {
     color: #007bff;
@@ -422,6 +423,9 @@ border-radius: 8px 0 0 8px;
     }
     .post-page-single h1 {
         font-size: 20px;
+    }
+    .post-page-single {
+        padding: 20px;
     }
     .post-page-single .post-img {
         height: 150px;
@@ -576,5 +580,11 @@ border-radius: 8px 0 0 8px;
 nav[aria-label ="breadcrumb"] {
     font-size: 14px;
     padding: 6px 10px;
+}
+.single-page {
+    padding: 30px;
+}
+.post-page-single {
+    padding: 30px;
 }
 }

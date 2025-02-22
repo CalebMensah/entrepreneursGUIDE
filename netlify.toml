@@ -2,6 +2,12 @@
  command = "hugo && node scripts/postBuild.js"
  publish = "public"
 
+[[headers]]
+for = "/js/*"
+[headers.values]
+Access-Control-Allow-Origin = "*"
+
+
 [dev]
 command = "hugo server -w"
 
