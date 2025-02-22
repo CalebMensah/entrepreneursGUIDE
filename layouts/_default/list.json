@@ -3,7 +3,8 @@
  {
     "title": "{{ .Title }}",
     "url": "{{ .Permalink }}",
-    "summary": "{{ .Description }}"
+    "summary": "{{ .Description }}",
+    "image_url": "{{ .Params.image }}"
  }
  {{- end -}}
 ]
