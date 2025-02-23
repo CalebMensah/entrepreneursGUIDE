@@ -268,6 +268,9 @@ border-radius: 8px 0 0 8px;
 .post-content1 h3 a:hover{
     text-decoration: underline;
   }
+.post-content1 {
+    padding: 5px;
+}
 
   .main-container1 {
     max-width: 1200px;
