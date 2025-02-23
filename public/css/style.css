@@ -256,20 +256,21 @@ border-radius: 8px 0 0 8px;
 
 }
 
-.post-content1 h2{
+.post-content1 h2 a{
     margin: 0 0 0.5rem 0;
     font-size: 1.2rem;
+    text-decoration: none;
 }
 .post-content1 h3 a{
   color: #007bff;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.0rem;
 }
 .post-content1 h3 a:hover{
     text-decoration: underline;
   }
 .post-content1 {
-    padding: 5px;
+    padding: 8px;
 }
 
   .main-container1 {
@@ -422,6 +423,9 @@ border-radius: 8px 0 0 8px;
     .post-content1 h2{
         margin: 0 0 0.5rem 0;
         font-size: 0.8rem;
+    }
+    .post-content1 h3 a{
+        font-size: 15px;
     }
     .post-page-sub-container {
         max-width: 600px;
