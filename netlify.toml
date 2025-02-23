@@ -1,5 +1,5 @@
 [build]
-  command = "hugo && node scripts/postBuild.js"
+  command = "hugo"
   publish = "public"
 
 [dev]

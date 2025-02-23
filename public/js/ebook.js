@@ -1,31 +1,16 @@
-require('dotenv').config();
-const nodemailer = require("nodemailer");
 
-const EMAIL = process.env.EMAIL;
-const APP_PASSWORD = process.env.APP_PASSWORD;
-
-const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-        user: EMAIL,
-        pass: APP_PASSWORD
-    }
-});
 
 async function sendThankYouEmail(email) {
-    const mailOptions = {
-        from: EMAIL,
-        to: email,
-        subject: 'Thank You for Downloading Our Ebook!',
-        text: 'Hi,\n\nThank you for downloading our ebook. We hope you enjoy reading it!\n\nBest regards,\nYour Company',
-        html: '<p>Hi,</p><p>Thank you for downloading our ebook. We hope you enjoy reading it!</p><p>Best regards,<br>Your Company</p>'
-    };
-
     try {
-        await transporter.sendMail(mailOptions);
-        console.log('Thank-you email sent successfully.');
-    } catch (error) {
-        console.error('Error sending thank-you email:', error);
+      const response = await fetch("./netlify/functions/sendThankYouEmails.js", {
+        method: 'POST',
+        headers: {"Content-Type" : "application/json"},
+        body: JSON.stringify({ email })
+      })
+      const result = await response.json()
+      console.log("Email response:", result.message)
+    } catch(error) {
+      console.error('Error sending thank you emails:', error)
     }
 }
 

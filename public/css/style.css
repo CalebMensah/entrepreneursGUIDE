@@ -4,11 +4,14 @@
     box-sizing: border-box;
 }
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Lora', serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
     background-color: #fff;
+}
+h1,h2,h3,h4,h5 {
+    font-family: 'Merriweather', serif;
 }
 .sub-button {
     margin-right: 20px;
@@ -587,4 +590,8 @@ nav[aria-label ="breadcrumb"] {
 .post-page-single {
     padding: 10px;
 }
+.post-rows {
+  gap: 5px;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

@@ -18,7 +18,7 @@ paginate = 5
   home = ["HTML", "JSON"]
 
 [params]
-favicon = "/images/favicon-32.png"
+favicon = "/images/favicon-512.png"
 
 [production]
 baseURL = "https://businessmasters.netlify.app" # Base URL for production
