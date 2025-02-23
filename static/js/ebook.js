@@ -1,3 +1,34 @@
+require('dotenv').config();
+const nodemailer = require("nodemailer");
+
+const EMAIL = process.env.EMAIL;
+const APP_PASSWORD = process.env.APP_PASSWORD;
+
+const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: EMAIL,
+        pass: APP_PASSWORD
+    }
+});
+
+async function sendThankYouEmail(email) {
+    const mailOptions = {
+        from: EMAIL,
+        to: email,
+        subject: 'Thank You for Downloading Our Ebook!',
+        text: 'Hi,\n\nThank you for downloading our ebook. We hope you enjoy reading it!\n\nBest regards,\nYour Company',
+        html: '<p>Hi,</p><p>Thank you for downloading our ebook. We hope you enjoy reading it!</p><p>Best regards,<br>Your Company</p>'
+    };
+
+    try {
+        await transporter.sendMail(mailOptions);
+        console.log('Thank-you email sent successfully.');
+    } catch (error) {
+        console.error('Error sending thank-you email:', error);
+    }
+}
+
 document.getElementById('download-ebook-trigger').addEventListener('click', function(event) {
   event.preventDefault();
   document.getElementById('ebook-popup').style.display = 'block';
@@ -47,13 +78,15 @@ document.getElementById('ebook-download-form').addEventListener('submit', async 
       responseMessage.style.color = "blue";
 
       // Simulate the download process
-      setTimeout(function() {
+      setTimeout(async function() {
         const pdfUrl = '/files/ebook.pdf';
         const link = document.createElement('a');
         link.href = pdfUrl;
         link.download = 'ebook.pdf';
         link.click();
 
+        // send thank you email
+        await sendThankYouEmail(email)
         // Close the popup after download
         document.getElementById('ebook-popup').style.display = 'none';
       }, 2000);
@@ -76,12 +109,14 @@ document.getElementById('ebook-download-form').addEventListener('submit', async 
         responseMessage.innerHTML = "Subscription successful! Downloading...";
         responseMessage.style.color = "green";
 
-        setTimeout(function() {
+        setTimeout(async function() {
           const pdfUrl = '/files/ebook.pdf';
           const link = document.createElement('a');
           link.href = pdfUrl;
           link.download = 'ebook.pdf';
           link.click();
+
+          await sendThankYouEmail(email)
 
           // Close the popup after download
           document.getElementById('ebook-popup').style.display = 'none';

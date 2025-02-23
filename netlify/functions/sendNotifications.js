@@ -1,48 +1,68 @@
 const fs = require("fs")
-const path = require("path")
 const webpush = require("web-push")
-//const fetch = (await import("node-fetch")).default
+const path = require("path")
 const axios = require("axios")
+require("dotenv").config()
 
-const publicVapidKey = "BKyqUk5qZG9yT8LOoktxaZr_-eW_5sMsLbtORzFeIaa6DiDemFNmIL4hMKGQ72QaRcAPQJWaIrvXL_gkIQVyAPU"
-const privateVapidKey = "F5JhW_qZA2fyd79sklA0KHOzJZRcgsCEuSKPwWnWlv0"
+const SUBSCRIPTION_FILE = path.resolve(__dirname, "subscriptions.json")
+const LATEST_POST = "https://businessmasters.netlify.app/index.json"
 
 webpush.setVapidDetails(
     "mailto:mensahkhalib25@gmail.com",
-    publicVapidKey,
-    privateVapidKey
+    process.env.WEB_PUSH_PUBLIC_KEY,
+    process.env.WEB_PUSH_PRIVATE_KEY
 )
 
-exports.handler = async () => {
+console.log("Running notifications.js ....")
+
+function fetchSubscribers () {
+    console.log(`Fetching all subscribers from ${SUBSCRIPTION_FILE}`)
+    if(!fs.existsSync(SUBSCRIPTION_FILE)) {
+        console.error("Error: subscriptions.json file not found.")
+        return []
+    }
+    const subscribers = JSON.parse(fs.readFileSync(SUBSCRIPTION_FILE, "utf8"))
+    console.log(`Found ${subscribers.length} subscribers`)
+    return subscribers
+}
+
+// function to fetch latest post
+async function fetchLatestPost() {
+    console.log("Fetching latest post")
     try {
-        const filePath = path.resolve(__dirname, "subscriptions.json");
-        if(!fs.existsSync(filePath)) {
-            return { statusCode: 404, bod: "No subscriptions found"}
-        }
-
-        const subscriptions = JSON.parse(fs.readFileSync(filePath));
-        const response = await axios.get("https://businesmasters.netlify.app/index.json") // add Website URL
-        const posts = await response.data;
-        const latestPost = posts[0];
-
-        if(!latestPost) {
-            return { statusCode: 404, bod: "No posts found"}
-        }
-
-        const payload = JSON.stringify({
-            title: "New Blog Post!",
-            body: "Click to read the latest post!",
-            icon: latestPost.image,
-            url: latestPost.url
-        })
-
-        const sendPromises = subscriptions.map(sub => webpush.sendNotification(sub, payload));
-
-        await Promise.all(sendPromises)
-
-        return { statusCode: 200, bod: "Notifications sent successfully."}
+        const response = await axios.get(LATEST_POST);
+        if(!response.data.length) throw new Error("No post found")
+            console.log("Latest post fetched:", response.data[0].title);
+        return response.data[0];
     } catch (error) {
-        console.error("Error sending notifications:", error)
-        return { statusCode: 500, bod: "Failed to send notifications"}
+        console.error("Error fetching latest post:", error.message);
+        return null;
     }
 }
+
+// function to send push notifications
+async function sendNotifications() {
+   console.log("Preparing to send notifications")
+   const latestPost = await fetchLatestPost();
+   if(!latestPost) return console.log("No new post detected. Exiting...")
+    const subscribers = fetchSubscribers();
+    if(subscribers.length === 0) return console.log(`Sending notifications to ${subscribers.length} subscribers...`);
+
+    const payload = JSON.stringify({
+        title: "New Blog Post!",
+        body: latestPost.title,
+        icon: latestPost.image_url,
+        url: latestPost.url
+    })
+    for (const subscriber of subscribers) {
+        try {
+            await webpush.sendNotification(subscriber, payload);
+            console.log(`Notification sent to ${subscriber.endpoint}`);
+        } catch (error) {
+            console.error(`Error sending notification to ${subscriber.endpoint}:`, error.message);
+        }
+    }
+    console.log("All notifications sent successfully!")
+}
+
+sendNotifications()

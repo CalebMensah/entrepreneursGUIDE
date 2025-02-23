@@ -2,67 +2,58 @@ const menuToggle = document.querySelector('.toggle-menu');
 const navLinks = document.querySelector('.nav-links');
 const spinner = document.getElementById('loading-spinner');
 
-menuToggle.addEventListener('click', ()=> {
-    navLinks.classList.toggle('active')
-})
-
-
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
 
 document.addEventListener("DOMContentLoaded", () => {
-    setTimeout (() => {
-        showNotificationModal();
-    }, 5000)
-})
+    // Check if notifications are already allowed
+    OneSignal.push(function() {
+        OneSignal.isPushNotificationsEnabled().then(function(isEnabled) {
+            if (!isEnabled) {
+                // Show modal after 5 seconds only if notifications are not enabled
+                setTimeout(() => {
+                    showNotificationModal();
+                }, 5000);
+            }
+        });
+    });
+});
 
 function showNotificationModal() {
     const modal = document.createElement("div");
     modal.innerHTML = `
-    <div id='notification-modal' class="model-overlay">
-    <div class="model-content">
-    <h2>Enable Notifications</h2>
-    <p>Get updates on new blog posts!</p>
-    <div class="model-buttons">
-     <button id="allow-notifications">Allow</button>
-    <button id="deny-notifications">Deny</button>
-    </div>
-    </div>
-    </div>
+        <div id='notification-modal' class="modal-overlay">
+            <div class="modal-content">
+                <h2>Enable Notifications</h2>
+                <p>Get updates on new blog posts!</p>
+                <div class="modal-buttons">
+                    <button id="allow-notifications">Allow</button>
+                    <button id="deny-notifications">Deny</button>
+                </div>
+            </div>
+        </div>
     `;
 
     document.body.appendChild(modal);
 
-    document.getElementById('allow-notifications').addEventListener("click", requestNotificationPermission);
-    document.getElementById("deny-notifications").addEventListener("click", () => modal.remove())
+    document.getElementById('allow-notifications').addEventListener("click", function() {
+        OneSignal.push(function() {
+            OneSignal.registerForPushNotifications();
+        });
+        modal.remove();
+    });
+
+    document.getElementById("deny-notifications").addEventListener("click", () => modal.remove());
 }
 
-async function requestNotificationPermission() {
-    const permission = await Notification.requestPermission();
-    if (permission === "granted") {
-        registerServiceWorker();
-    } 
-    document.getElementById("notification-modal").remove()
-}
-
-async function registerServiceWorker() {
-    if("serviceWorker" in navigator && "PushManager" in window ) {
-        try {
-            const registration = await navigator.serviceWorker.register("/sw.js");
-            const subscription = await registration.pushManager.subscribe({
-                userVisibleOnly: true,
-                applicationServerKey: "BKyqUk5qZG9yT8LOoktxaZr_-eW_5sMsLbtORzFeIaa6DiDemFNmIL4hMKGQ72QaRcAPQJWaIrvXL_gkIQVyAPU"
-            });
-
-            await fetch("/.netlify/functions/saveSubscription", {
-                method: "POST",
-                body: JSON.stringify(subscription),
-                headers: {"Content-Type": "application/json"}
-            })
-            console.log("User subscribed to push notifications")
-        } catch (error) {
-           console.error("Service worker registration failed:", error)
-        }
-    }
-}
-
-
-
+// Initialize OneSignal
+window.OneSignal = window.OneSignal || [];
+OneSignal.push(function() {
+    OneSignal.init({
+        appId: "3684ab0f-136e-404a-ab10-8206040c0129",  // Replace with your OneSignal App ID
+        serviceWorkerPath: "/OneSignalSDKWorker.js",
+        serviceWorkerUpdaterPath: "/OneSignalSDKUpdaterWorker.js",
+        notifyButton: { enable: false }  // Hide default notify button since we use a modal
+    });
+});

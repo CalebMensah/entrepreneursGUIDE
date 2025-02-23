@@ -4,7 +4,7 @@
     "title": "{{ .Title }}",
     "url": "{{ .Permalink }}",
     "summary": "{{ .Description }}",
-    "image_url": "{{ .Params.image }}"
+     "image_url": "{{ .Site.BaseURL | strings.TrimSuffix "/" }}{{ .Params.image | relURL }}"
  }
  {{- end -}}
 ]
