@@ -9,7 +9,51 @@
     <link rel="stylesheet" href="http://localhost:1313/css/style.css">
     <link rel="stylesheet" href="http://localhost:1313/css/morestyles.css">
 
-    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+
+    <script>
+
+
+window.OneSignal = window.OneSignal || [];
+OneSignal.push(async function() {
+    try {
+        await OneSignal.init({
+            appId: "3684ab0f-136e-404a-ab10-8206040c0129", 
+            allowLocalhostAsSecureOrigin: true, 
+            notifyButton: { enable: true } 
+        });
+
+        console.log("OneSignal initialized successfully");
+
+        
+        const isSubscribed = await OneSignal.isPushNotificationsEnabled();
+        console.log("Notification enabled:", isSubscribed);
+
+        if(!isSubscribed) {
+          console.log("showing notification prompt")
+          OneSignal.showSlidedownPrompt()
+        }
+
+        
+        const userId = await OneSignal.getUserId();
+        console.log("OneSignal User ID:", userId);
+    } catch (error) {
+        console.error("OneSignal Initialization Error:", error);
+    }
+});
+
+
+OneSignal.push(function() {
+    OneSignal.on('subscriptionChange', function(isSubscribed) {
+        if (isSubscribed) {
+            console.log("User subscribed to notifications");
+        } else {
+            console.log("User unsubscribed from notifications");
+        }
+    });
+});
+
+    </script>
 
     <script src="https://kit.fontawesome.com/8749291112.js" crossorigin="anonymous"></script>
 
@@ -83,8 +127,8 @@
                     <div class="post-content">
                         <h3> Common Myths About Entrepreneurs and Challenges Faced By Entrepreneurs </h3>
                         <p> Entrepreneurship is often surrounded by a cloud of myths and misconceptions that can mislead aspiring entrepreneurs ...
-                            
                         </p>
+                        <h3> <a href="http://localhost:1313/post/myth-challenges/">read more</a></h3>
                     </div>
                 </a>
             </article>

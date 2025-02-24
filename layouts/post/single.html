@@ -27,29 +27,32 @@
             {{ .Content }}
         </div>
       
-
-    <section class="latest-post">
-        <div class="latest-post-container">
-            <h1>Latest post</h1>
-            <div class="post-rows">
-            {{range first 5 (where .Site.RegularPages "Section" "post") }}
-            <div class="post-summary1">
-                <div class="post-image1">
-                    <a href="{{ .Permalink }}">
-                        <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy">
-                    </a>
-                </div>
-                <div class="post-content1">
-                    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-                    
-                </div>
-            </div>
-            {{ end }}
-        </div>
-        </div>
-    </section>
     </div>
+
+    
 </div>
+
+   <!-- Optional: Display More Posts Below the Latest Post -->
+   <section class="latest-post">
+    <div class="latest-post-container">
+        <h1>Latest post</h1>
+        <div class="post-rows">
+        {{range first 5 (where .Site.RegularPages "Section" "post") }}
+        <div class="post-summary1">
+            <div class="post-image1">
+                <a href="{{ .Permalink }}">
+                    <img src="{{ .Params.image }}" alt="{{ .Title }}">
+                </a>
+            </div>
+            <div class="post-content1">
+                <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                <h3> <a href="{{ .Permalink }}">read more</a></h3>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+    </div>
+</section>
 
 <!--- pop up form for email collection -->
 <div id="ebook-popup" class="ebook-popup" style="display: none;">

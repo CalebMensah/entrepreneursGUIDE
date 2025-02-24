@@ -258,25 +258,26 @@ border-radius: 8px 0 0 8px;
 
 .post-content1 h2 a{
     margin: 0 0 0.5rem 0;
-    font-size: 1.2rem;
+    font-size: 15px;
     text-decoration: none;
 }
 .post-content1 h3 a{
   color: #007bff;
   text-decoration: none;
-  font-size: 1.0rem;
+  font-size: 15px;
 }
 .post-content1 h3 a:hover{
     text-decoration: underline;
   }
 .post-content1 {
     padding: 8px;
+    
 }
 
   .main-container1 {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
   }
   .post-page-single {
     
@@ -287,7 +288,7 @@ border-radius: 8px 0 0 8px;
     margin-bottom: 20px;
     color: #333;
 }
-.post-img {
+.post-page-single .post-img {
     width: 95%;
     height: auto;
     margin-left: 2.5%;
@@ -433,6 +434,8 @@ border-radius: 8px 0 0 8px;
     }
     .post-page-single h1 {
         font-size: 20px;
+        margin-top: 18px;
+        margin-bottom: 8px;
     }
     .post-page-single {
         padding: 10px;
@@ -440,8 +443,9 @@ border-radius: 8px 0 0 8px;
     .post-page-single .post-img {
         height: 150px;
         margin-bottom: 10px;
-        width: 80%;
+        width: 90%;
         display: block;
+        margin: auto;
     }
     .post-date {
         color: #666;
@@ -547,7 +551,7 @@ border-radius: 8px 0 0 8px;
         padding: 10px;
     }
     #index-ebook-p {
-        margin-top: 70px;
+        margin-top: 40px;
     }
     .subscribe-form1 button{
         margin-top: 7px;
@@ -595,10 +599,16 @@ nav[aria-label ="breadcrumb"] {
     padding: 10px;
 }
 .post-page-single {
-    padding: 10px;
+    padding: 5px;
 }
 .post-rows {
   gap: 5px;
     grid-template-columns: repeat(1, 1fr);
+  }
+  .post-image img {
+    height: 100px
+  }
+  .post-content p {
+    display: none;
   }
 }

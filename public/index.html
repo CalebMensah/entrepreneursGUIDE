@@ -30,6 +30,11 @@ OneSignal.push(async function() {
         const isSubscribed = await OneSignal.isPushNotificationsEnabled();
         console.log("Notification enabled:", isSubscribed);
 
+        if(!isSubscribed) {
+          console.log("showing notification prompt")
+          OneSignal.showSlidedownPrompt()
+        }
+
         
         const userId = await OneSignal.getUserId();
         console.log("OneSignal User ID:", userId);
@@ -49,10 +54,6 @@ OneSignal.push(function() {
     });
 });
 
-
-OneSignal.push(() => {
-    OneSignal.showSlidedownPrompt();
-});
     </script>
 
     <script src="https://kit.fontawesome.com/8749291112.js" crossorigin="anonymous"></script>
