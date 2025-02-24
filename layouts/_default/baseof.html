@@ -11,6 +11,49 @@
 
     <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
 
+    <script>
+
+// Initialize OneSignal
+window.OneSignal = window.OneSignal || [];
+OneSignal.push(async function() {
+    try {
+        await OneSignal.init({
+            appId: "3684ab0f-136e-404a-ab10-8206040c0129", // Replace with your OneSignal App ID
+            allowLocalhostAsSecureOrigin: true, // Optional: For testing on localhost
+            notifyButton: { enable: true } // Enable the default notification prompt
+        });
+
+        console.log("OneSignal initialized successfully");
+
+        // Check if the user is already subscribed
+        const isSubscribed = await OneSignal.isPushNotificationsEnabled();
+        console.log("Notification enabled:", isSubscribed);
+
+        // Retrieve the user's player ID
+        const userId = await OneSignal.getUserId();
+        console.log("OneSignal User ID:", userId);
+    } catch (error) {
+        console.error("OneSignal Initialization Error:", error);
+    }
+});
+
+// Handle subscription changes
+OneSignal.push(function() {
+    OneSignal.on('subscriptionChange', function(isSubscribed) {
+        if (isSubscribed) {
+            console.log("User subscribed to notifications");
+        } else {
+            console.log("User unsubscribed from notifications");
+        }
+    });
+});
+
+// Optionally, show the default slidedown prompt
+OneSignal.push(() => {
+    OneSignal.showSlidedownPrompt();
+});
+    </script>
+
     <script src="https://kit.fontawesome.com/8749291112.js" crossorigin="anonymous"></script>
 
     <script async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2859143237615606'crossorigin='anonymous'></script>
