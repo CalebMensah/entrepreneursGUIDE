@@ -22,14 +22,31 @@
             </small>
         </div>
         
- 
         <div class="single-page">
             {{ .Content }}
         </div>
       
     </div>
 
-    
+    <!-- Comments Section (Giscus) -->
+<div class="comments-section">
+    <h2>Comments</h2>
+    <script src="https://giscus.app/client.js"
+        data-repo="CalebMensah/entrepreneursGUIDE"
+        data-repo-id="R_kgDOMpPjIg"
+        data-category="General"
+        data-category-id="DIC_kwDOMpPjIs4Cnedi"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="light_high_contrast"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+    </script>
 </div>
 
    <!-- Optional: Display More Posts Below the Latest Post -->
@@ -37,7 +54,7 @@
     <div class="latest-post-container">
         <h1>Latest post</h1>
         <div class="post-rows">
-        {{range first 5 (where .Site.RegularPages "Section" "post") }}
+        {{ range first 5 (where .Site.RegularPages "Section" "post") }}
         <div class="post-summary1">
             <div class="post-image1">
                 <a href="{{ .Permalink }}">
@@ -46,6 +63,7 @@
             </div>
             <div class="post-content1">
                 <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                <span><a href="{{ .Permalink }}">{{ .Description }}</a></span>
                 <h3> <a href="{{ .Permalink }}">read more</a></h3>
             </div>
         </div>
@@ -54,7 +72,8 @@
     </div>
 </section>
 
-<!--- pop up form for email collection -->
+
+<!--- pop-up form for email collection -->
 <div id="ebook-popup" class="ebook-popup" style="display: none;">
     <div class="popup-content">
         <span class="close-popup">&times;</span>
@@ -67,9 +86,7 @@
     </div>
 </div>
 
-
-
 <!-- link to external javascript file -->
- <script type="module" src="/js/ebook.js"></script>
+<script type="module" src="/js/ebook.js"></script>
 
 {{ end }}

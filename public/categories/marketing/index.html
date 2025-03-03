@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="http://localhost:1313/images/favicon-512.png">
+    <title>Marketing</title>
+
+    <link rel="stylesheet" href="http://localhost:1313/css/style.css">
+    <link rel="stylesheet" href="http://localhost:1313/css/morestyles.css">
+
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+
+    <script>
+
+
+window.OneSignal = window.OneSignal || [];
+OneSignal.push(async function() {
+    try {
+        await OneSignal.init({
+            appId: "3684ab0f-136e-404a-ab10-8206040c0129", 
+            allowLocalhostAsSecureOrigin: true, 
+            notifyButton: { enable: true } 
+        });
+
+        console.log("OneSignal initialized successfully");
+
+        
+        const isSubscribed = await OneSignal.isPushNotificationsEnabled();
+        console.log("Notification enabled:", isSubscribed);
+
+        if(!isSubscribed) {
+          console.log("showing notification prompt")
+          OneSignal.showSlidedownPrompt()
+        }
+
+        
+        const userId = await OneSignal.getUserId();
+        console.log("OneSignal User ID:", userId);
+    } catch (error) {
+        console.error("OneSignal Initialization Error:", error);
+    }
+});
+
+
+OneSignal.push(function() {
+    OneSignal.on('subscriptionChange', function(isSubscribed) {
+        if (isSubscribed) {
+            console.log("User subscribed to notifications");
+        } else {
+            console.log("User unsubscribed from notifications");
+        }
+    });
+});
+
+    </script>
+
+    <script src="https://kit.fontawesome.com/8749291112.js" crossorigin="anonymous"></script>
+
+    <script async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2859143237615606'crossorigin='anonymous'></script>
+     <meta name='google-adsense-account' content='ca-pub-2859143237615606'>
+
+     <script type="application/ld+json">
+      {
+          "@context": "https://schema.org",
+          "@type":"Article",
+          "mainEntityOfPage": {
+              "@type": "webPage",
+              "@id": "http://localhost:1313/categories/marketing/"
+          },
+          "headline": "Marketing",
+          "image": [
+          ""
+          ],
+          "datePublished": "2025-3-02T12:00:00Z",
+          "dateModified": "2025-3-02T12:00:00Z",
+          "author": {
+              "@type": 'Organization',
+              "name": "businessMasters",
+              "logo": {
+                  "@type": "ImageObject",
+                  "url": "/images/logo1.png",
+                  "width": 192,
+                  "height": 60
+              }
+          },
+          "description": ""
+      }
+  </script>
+
+    
+</head>
+<body>
+
+    <header>
+        <img src="http://localhost:1313/images/logo.webp" alt="businessmasters" loading="lazy">
+        <button class="toggle-menu" aria-label="Toggle menu">
+            &#9776
+        </button>
+        <nav class="nav-links">
+            <a href="http://localhost:1313/">Home</a>
+            <a href="http://localhost:1313/post">Post</a>
+            <a href="http://localhost:1313/news">News</a>
+            <a href="http://localhost:1313/about">About</a>
+            <a href="http://localhost:1313/contact">Contact Us</a>
+        </nav>
+    </header>
+
+   
+    
+    <main class="wrapper">
+        
+<section>
+    
+    <div >
+        <h2><a href="http://localhost:1313/post/personal-brand/">How to Build a Personal Brand as an Entrepreneur</a></h2>
+        <p>Introduction In today’s competitive market, having a strong personal brand is crucial for entrepreneurs. A well-crafted personal brand helps you establish credibility, attract clients, and differentiate yourself from competitors. In this guide, we’ll explore actionable steps to build and grow your personal brand effectively.
+What is Personal Branding? Personal branding is the process of creating a unique identity that reflects your skills, values, and expertise. It’s how people perceive you in your industry and what sets you apart from others.</p>
+    </div>
+    
+</section>
+
+    </main>
+
+    <footer>
+        
+        <div class="subscribe-form1">
+          <p>Subscribe to our newsletter and get exclusive tips delivered to your inbox</p>
+          <form id="subscribeForm" method="POST" > 
+          <input type="email" name="email" placeholder="Enter your email here"/>
+          <button type="submit">Subscribe Now</button>
+          </form>
+          </div>
+          
+          <div class="icons">
+            <a href="https://www.facebook.com/businessmasters"><i class="fa-brands fa-facebook"></i></a>
+           <a href="https://www.instagram.com/businessmasters.gh"> <i class="fa-brands fa-instagram"></i></a>
+            <a href="https://tiktok.com/@businessmasters5"><i class="fa-brands fa-tiktok"></i></a>
+            <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+
+          <p>&copy; 2024 entrepreneursGUIDE</p>
+    </footer>
+
+    
+
+    <script>
+        document.getElementById("subscribeForm").addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const email = document.getElementById("email").value.trim();
+          const responseMessage = document.getElementById("responseMessage");
+      
+          
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailPattern.test(email)) {
+            responseMessage.innerHTML = "Enter a valid email address.";
+            responseMessage.style.color = "red";
+            return;
+          }
+      
+          responseMessage.innerHTML = "Checking...";
+          responseMessage.style.color = "green";
+      
+          try {
+            
+            const checkResponse = await fetch(
+              `https://sheetdb.io/api/v1/w7eydswfjd972/search?Email=${encodeURIComponent(email)}`
+            )
+            
+            if (!checkResponse.ok) throw new Error("Check failed");
+            
+            const existingData = await checkResponse.json();
+            console.log("API Response:", existingData); 
+            
+            if (existingData.length > 0) {
+              responseMessage.innerHTML = "Email already subscribed!";
+              responseMessage.style.color = "red";
+              return;
+            }
+      
+            
+            responseMessage.innerHTML = "Submitting...";
+            const postResponse = await fetch("https://sheetdb.io/api/v1/w7eydswfjd972", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                data: [{ 
+                  Email: email, 
+                  Joined_at: new Date().toLocaleString() 
+                }]
+              }),
+            });
+      
+            if (postResponse.ok) {
+              responseMessage.innerHTML = "Subscription successful!";
+              responseMessage.style.color = "green";
+            } else {
+              responseMessage.innerHTML = "Error. Try again.";
+              responseMessage.style.color = "red";
+            }
+          } catch (error) {
+            responseMessage.innerHTML = "Failed to submit. Please try again.";
+            responseMessage.style.color = "red";
+          }
+        });
+      </script>
+    
+    <script src="http://localhost:1313/js/script.js"></script>
+</body>
+</html>

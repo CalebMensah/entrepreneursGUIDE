@@ -33,6 +33,9 @@
     </div>
 </section>
 
+
+
+
 <!-- Optional: Display More Posts Below the Latest Post -->
 <section class="latest-post">
     <div class="latest-post-container">
@@ -47,6 +50,7 @@
             </div>
             <div class="post-content1">
                 <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                <span><a href="{{ .Permalink }}">{{ .Description }}</a></span>
                 <h3> <a href="{{ .Permalink }}">read more</a></h3>
             </div>
         </div>
@@ -54,6 +58,8 @@
     </div>
     </div>
 </section>
+
+
 
  <!--- pop up form for email collection -->
 <div id="ebook-popup" class="ebook-popup" style="display: none;">

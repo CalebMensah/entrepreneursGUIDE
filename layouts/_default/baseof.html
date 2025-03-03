@@ -20,7 +20,8 @@ OneSignal.push(async function() {
         await OneSignal.init({
             appId: "3684ab0f-136e-404a-ab10-8206040c0129", // Replace with your OneSignal App ID
             allowLocalhostAsSecureOrigin: true, // Optional: For testing on localhost
-            notifyButton: { enable: true } // Enable the default notification prompt
+            notifyButton: { enable: true }, // Enable the default notification prompt
+            promptOptions: {autoPrompt: false}
         });
 
         console.log("OneSignal initialized successfully");
@@ -31,7 +32,9 @@ OneSignal.push(async function() {
 
         if(!isSubscribed) {
           console.log("showing notification prompt")
-          OneSignal.showSlidedownPrompt()
+          setTimeout(() => {
+            OneSignal.showSlidedownPrompt()
+          }, 3000)
         }
 
         // Retrieve the user's player ID
@@ -100,8 +103,8 @@ OneSignal.push(function() {
         <nav class="nav-links">
             <a href="/">Home</a>
             <a href="/post">Post</a>
-            <a href="/news">News</a>
-            <a href="/about">About</a>
+            <a href="/news/">News</a>
+            <a href="/about/">About</a>
             <a href="/contact">Contact Us</a>
         </nav>
     </header>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="http://localhost:1313/images/favicon-512.png">
-    <title>News</title>
+    <title>Business News</title>
 
     <link rel="stylesheet" href="http://localhost:1313/css/style.css">
     <link rel="stylesheet" href="http://localhost:1313/css/morestyles.css">
@@ -20,7 +20,8 @@ OneSignal.push(async function() {
         await OneSignal.init({
             appId: "3684ab0f-136e-404a-ab10-8206040c0129", 
             allowLocalhostAsSecureOrigin: true, 
-            notifyButton: { enable: true } 
+            notifyButton: { enable: true }, 
+            promptOptions: {autoPrompt: false}
         });
 
         console.log("OneSignal initialized successfully");
@@ -31,7 +32,9 @@ OneSignal.push(async function() {
 
         if(!isSubscribed) {
           console.log("showing notification prompt")
-          OneSignal.showSlidedownPrompt()
+          setTimeout(() => {
+            OneSignal.showSlidedownPrompt()
+          }, 3000)
         }
 
         
@@ -68,7 +71,7 @@ OneSignal.push(function() {
               "@type": "webPage",
               "@id": "http://localhost:1313/news/"
           },
-          "headline": "News",
+          "headline": "Business News",
           "image": [
           ""
           ],
@@ -84,7 +87,7 @@ OneSignal.push(function() {
                   "height": 60
               }
           },
-          "description": ""
+          "description": "Latest business news"
       }
   </script>
 
@@ -100,8 +103,8 @@ OneSignal.push(function() {
         <nav class="nav-links">
             <a href="http://localhost:1313/">Home</a>
             <a href="http://localhost:1313/post">Post</a>
-            <a href="http://localhost:1313/news">News</a>
-            <a href="http://localhost:1313/about">About</a>
+            <a href="http://localhost:1313/news/">News</a>
+            <a href="http://localhost:1313/about/">About</a>
             <a href="http://localhost:1313/contact">Contact Us</a>
         </nav>
     </header>
@@ -110,27 +113,96 @@ OneSignal.push(function() {
     
     <main class="wrapper">
         
-<section class="news-page">
- <div class="news-page-header">
-    <h1>Latest Business and Entrepreneurship News</h1>
-
+<div class="news-container">
+    <h1 class="news-header">Latest Business News</h1>
     
-    <div class="filter-section">
-        <label for="category-filtering">Filter by Category</label>
-        <select id="category-filter">
-            <option value="business" selected>business</option>
-            <option value="technology">technology</option>
-            <option value="general">general</option>
-        </select>
+    <div id="news-list" class="news-grid">
+        
     </div>
- </div>
+    
+    <p id="no-news" class="no-news-message" style="display: none;">No news available at the moment. Please check back later.</p>
+</div>
 
+<script>
+fetch("/news.json")
+    .then(response => response.json())
+    .then(news => {
+        let newsList = document.getElementById("news-list");
+        let noNewsMessage = document.getElementById("no-news");
+
+        if (news.length === 0) {
+            noNewsMessage.style.display = "block";
+        } else {
+            news.forEach((article, index) => {
+                let newsItem = `
+                    <div class="news-item">
+                        <a href="http://localhost:1313/news/${index}" class="news-link">
+                            <img src="${article.urlToImage || '/default-image.jpg'}" alt="${article.title}" class="news-img">
+                            <h2 class="news-title">${article.title}</h2>
+                        </a>
+                        <p class="news-author">By ${article.author || 'Unknown'}</p>
+                        <p class="news-description">${article.description || 'No description available.'}</p>
+                    </div>
+                `;
+                newsList.innerHTML += newsItem;
+            });
+        }
+    })
+    .catch(error => {
+        document.getElementById("no-news").innerText = "Error loading news. Please try again later.";
+        document.getElementById("no-news").style.display = "block";
+        console.error("❌ Error loading news:", error);
+    });
+</script>
+
+<style>
  
- <div id="loading-indicator" style="display: none; text-align: center; margin: 20px;">Loading news...</div>
-
-    <div id="news-container"></div>
-</section>
-<script src="http://localhost:1313/js/news.js"></script>
+.news-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.news-header {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.news-item {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+.news-item:hover {
+    transform: translateY(-5px);
+}
+.news-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.news-title {
+    font-size: 1.2rem;
+    padding: 10px;
+}
+.news-author, .news-description {
+    padding: 0 10px;
+    font-size: 0.9rem;
+    color: #555;
+}
+.no-news-message {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #888;
+    margin-top: 20px;
+}
+</style>
 
     </main>
 

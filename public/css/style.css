@@ -5,7 +5,7 @@
 }
 body {
     font-family: 'Lora', serif;
-    line-height: 1.6;
+    line-height: 1.6rem;
     margin: 0;
     padding: 0;
     background-color: #fff;
@@ -89,7 +89,7 @@ footer {
     text-align: center;
     margin-top: 40px;
 }
-h1,h2,h3 {
+h1,h2,h3, h4 {
     color: blue;
 }
 span {
@@ -205,11 +205,15 @@ button:hover {
     padding: 15px;
     text-align: center;
 }
+.post-content h3 {
+    text-decoration: underline;
+    margin-bottom: 5px;
+}
 .post-content h3 a{
-    color: #007bff;
     font-size: 1.2rem;
-    text-decoration: none;
+    text-decoration: underline;
     font-weight: bold;
+    color: #007bff;
 }
 .post-content h3 a:hover {
     text-decoration: underline;
@@ -231,7 +235,7 @@ button:hover {
 }
 .post-rows {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin:  20px;
 }
@@ -259,11 +263,11 @@ border-radius: 8px 0 0 8px;
 .post-content1 h2 a{
     margin: 0 0 0.5rem 0;
     font-size: 15px;
-    text-decoration: none;
+    text-decoration: underline;
 }
 .post-content1 h3 a{
-  color: #007bff;
-  text-decoration: none;
+  margin-left: 10px;
+  text-decoration: underline;
   font-size: 15px;
 }
 .post-content1 h3 a:hover{
@@ -280,8 +284,12 @@ border-radius: 8px 0 0 8px;
     padding: 10px;
   }
   .post-page-single {
-    
     margin-top: 40px;
+  }
+  .post-page-single h1 {
+    margin-top: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
   }
 .post-header {
     font-size: 2rem;
@@ -290,20 +298,22 @@ border-radius: 8px 0 0 8px;
 }
 .post-page-single .post-img {
     width: 95%;
-    height: auto;
+    height: 300px;
     margin-left: 2.5%;
     border-radius: 8px;
     margin-bottom: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .single-page {
-    line-height: 1.6;
-    font-size: 1rem;
+    line-height: 2.0rem;
+    font-size: 1.2rem;
     color: #555;
     padding: 20px;
 }
 .single-page h1, .single-page h2, .single-page h3 {
     color: #007bff;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 .single-page p {
     margin-bottom: 15px;
@@ -358,6 +368,32 @@ border-radius: 8px 0 0 8px;
 }
 .post-page-single .download-text {
     margin-top: 50px;
+}
+.related-articles {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    padding: 5px;
+
+}
+.related-articles a {
+    text-align: center;
+}
+#related-articles {
+    margin-top: 20px;
+    margin: -5px;
+    padding: 10px;
+}
+
+.single-page li {
+    margin-left: 30px;
+}
+ .post-summary1 span a{
+    text-decoration: none;
+    color: #007bff;
+    text-align: center;
+    margin-left: 10px;
 }
 
 /* for small screens */
@@ -454,7 +490,7 @@ border-radius: 8px 0 0 8px;
         padding: 5px 0;
     }
     .latest-post-container h1 {
-        margin-top: -70px;
+        margin-top: 10px;
     }
     header h3 {
         margin-left: 5px;
@@ -571,7 +607,7 @@ border-radius: 8px 0 0 8px;
     font-size: 0.9rem;
 }
 .post-image1 img {
-    height: 100px;
+    height: 150px;
 }
 .model-content {
     width: 95%;
@@ -596,7 +632,9 @@ nav[aria-label ="breadcrumb"] {
     padding: 6px 10px;
 }
 .single-page {
-    padding: 10px;
+    padding: 15px;
+    font-size: 1rem;
+    line-height: 2.0rem;
 }
 .post-page-single {
     padding: 5px;
@@ -606,9 +644,39 @@ nav[aria-label ="breadcrumb"] {
     grid-template-columns: repeat(1, 1fr);
   }
   .post-image img {
-    height: 100px
+    height: 150px
   }
   .post-content p {
     display: none;
   }
+  .news-container {
+    padding: 10px;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+.news-card img {
+    height: 150px;
+}
+
+.news-content h3 {
+    font-size: 1rem;
+}
+
+.news-content p {
+    font-size: 0.9rem;
+}
+.comments-section {
+    padding: 15px;
+    margin: 20px auto;
+}
+
+.comments-section h2 {
+    font-size: 20px;
+}
+#related-articles {
+    padding: 20px;
+}
 }

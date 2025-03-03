@@ -9,7 +9,51 @@
     <link rel="stylesheet" href="http://localhost:1313/css/style.css">
     <link rel="stylesheet" href="http://localhost:1313/css/morestyles.css">
 
-    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+
+    <script>
+
+
+window.OneSignal = window.OneSignal || [];
+OneSignal.push(async function() {
+    try {
+        await OneSignal.init({
+            appId: "3684ab0f-136e-404a-ab10-8206040c0129", 
+            allowLocalhostAsSecureOrigin: true, 
+            notifyButton: { enable: true } 
+        });
+
+        console.log("OneSignal initialized successfully");
+
+        
+        const isSubscribed = await OneSignal.isPushNotificationsEnabled();
+        console.log("Notification enabled:", isSubscribed);
+
+        if(!isSubscribed) {
+          console.log("showing notification prompt")
+          OneSignal.showSlidedownPrompt()
+        }
+
+        
+        const userId = await OneSignal.getUserId();
+        console.log("OneSignal User ID:", userId);
+    } catch (error) {
+        console.error("OneSignal Initialization Error:", error);
+    }
+});
+
+
+OneSignal.push(function() {
+    OneSignal.on('subscriptionChange', function(isSubscribed) {
+        if (isSubscribed) {
+            console.log("User subscribed to notifications");
+        } else {
+            console.log("User unsubscribed from notifications");
+        }
+    });
+});
+
+    </script>
 
     <script src="https://kit.fontawesome.com/8749291112.js" crossorigin="anonymous"></script>
 
@@ -28,8 +72,8 @@
           "image": [
           ""
           ],
-          "datePublished": "2025-1-05T00:00:00Z",
-          "dateModified": "2025-1-05T00:00:00Z",
+          "datePublished": "2025-3-02T12:00:00Z",
+          "dateModified": "2025-3-02T12:00:00Z",
           "author": {
               "@type": 'Organization',
               "name": "businessMasters",
@@ -67,6 +111,18 @@
     <main class="wrapper">
         
 <section>
+    
+    <div >
+        <h2><a href="http://localhost:1313/post/business-to-start-today/">10 Low-Cost Businesses You Can Start Today</a></h2>
+        <p>Introduction Starting a business doesn’t always require a huge investment. With the right idea and strategy, you can launch a profitable business with minimal upfront costs. In this guide, we’ll explore 10 low-cost business ideas that you can start today, even on a tight budget.
+1. Freelance Services If you have a skill like writing, graphic design, video editing, or programming, you can offer freelance services on platforms like Upwork, Fiverr, or Freelancer.</p>
+    </div>
+    
+    <div >
+        <h2><a href="http://localhost:1313/post/personal-brand/">How to Build a Personal Brand as an Entrepreneur</a></h2>
+        <p>Introduction In today’s competitive market, having a strong personal brand is crucial for entrepreneurs. A well-crafted personal brand helps you establish credibility, attract clients, and differentiate yourself from competitors. In this guide, we’ll explore actionable steps to build and grow your personal brand effectively.
+What is Personal Branding? Personal branding is the process of creating a unique identity that reflects your skills, values, and expertise. It’s how people perceive you in your industry and what sets you apart from others.</p>
+    </div>
     
     <div >
         <h2><a href="http://localhost:1313/post/validating-your-business-idea/">  How to Validate Your Business Idea Before Launching</a></h2>

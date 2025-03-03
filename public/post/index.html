@@ -20,7 +20,8 @@ OneSignal.push(async function() {
         await OneSignal.init({
             appId: "3684ab0f-136e-404a-ab10-8206040c0129", 
             allowLocalhostAsSecureOrigin: true, 
-            notifyButton: { enable: true } 
+            notifyButton: { enable: true }, 
+            promptOptions: {autoPrompt: false}
         });
 
         console.log("OneSignal initialized successfully");
@@ -31,7 +32,9 @@ OneSignal.push(async function() {
 
         if(!isSubscribed) {
           console.log("showing notification prompt")
-          OneSignal.showSlidedownPrompt()
+          setTimeout(() => {
+            OneSignal.showSlidedownPrompt()
+          }, 3000)
         }
 
         
@@ -72,8 +75,8 @@ OneSignal.push(function() {
           "image": [
           ""
           ],
-          "datePublished": "2025-1-05T00:00:00Z",
-          "dateModified": "2025-1-05T00:00:00Z",
+          "datePublished": "2025-3-02T12:00:00Z",
+          "dateModified": "2025-3-02T12:00:00Z",
           "author": {
               "@type": 'Organization',
               "name": "businessMasters",
@@ -100,8 +103,8 @@ OneSignal.push(function() {
         <nav class="nav-links">
             <a href="http://localhost:1313/">Home</a>
             <a href="http://localhost:1313/post">Post</a>
-            <a href="http://localhost:1313/news">News</a>
-            <a href="http://localhost:1313/about">About</a>
+            <a href="http://localhost:1313/news/">News</a>
+            <a href="http://localhost:1313/about/">About</a>
             <a href="http://localhost:1313/contact">Contact Us</a>
         </nav>
     </header>
@@ -120,14 +123,39 @@ OneSignal.push(function() {
         <div class="post-grid">
             
             <article class="post-card">
+                <a href="http://localhost:1313/post/business-to-start-today/">
+                    <div class="post-image">
+                        <img src="http://localhost:1313/images/business-ideas.webp" alt="10 Low-Cost Businesses You Can Start Today" loading="lazy">
+                    </div>
+                    <div class="post-content">
+                        <h3>10 Low-Cost Businesses You Can Start Today</h3>
+                        <span><a href="http://localhost:1313/post/business-to-start-today/">Discover 10 profitable low-cost businesses you can start today with minimal investment and high earning potential.</a></span>
+                        <h3> <a href="http://localhost:1313/post/business-to-start-today/">read more</a></h3>
+                    </div>
+                </a>
+            </article>
+            
+            <article class="post-card">
+                <a href="http://localhost:1313/post/personal-brand/">
+                    <div class="post-image">
+                        <img src="http://localhost:1313/images/personal-branding.png" alt="How to Build a Personal Brand as an Entrepreneur" loading="lazy">
+                    </div>
+                    <div class="post-content">
+                        <h3>How to Build a Personal Brand as an Entrepreneur</h3>
+                        <span><a href="http://localhost:1313/post/personal-brand/">Learn how to build a strong personal brand as an entrepreneur and increase your visibility using proven strategies.</a></span>
+                        <h3> <a href="http://localhost:1313/post/personal-brand/">read more</a></h3>
+                    </div>
+                </a>
+            </article>
+            
+            <article class="post-card">
                 <a href="http://localhost:1313/post/validating-your-business-idea/">
                     <div class="post-image">
                         <img src="http://localhost:1313/images/validate.png" alt="  How to Validate Your Business Idea Before Launching" loading="lazy">
                     </div>
                     <div class="post-content">
                         <h3>  How to Validate Your Business Idea Before Launching</h3>
-                        <p>Learn how to validate your business idea before launching.
-                        </p>
+                        <span><a href="http://localhost:1313/post/validating-your-business-idea/">Learn how to validate your business idea before launching.</a></span>
                         <h3> <a href="http://localhost:1313/post/validating-your-business-idea/">read more</a></h3>
                     </div>
                 </a>
@@ -140,8 +168,7 @@ OneSignal.push(function() {
                     </div>
                     <div class="post-content">
                         <h3>  Overcoming Barriers to Developing an Entrepreneurial Mindset</h3>
-                        <p> Developing an entrepreneurial mindset is crucial for anyone aspiring to create, innovate, and lead successfully. However, various barriers ...
-                        </p>
+                        <span><a href="http://localhost:1313/post/overcome-barriers/"> Developing an entrepreneurial mindset is crucial for anyone aspiring to create, innovate, and lead successfully. However, various barriers ...</a></span>
                         <h3> <a href="http://localhost:1313/post/overcome-barriers/">read more</a></h3>
                     </div>
                 </a>
@@ -154,37 +181,8 @@ OneSignal.push(function() {
                     </div>
                     <div class="post-content">
                         <h3>Real life examples of entrepreneur mindset</h3>
-                        <p>The entrepreneurial mindset isn’t just a theoretical concept; it’s a powerful approach to life and business that has been demonstrated...
-                        </p>
+                        <span><a href="http://localhost:1313/post/mindset-examples/">The entrepreneurial mindset isn’t just a theoretical concept; it’s a powerful approach to life and business that has been demonstrated...</a></span>
                         <h3> <a href="http://localhost:1313/post/mindset-examples/">read more</a></h3>
-                    </div>
-                </a>
-            </article>
-            
-            <article class="post-card">
-                <a href="http://localhost:1313/post/who-is-an-entrepreneur/">
-                    <div class="post-image">
-                        <img src="http://localhost:1313/images/entrepreneurship2.webp" alt=" Who is an entrepreneur? What are the qualities of an entrepreneur? " loading="lazy">
-                    </div>
-                    <div class="post-content">
-                        <h3> Who is an entrepreneur? What are the qualities of an entrepreneur? </h3>
-                        <p> Entrepreneurs are innovators, creators, and leaders. They are individuals who take the leap into the unknown ... 
-                        </p>
-                        <h3> <a href="http://localhost:1313/post/who-is-an-entrepreneur/">read more</a></h3>
-                    </div>
-                </a>
-            </article>
-            
-            <article class="post-card">
-                <a href="http://localhost:1313/post/entrepreneur-mindset/">
-                    <div class="post-image">
-                        <img src="http://localhost:1313/images/mindset1.webp" alt=" The Entrepreneurial Mindset! What It Is and How to Cultivate It" loading="lazy">
-                    </div>
-                    <div class="post-content">
-                        <h3> The Entrepreneurial Mindset! What It Is and How to Cultivate It</h3>
-                        <p>The entrepreneurial mindset is characterized by a set of attitudes and skills that enable individuals to identify opportunities, take initiative ...
-                        </p>
-                        <h3> <a href="http://localhost:1313/post/entrepreneur-mindset/">read more</a></h3>
                     </div>
                 </a>
             </article>

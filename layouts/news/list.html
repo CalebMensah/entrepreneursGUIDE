@@ -1,0 +1,93 @@
+{{ define "main" }}
+<div class="news-container">
+    <h1 class="news-header">Latest Business News</h1>
+    
+    <div id="news-list" class="news-grid">
+        <!-- News items will be inserted here by JavaScript -->
+    </div>
+    
+    <p id="no-news" class="no-news-message" style="display: none;">No news available at the moment. Please check back later.</p>
+</div>
+
+<script>
+fetch("/news.json")
+    .then(response => response.json())
+    .then(news => {
+        let newsList = document.getElementById("news-list");
+        let noNewsMessage = document.getElementById("no-news");
+
+        if (news.length === 0) {
+            noNewsMessage.style.display = "block";
+        } else {
+            news.forEach((article, index) => {
+                let newsItem = `
+                    <div class="news-item">
+                        <a href="/news/${index}" class="news-link">
+                            <img src="${article.urlToImage || '/default-image.jpg'}" alt="${article.title}" class="news-img">
+                            <h2 class="news-title">${article.title}</h2>
+                        </a>
+                        <p class="news-author">By ${article.author || 'Unknown'}</p>
+                        <p class="news-description">${article.description || 'No description available.'}</p>
+                    </div>
+                `;
+                newsList.innerHTML += newsItem;
+            });
+        }
+    })
+    .catch(error => {
+        document.getElementById("no-news").innerText = "Error loading news. Please try again later.";
+        document.getElementById("no-news").style.display = "block";
+        console.error("❌ Error loading news:", error);
+    });
+</script>
+
+<style>
+/* Responsive and Modern Design */
+.news-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.news-header {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.news-item {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+.news-item:hover {
+    transform: translateY(-5px);
+}
+.news-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.news-title {
+    font-size: 1.2rem;
+    padding: 10px;
+}
+.news-author, .news-description {
+    padding: 0 10px;
+    font-size: 0.9rem;
+    color: #555;
+}
+.no-news-message {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #888;
+    margin-top: 20px;
+}
+</style>
+{{ end }}
+

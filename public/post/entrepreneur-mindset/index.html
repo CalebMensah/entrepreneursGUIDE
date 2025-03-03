@@ -9,7 +9,51 @@
     <link rel="stylesheet" href="http://localhost:1313/css/style.css">
     <link rel="stylesheet" href="http://localhost:1313/css/morestyles.css">
 
-    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+
+    <script>
+
+
+window.OneSignal = window.OneSignal || [];
+OneSignal.push(async function() {
+    try {
+        await OneSignal.init({
+            appId: "3684ab0f-136e-404a-ab10-8206040c0129", 
+            allowLocalhostAsSecureOrigin: true, 
+            notifyButton: { enable: true } 
+        });
+
+        console.log("OneSignal initialized successfully");
+
+        
+        const isSubscribed = await OneSignal.isPushNotificationsEnabled();
+        console.log("Notification enabled:", isSubscribed);
+
+        if(!isSubscribed) {
+          console.log("showing notification prompt")
+          OneSignal.showSlidedownPrompt()
+        }
+
+        
+        const userId = await OneSignal.getUserId();
+        console.log("OneSignal User ID:", userId);
+    } catch (error) {
+        console.error("OneSignal Initialization Error:", error);
+    }
+});
+
+
+OneSignal.push(function() {
+    OneSignal.on('subscriptionChange', function(isSubscribed) {
+        if (isSubscribed) {
+            console.log("User subscribed to notifications");
+        } else {
+            console.log("User unsubscribed from notifications");
+        }
+    });
+});
+
+    </script>
 
     <script src="https://kit.fontawesome.com/8749291112.js" crossorigin="anonymous"></script>
 
@@ -95,7 +139,6 @@
             </small>
         </div>
         
- 
         <div class="single-page">
             <h3 id="introduction">Introduction</h3>
 <p>The entrepreneurial mindset is a way of thinking that empowers individuals to overcome challenges, be decisive, and accept responsibility for their outcomes. It is a set of beliefs, thought processes, and ways of viewing the world that drives entrepreneurial behavior. This mindset isn’t limited to those who start companies; it&rsquo;s a valuable perspective that can benefit anyone, regardless of their career path. In this blog post, we’ll explore what the entrepreneurial mindset is, why it’s important, and how you can develop it to achieve your goals.</p>
@@ -174,13 +217,17 @@ Entrepreneurs believe that their abilities and intelligence can be developed thr
 </ul>
 <h3 id="conclusion">Conclusion</h3>
 <p>The entrepreneurial mindset is not just for business owners—it’s a powerful way of thinking that can benefit anyone, regardless of their profession or life goals. By cultivating qualities like resilience, adaptability, creativity, and a growth mindset, you can navigate challenges more effectively, seize opportunities, and create value in your personal and professional life. Whether you’re aspiring to start your own business or simply want to take a more proactive approach to your career and life, developing an entrepreneurial mindset is a valuable and transformative pursuit.</p>
+<hr>
 <h2 id="related-articles">Related Articles</h2>
-<ul>
-<li><a href="http://localhost:1313/post/myth-challenges">Common Myths About Entrepreneurs</a></li>
-<li><a href="http://localhost:1313/post/mindset-examples">Mindset Examples</a></li>
-<li><a href="http://localhost:1313/post/who-is-an-entrepreneur">Who is an Entrepreneur?</a></li>
-<li><a href="http://localhost:1313/post/validating-your-business-idea">Validating your business idea</a></li>
-</ul>
+<div class="related-articles">
+ <a href="http://localhost:1313/post/myth-challenges">Common Myths About Entrepreneurs</a>
+ <a href="http://localhost:1313/post/entrepreneur-mindset">The Entrepreneurial Mindset</a>
+ <a href="http://localhost:1313/post/who-is-an-entrepreneur">Who is an Entrepreneur?</a>
+ <a href="http://localhost:1313/post/validating-your-business-idea">Validating your business idea</a>
+ </div>
+ 
+
+<hr>
 <!-- raw HTML omitted -->
 <div class="subscribe-form">
   <p>Subscribe to our newsletter and get exclusive tips delivered to your inbox</p>
@@ -254,77 +301,99 @@ Entrepreneurs believe that their abilities and intelligence can be developed thr
 
         </div>
       
-
-    <section class="latest-post">
-        <div class="latest-post-container">
-            <h1>Latest post</h1>
-            <div class="post-rows">
-            
-            <div class="post-summary1">
-                <div class="post-image1">
-                    <a href="http://localhost:1313/post/validating-your-business-idea/">
-                        <img src="http://localhost:1313/images/validate.png" alt="  How to Validate Your Business Idea Before Launching" loading="lazy">
-                    </a>
-                </div>
-                <div class="post-content1">
-                    <h2><a href="http://localhost:1313/post/validating-your-business-idea/">  How to Validate Your Business Idea Before Launching</a></h2>
-                    
-                </div>
-            </div>
-            
-            <div class="post-summary1">
-                <div class="post-image1">
-                    <a href="http://localhost:1313/post/overcome-barriers/">
-                        <img src="http://localhost:1313/images/overcome.jpg" alt="  Overcoming Barriers to Developing an Entrepreneurial Mindset" loading="lazy">
-                    </a>
-                </div>
-                <div class="post-content1">
-                    <h2><a href="http://localhost:1313/post/overcome-barriers/">  Overcoming Barriers to Developing an Entrepreneurial Mindset</a></h2>
-                    
-                </div>
-            </div>
-            
-            <div class="post-summary1">
-                <div class="post-image1">
-                    <a href="http://localhost:1313/post/mindset-examples/">
-                        <img src="http://localhost:1313/images/realmindset.webp" alt="Real life examples of entrepreneur mindset" loading="lazy">
-                    </a>
-                </div>
-                <div class="post-content1">
-                    <h2><a href="http://localhost:1313/post/mindset-examples/">Real life examples of entrepreneur mindset</a></h2>
-                    
-                </div>
-            </div>
-            
-            <div class="post-summary1">
-                <div class="post-image1">
-                    <a href="http://localhost:1313/post/who-is-an-entrepreneur/">
-                        <img src="http://localhost:1313/images/entrepreneurship2.webp" alt=" Who is an entrepreneur? What are the qualities of an entrepreneur? " loading="lazy">
-                    </a>
-                </div>
-                <div class="post-content1">
-                    <h2><a href="http://localhost:1313/post/who-is-an-entrepreneur/"> Who is an entrepreneur? What are the qualities of an entrepreneur? </a></h2>
-                    
-                </div>
-            </div>
-            
-            <div class="post-summary1">
-                <div class="post-image1">
-                    <a href="http://localhost:1313/post/entrepreneur-mindset/">
-                        <img src="http://localhost:1313/images/mindset1.webp" alt=" The Entrepreneurial Mindset! What It Is and How to Cultivate It" loading="lazy">
-                    </a>
-                </div>
-                <div class="post-content1">
-                    <h2><a href="http://localhost:1313/post/entrepreneur-mindset/"> The Entrepreneurial Mindset! What It Is and How to Cultivate It</a></h2>
-                    
-                </div>
-            </div>
-            
-        </div>
-        </div>
-    </section>
     </div>
+
+    
+<div class="comments-section">
+    <h2>Comments</h2>
+    <script src="https://giscus.app/client.js"
+        data-repo="CalebMensah/entrepreneursGUIDE"
+        data-repo-id="R_kgDOMpPjIg"
+        data-category="General"
+        data-category-id="DIC_kwDOMpPjIs4Cnedi"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="light_high_contrast"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+    </script>
 </div>
+
+   
+   <section class="latest-post">
+    <div class="latest-post-container">
+        <h1>Latest post</h1>
+        <div class="post-rows">
+        
+        <div class="post-summary1">
+            <div class="post-image1">
+                <a href="http://localhost:1313/post/business-to-start-today/">
+                    <img src="http://localhost:1313/images/business-ideas.webp" alt="10 Low-Cost Businesses You Can Start Today">
+                </a>
+            </div>
+            <div class="post-content1">
+                <h2><a href="http://localhost:1313/post/business-to-start-today/">10 Low-Cost Businesses You Can Start Today</a></h2>
+                <h3> <a href="http://localhost:1313/post/business-to-start-today/">read more</a></h3>
+            </div>
+        </div>
+        
+        <div class="post-summary1">
+            <div class="post-image1">
+                <a href="http://localhost:1313/post/personal-brand/">
+                    <img src="http://localhost:1313/images/personal-branding.png" alt="How to Build a Personal Brand as an Entrepreneur">
+                </a>
+            </div>
+            <div class="post-content1">
+                <h2><a href="http://localhost:1313/post/personal-brand/">How to Build a Personal Brand as an Entrepreneur</a></h2>
+                <h3> <a href="http://localhost:1313/post/personal-brand/">read more</a></h3>
+            </div>
+        </div>
+        
+        <div class="post-summary1">
+            <div class="post-image1">
+                <a href="http://localhost:1313/post/validating-your-business-idea/">
+                    <img src="http://localhost:1313/images/validate.png" alt="  How to Validate Your Business Idea Before Launching">
+                </a>
+            </div>
+            <div class="post-content1">
+                <h2><a href="http://localhost:1313/post/validating-your-business-idea/">  How to Validate Your Business Idea Before Launching</a></h2>
+                <h3> <a href="http://localhost:1313/post/validating-your-business-idea/">read more</a></h3>
+            </div>
+        </div>
+        
+        <div class="post-summary1">
+            <div class="post-image1">
+                <a href="http://localhost:1313/post/overcome-barriers/">
+                    <img src="http://localhost:1313/images/overcome.jpg" alt="  Overcoming Barriers to Developing an Entrepreneurial Mindset">
+                </a>
+            </div>
+            <div class="post-content1">
+                <h2><a href="http://localhost:1313/post/overcome-barriers/">  Overcoming Barriers to Developing an Entrepreneurial Mindset</a></h2>
+                <h3> <a href="http://localhost:1313/post/overcome-barriers/">read more</a></h3>
+            </div>
+        </div>
+        
+        <div class="post-summary1">
+            <div class="post-image1">
+                <a href="http://localhost:1313/post/mindset-examples/">
+                    <img src="http://localhost:1313/images/realmindset.webp" alt="Real life examples of entrepreneur mindset">
+                </a>
+            </div>
+            <div class="post-content1">
+                <h2><a href="http://localhost:1313/post/mindset-examples/">Real life examples of entrepreneur mindset</a></h2>
+                <h3> <a href="http://localhost:1313/post/mindset-examples/">read more</a></h3>
+            </div>
+        </div>
+        
+    </div>
+    </div>
+</section>
+
 
 
 <div id="ebook-popup" class="ebook-popup" style="display: none;">
@@ -340,9 +409,7 @@ Entrepreneurs believe that their abilities and intelligence can be developed thr
 </div>
 
 
-
-
- <script type="module" src="http://localhost:1313/js/ebook.js"></script>
+<script type="module" src="http://localhost:1313/js/ebook.js"></script>
 
 
     </main>

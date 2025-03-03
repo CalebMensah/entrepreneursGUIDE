@@ -9,7 +9,51 @@
     <link rel="stylesheet" href="http://localhost:1313/css/style.css">
     <link rel="stylesheet" href="http://localhost:1313/css/morestyles.css">
 
-    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+
+    <script>
+
+
+window.OneSignal = window.OneSignal || [];
+OneSignal.push(async function() {
+    try {
+        await OneSignal.init({
+            appId: "3684ab0f-136e-404a-ab10-8206040c0129", 
+            allowLocalhostAsSecureOrigin: true, 
+            notifyButton: { enable: true } 
+        });
+
+        console.log("OneSignal initialized successfully");
+
+        
+        const isSubscribed = await OneSignal.isPushNotificationsEnabled();
+        console.log("Notification enabled:", isSubscribed);
+
+        if(!isSubscribed) {
+          console.log("showing notification prompt")
+          OneSignal.showSlidedownPrompt()
+        }
+
+        
+        const userId = await OneSignal.getUserId();
+        console.log("OneSignal User ID:", userId);
+    } catch (error) {
+        console.error("OneSignal Initialization Error:", error);
+    }
+});
+
+
+OneSignal.push(function() {
+    OneSignal.on('subscriptionChange', function(isSubscribed) {
+        if (isSubscribed) {
+            console.log("User subscribed to notifications");
+        } else {
+            console.log("User unsubscribed from notifications");
+        }
+    });
+});
+
+    </script>
 
     <script src="https://kit.fontawesome.com/8749291112.js" crossorigin="anonymous"></script>
 
@@ -28,8 +72,8 @@
           "image": [
           ""
           ],
-          "datePublished": "2025-1-05T00:00:00Z",
-          "dateModified": "2025-1-05T00:00:00Z",
+          "datePublished": "2025-3-02T12:00:00Z",
+          "dateModified": "2025-3-02T12:00:00Z",
           "author": {
               "@type": 'Organization',
               "name": "businessMasters",
@@ -69,12 +113,37 @@
 <section>
     
     <div >
+        <h2><a href="http://localhost:1313/tags/business-growth/">Business Growth</a></h2>
+        <p></p>
+    </div>
+    
+    <div >
         <h2><a href="http://localhost:1313/tags/business-ideas/">Business Ideas</a></h2>
         <p></p>
     </div>
     
     <div >
         <h2><a href="http://localhost:1313/tags/entrepreneurship/">Entrepreneurship</a></h2>
+        <p></p>
+    </div>
+    
+    <div >
+        <h2><a href="http://localhost:1313/tags/low-investment-businesses/">Low Investment Businesses</a></h2>
+        <p></p>
+    </div>
+    
+    <div >
+        <h2><a href="http://localhost:1313/tags/marketing/">Marketing</a></h2>
+        <p></p>
+    </div>
+    
+    <div >
+        <h2><a href="http://localhost:1313/tags/personal-branding/">Personal Branding</a></h2>
+        <p></p>
+    </div>
+    
+    <div >
+        <h2><a href="http://localhost:1313/tags/side-hustles/">Side Hustles</a></h2>
         <p></p>
     </div>
     
