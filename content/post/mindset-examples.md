@@ -2,7 +2,7 @@
 title: "Real life examples of entrepreneur mindset"
 image: "/images/realmindset.webp"
 date: 2024-08-28
-description: "The entrepreneurial mindset isn’t just a theoretical concept; it’s a powerful approach to life and business that has been demonstrated..."
+description: "The entrepreneurial mindset isn’t just a theoretical concept; it’s a powerful approach to life and business that..."
 tags:
   - entrepreneurship
   - startups

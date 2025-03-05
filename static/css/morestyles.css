@@ -158,14 +158,15 @@ h2 {
 /* ebook popup */
 
 .ebook-download-text {
-    margin-top: 100px;
+    margin-top: 20px;
     text-align: center;
     color: red;
+    margin-bottom: 20px;
 }
 .ebook-download-text a {
     text-align: center;
     color: red;
-    font-size: 15px;
+    font-size: 20px;
 }
 .ebook-download-text a:hover {
 color: rgb(111, 15, 15);
@@ -399,7 +400,7 @@ nav[aria-label ="breadcrumb"] li:last-child::after {
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .txt{
-        margin-top: 100px;
+        margin-top: 70px;
         text-align: center;
     }
     .post-ros{

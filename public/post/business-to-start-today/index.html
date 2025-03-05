@@ -20,7 +20,8 @@ OneSignal.push(async function() {
         await OneSignal.init({
             appId: "3684ab0f-136e-404a-ab10-8206040c0129", 
             allowLocalhostAsSecureOrigin: true, 
-            notifyButton: { enable: true } 
+            notifyButton: { enable: true }, 
+            promptOptions: {autoPrompt: false}
         });
 
         console.log("OneSignal initialized successfully");
@@ -31,7 +32,9 @@ OneSignal.push(async function() {
 
         if(!isSubscribed) {
           console.log("showing notification prompt")
-          OneSignal.showSlidedownPrompt()
+          setTimeout(() => {
+            OneSignal.showSlidedownPrompt()
+          }, 3000)
         }
 
         
@@ -100,8 +103,8 @@ OneSignal.push(function() {
         <nav class="nav-links">
             <a href="http://localhost:1313/">Home</a>
             <a href="http://localhost:1313/post">Post</a>
-            <a href="http://localhost:1313/news">News</a>
-            <a href="http://localhost:1313/about">About</a>
+            <a href="http://localhost:1313/news/">News</a>
+            <a href="http://localhost:1313/about/">About</a>
             <a href="http://localhost:1313/contact">Contact Us</a>
         </nav>
     </header>
@@ -234,7 +237,7 @@ OneSignal.push(function() {
 </ul>
 <h2 id="final-thoughts">Final Thoughts</h2>
 <p>Starting a business doesn’t have to be expensive. The key to success is <strong>choosing the right business for your skills, staying consistent, and using digital marketing to grow your brand</strong>.</p>
-<h3 id="-take-action-today"><strong>🚀 Take Action Today:</strong></h3>
+<h2 id="-take-action-today"><strong>🚀 Take Action Today:</strong></h2>
 <p>✅ Pick a business idea that matches your strengths.<br>
 ✅ Set up your online presence &amp; start marketing.<br>
 ✅ Stay committed and scale as you grow!</p>
@@ -290,6 +293,7 @@ OneSignal.push(function() {
             </div>
             <div class="post-content1">
                 <h2><a href="http://localhost:1313/post/business-to-start-today/">10 Low-Cost Businesses You Can Start Today</a></h2>
+                <span><a href="http://localhost:1313/post/business-to-start-today/">Discover 10 profitable low-cost businesses you can start today with minimal investment and high earning potential.</a></span>
                 <h3> <a href="http://localhost:1313/post/business-to-start-today/">read more</a></h3>
             </div>
         </div>
@@ -302,6 +306,7 @@ OneSignal.push(function() {
             </div>
             <div class="post-content1">
                 <h2><a href="http://localhost:1313/post/personal-brand/">How to Build a Personal Brand as an Entrepreneur</a></h2>
+                <span><a href="http://localhost:1313/post/personal-brand/">Learn how to build a strong personal brand as an entrepreneur and increase your visibility using proven strategies.</a></span>
                 <h3> <a href="http://localhost:1313/post/personal-brand/">read more</a></h3>
             </div>
         </div>
@@ -314,6 +319,7 @@ OneSignal.push(function() {
             </div>
             <div class="post-content1">
                 <h2><a href="http://localhost:1313/post/validating-your-business-idea/">  How to Validate Your Business Idea Before Launching</a></h2>
+                <span><a href="http://localhost:1313/post/validating-your-business-idea/">Learn how to validate your business idea before launching.</a></span>
                 <h3> <a href="http://localhost:1313/post/validating-your-business-idea/">read more</a></h3>
             </div>
         </div>
@@ -326,6 +332,7 @@ OneSignal.push(function() {
             </div>
             <div class="post-content1">
                 <h2><a href="http://localhost:1313/post/overcome-barriers/">  Overcoming Barriers to Developing an Entrepreneurial Mindset</a></h2>
+                <span><a href="http://localhost:1313/post/overcome-barriers/"> Developing an entrepreneurial mindset is crucial for anyone aspiring to create, innovate, and lead successfully. ...</a></span>
                 <h3> <a href="http://localhost:1313/post/overcome-barriers/">read more</a></h3>
             </div>
         </div>
@@ -338,6 +345,7 @@ OneSignal.push(function() {
             </div>
             <div class="post-content1">
                 <h2><a href="http://localhost:1313/post/mindset-examples/">Real life examples of entrepreneur mindset</a></h2>
+                <span><a href="http://localhost:1313/post/mindset-examples/">The entrepreneurial mindset isn’t just a theoretical concept; it’s a powerful approach to life and business that...</a></span>
                 <h3> <a href="http://localhost:1313/post/mindset-examples/">read more</a></h3>
             </div>
         </div>
@@ -362,6 +370,8 @@ OneSignal.push(function() {
 
 
 <script type="module" src="http://localhost:1313/js/ebook.js"></script>
+
+</div>
 
 
     </main>

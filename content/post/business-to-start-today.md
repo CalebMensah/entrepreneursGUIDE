@@ -115,7 +115,7 @@ If you enjoy creating videos, YouTube can be a great way to earn money through *
 ## Final Thoughts  
 Starting a business doesn’t have to be expensive. The key to success is **choosing the right business for your skills, staying consistent, and using digital marketing to grow your brand**.  
 
-### **🚀 Take Action Today:**  
+## **🚀 Take Action Today:**  
 ✅ Pick a business idea that matches your strengths.  
 ✅ Set up your online presence & start marketing.  
 ✅ Stay committed and scale as you grow!  

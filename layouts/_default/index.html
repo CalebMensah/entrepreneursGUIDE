@@ -1,4 +1,5 @@
 {{ define "main" }}
+<div class="main-container1">
 <section class="home-container">
     <div class="post-page-single">
         <!-- Hugo Template for Latest Post -->
@@ -33,7 +34,26 @@
     </div>
 </section>
 
-
+   <!-- Comments Section (Giscus) -->
+   <div class="comments-section">
+    <h2>Comments</h2>
+    <script src="https://giscus.app/client.js"
+        data-repo="CalebMensah/entrepreneursGUIDE"
+        data-repo-id="R_kgDOMpPjIg"
+        data-category="General"
+        data-category-id="DIC_kwDOMpPjIs4Cnedi"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="light_high_contrast"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+    </script>
+</div>
 
 
 <!-- Optional: Display More Posts Below the Latest Post -->
@@ -75,13 +95,10 @@
 </div>
 
 
-</div>
-</div>
-
 
  <!-- link to external javascript file -->
  <script src="/js/ebook.js"></script>
 
 
-
+</div>
 {{ end }}
