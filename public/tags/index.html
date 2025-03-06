@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="http://localhost:1313/images/favicon-512.png">
+    <link rel="icon" type="image/x-icon" href="https://businessmasters.netlify.app/images/favicon-512.png">
     <title>Tags</title>
 
-    <link rel="stylesheet" href="http://localhost:1313/css/style.css">
-    <link rel="stylesheet" href="http://localhost:1313/css/morestyles.css">
+    <link rel="stylesheet" href="https://businessmasters.netlify.app/css/style.css">
+    <link rel="stylesheet" href="https://businessmasters.netlify.app/css/morestyles.css">
 
     <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
 
@@ -21,7 +21,15 @@ OneSignal.push(async function() {
             appId: "3684ab0f-136e-404a-ab10-8206040c0129", 
             allowLocalhostAsSecureOrigin: true, 
             notifyButton: { enable: true }, 
-            promptOptions: {autoPrompt: false}
+            promptOptions: {
+              slidedown: {
+                enabled: true,
+                autoPrompt: true,
+                actionMessage: "We'd like to show you notifications for the latest news and updates.",
+                acceptButtonText: "ALLOW",
+                cancelButtonText: "NO THANKS"
+              }
+            }
         });
 
         console.log("OneSignal initialized successfully");
@@ -69,7 +77,7 @@ OneSignal.push(function() {
           "@type":"Article",
           "mainEntityOfPage": {
               "@type": "webPage",
-              "@id": "http://localhost:1313/tags/"
+              "@id": "https://businessmasters.netlify.app/tags/"
           },
           "headline": "Tags",
           "image": [
@@ -96,16 +104,16 @@ OneSignal.push(function() {
 <body>
 
     <header>
-        <img src="http://localhost:1313/images/logo.webp" alt="businessmasters" loading="lazy">
+        <img src="https://businessmasters.netlify.app/images/logo.webp" alt="businessmasters" loading="lazy">
         <button class="toggle-menu" aria-label="Toggle menu">
             &#9776
         </button>
         <nav class="nav-links">
-            <a href="http://localhost:1313/">Home</a>
-            <a href="http://localhost:1313/post">Post</a>
-            <a href="http://localhost:1313/news/">News</a>
-            <a href="http://localhost:1313/about/">About</a>
-            <a href="http://localhost:1313/contact">Contact Us</a>
+            <a href="https://businessmasters.netlify.app/">Home</a>
+            <a href="https://businessmasters.netlify.app/post">Post</a>
+            <a href="https://businessmasters.netlify.app/news/">News</a>
+            <a href="https://businessmasters.netlify.app/about/">About</a>
+            <a href="https://businessmasters.netlify.app/contact">Contact Us</a>
         </nav>
     </header>
 
@@ -116,47 +124,47 @@ OneSignal.push(function() {
 <section>
     
     <div >
-        <h2><a href="http://localhost:1313/tags/business-growth/">Business Growth</a></h2>
+        <h2><a href="https://businessmasters.netlify.app/tags/business-growth/">Business Growth</a></h2>
         <p></p>
     </div>
     
     <div >
-        <h2><a href="http://localhost:1313/tags/business-ideas/">Business Ideas</a></h2>
+        <h2><a href="https://businessmasters.netlify.app/tags/business-ideas/">Business Ideas</a></h2>
         <p></p>
     </div>
     
     <div >
-        <h2><a href="http://localhost:1313/tags/entrepreneurship/">Entrepreneurship</a></h2>
+        <h2><a href="https://businessmasters.netlify.app/tags/entrepreneurship/">Entrepreneurship</a></h2>
         <p></p>
     </div>
     
     <div >
-        <h2><a href="http://localhost:1313/tags/low-investment-businesses/">Low Investment Businesses</a></h2>
+        <h2><a href="https://businessmasters.netlify.app/tags/low-investment-businesses/">Low Investment Businesses</a></h2>
         <p></p>
     </div>
     
     <div >
-        <h2><a href="http://localhost:1313/tags/marketing/">Marketing</a></h2>
+        <h2><a href="https://businessmasters.netlify.app/tags/marketing/">Marketing</a></h2>
         <p></p>
     </div>
     
     <div >
-        <h2><a href="http://localhost:1313/tags/personal-branding/">Personal Branding</a></h2>
+        <h2><a href="https://businessmasters.netlify.app/tags/personal-branding/">Personal Branding</a></h2>
         <p></p>
     </div>
     
     <div >
-        <h2><a href="http://localhost:1313/tags/side-hustles/">Side Hustles</a></h2>
+        <h2><a href="https://businessmasters.netlify.app/tags/side-hustles/">Side Hustles</a></h2>
         <p></p>
     </div>
     
     <div >
-        <h2><a href="http://localhost:1313/tags/startups/">Startups</a></h2>
+        <h2><a href="https://businessmasters.netlify.app/tags/startups/">Startups</a></h2>
         <p></p>
     </div>
     
     <div >
-        <h2><a href="http://localhost:1313/tags/validate/">Validate</a></h2>
+        <h2><a href="https://businessmasters.netlify.app/tags/validate/">Validate</a></h2>
         <p></p>
     </div>
     
@@ -247,6 +255,6 @@ OneSignal.push(function() {
         });
       </script>
     
-    <script src="http://localhost:1313/js/script.js"></script>
+    <script src="https://businessmasters.netlify.app/js/script.js"></script>
 </body>
 </html>

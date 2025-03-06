@@ -166,7 +166,7 @@ h2 {
 .ebook-download-text a {
     text-align: center;
     color: red;
-    font-size: 20px;
+    font-size: 12px;
 }
 .ebook-download-text a:hover {
 color: rgb(111, 15, 15);
@@ -395,6 +395,95 @@ nav[aria-label ="breadcrumb"] li:last-child::after {
 .onesignal-bell-container {
     display: block !important;
 }
+
+.news-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.news-header {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.news-item {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+}
+
+.news-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.news-title {
+    font-size: 1.2rem;
+    padding: 10px;
+}
+
+.news-author, .news-description {
+    padding: 0 10px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.page-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #0073e6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 5px;
+    transition: background 0.3s;
+}
+
+.page-link:hover {
+    background: #005bb5;
+}
+
+.news-article {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.news-source {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0073e6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.news-source:hover {
+    background-color: #005bb5;
+}
+
 
 
 

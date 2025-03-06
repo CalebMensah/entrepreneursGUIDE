@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Side Hustles on My Entrepreneurship and Business Blog</title>
-    <link>http://localhost:1313/tags/side-hustles/</link>
+    <link>https://businessmasters.netlify.app/tags/side-hustles/</link>
     <description>Recent content in Side Hustles on My Entrepreneurship and Business Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 02 Mar 2025 12:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/side-hustles/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://businessmasters.netlify.app/tags/side-hustles/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>10 Low-Cost Businesses You Can Start Today</title>
-      <link>http://localhost:1313/post/business-to-start-today/</link>
+      <link>https://businessmasters.netlify.app/post/business-to-start-today/</link>
       <pubDate>Sun, 02 Mar 2025 12:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/business-to-start-today/</guid>
+      <guid>https://businessmasters.netlify.app/post/business-to-start-today/</guid>
       <description>Introduction Starting a business doesn’t always require a huge investment. With the right idea and strategy, you can launch a profitable business with minimal upfront costs. In this guide, we’ll explore 10 low-cost business ideas that you can start today, even on a tight budget.&#xA;1. Freelance Services If you have a skill like writing, graphic design, video editing, or programming, you can offer freelance services on platforms like Upwork, Fiverr, or Freelancer.</description>
     </item>
   </channel>

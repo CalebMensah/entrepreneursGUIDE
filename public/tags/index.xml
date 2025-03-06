@@ -2,73 +2,73 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on My Entrepreneurship and Business Blog</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://businessmasters.netlify.app/tags/</link>
     <description>Recent content in Tags on My Entrepreneurship and Business Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 02 Mar 2025 12:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://businessmasters.netlify.app/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Business Growth</title>
-      <link>http://localhost:1313/tags/business-growth/</link>
+      <link>https://businessmasters.netlify.app/tags/business-growth/</link>
       <pubDate>Sun, 02 Mar 2025 12:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/business-growth/</guid>
+      <guid>https://businessmasters.netlify.app/tags/business-growth/</guid>
       <description></description>
     </item>
     <item>
       <title>Business Ideas</title>
-      <link>http://localhost:1313/tags/business-ideas/</link>
+      <link>https://businessmasters.netlify.app/tags/business-ideas/</link>
       <pubDate>Sun, 02 Mar 2025 12:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/business-ideas/</guid>
+      <guid>https://businessmasters.netlify.app/tags/business-ideas/</guid>
       <description></description>
     </item>
     <item>
       <title>Entrepreneurship</title>
-      <link>http://localhost:1313/tags/entrepreneurship/</link>
+      <link>https://businessmasters.netlify.app/tags/entrepreneurship/</link>
       <pubDate>Sun, 02 Mar 2025 12:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/entrepreneurship/</guid>
+      <guid>https://businessmasters.netlify.app/tags/entrepreneurship/</guid>
       <description></description>
     </item>
     <item>
       <title>Low Investment Businesses</title>
-      <link>http://localhost:1313/tags/low-investment-businesses/</link>
+      <link>https://businessmasters.netlify.app/tags/low-investment-businesses/</link>
       <pubDate>Sun, 02 Mar 2025 12:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/low-investment-businesses/</guid>
+      <guid>https://businessmasters.netlify.app/tags/low-investment-businesses/</guid>
       <description></description>
     </item>
     <item>
       <title>Marketing</title>
-      <link>http://localhost:1313/tags/marketing/</link>
+      <link>https://businessmasters.netlify.app/tags/marketing/</link>
       <pubDate>Sun, 02 Mar 2025 12:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/marketing/</guid>
+      <guid>https://businessmasters.netlify.app/tags/marketing/</guid>
       <description></description>
     </item>
     <item>
       <title>Personal Branding</title>
-      <link>http://localhost:1313/tags/personal-branding/</link>
+      <link>https://businessmasters.netlify.app/tags/personal-branding/</link>
       <pubDate>Sun, 02 Mar 2025 12:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/personal-branding/</guid>
+      <guid>https://businessmasters.netlify.app/tags/personal-branding/</guid>
       <description></description>
     </item>
     <item>
       <title>Side Hustles</title>
-      <link>http://localhost:1313/tags/side-hustles/</link>
+      <link>https://businessmasters.netlify.app/tags/side-hustles/</link>
       <pubDate>Sun, 02 Mar 2025 12:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/side-hustles/</guid>
+      <guid>https://businessmasters.netlify.app/tags/side-hustles/</guid>
       <description></description>
     </item>
     <item>
       <title>Startups</title>
-      <link>http://localhost:1313/tags/startups/</link>
+      <link>https://businessmasters.netlify.app/tags/startups/</link>
       <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/startups/</guid>
+      <guid>https://businessmasters.netlify.app/tags/startups/</guid>
       <description></description>
     </item>
     <item>
       <title>Validate</title>
-      <link>http://localhost:1313/tags/validate/</link>
+      <link>https://businessmasters.netlify.app/tags/validate/</link>
       <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/validate/</guid>
+      <guid>https://businessmasters.netlify.app/tags/validate/</guid>
       <description></description>
     </item>
   </channel>

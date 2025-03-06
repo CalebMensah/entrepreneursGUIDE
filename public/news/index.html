@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="http://localhost:1313/images/favicon-512.png">
+    <link rel="icon" type="image/x-icon" href="https://businessmasters.netlify.app/images/favicon-512.png">
     <title>Business News</title>
 
-    <link rel="stylesheet" href="http://localhost:1313/css/style.css">
-    <link rel="stylesheet" href="http://localhost:1313/css/morestyles.css">
+    <link rel="stylesheet" href="https://businessmasters.netlify.app/css/style.css">
+    <link rel="stylesheet" href="https://businessmasters.netlify.app/css/morestyles.css">
 
     <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
 
@@ -21,7 +21,15 @@ OneSignal.push(async function() {
             appId: "3684ab0f-136e-404a-ab10-8206040c0129", 
             allowLocalhostAsSecureOrigin: true, 
             notifyButton: { enable: true }, 
-            promptOptions: {autoPrompt: false}
+            promptOptions: {
+              slidedown: {
+                enabled: true,
+                autoPrompt: true,
+                actionMessage: "We'd like to show you notifications for the latest news and updates.",
+                acceptButtonText: "ALLOW",
+                cancelButtonText: "NO THANKS"
+              }
+            }
         });
 
         console.log("OneSignal initialized successfully");
@@ -69,7 +77,7 @@ OneSignal.push(function() {
           "@type":"Article",
           "mainEntityOfPage": {
               "@type": "webPage",
-              "@id": "http://localhost:1313/news/"
+              "@id": "https://businessmasters.netlify.app/news/"
           },
           "headline": "Business News",
           "image": [
@@ -96,16 +104,16 @@ OneSignal.push(function() {
 <body>
 
     <header>
-        <img src="http://localhost:1313/images/logo.webp" alt="businessmasters" loading="lazy">
+        <img src="https://businessmasters.netlify.app/images/logo.webp" alt="businessmasters" loading="lazy">
         <button class="toggle-menu" aria-label="Toggle menu">
             &#9776
         </button>
         <nav class="nav-links">
-            <a href="http://localhost:1313/">Home</a>
-            <a href="http://localhost:1313/post">Post</a>
-            <a href="http://localhost:1313/news/">News</a>
-            <a href="http://localhost:1313/about/">About</a>
-            <a href="http://localhost:1313/contact">Contact Us</a>
+            <a href="https://businessmasters.netlify.app/">Home</a>
+            <a href="https://businessmasters.netlify.app/post">Post</a>
+            <a href="https://businessmasters.netlify.app/news/">News</a>
+            <a href="https://businessmasters.netlify.app/about/">About</a>
+            <a href="https://businessmasters.netlify.app/contact">Contact Us</a>
         </nav>
     </header>
 
@@ -115,94 +123,16 @@ OneSignal.push(function() {
         
 <div class="news-container">
     <h1 class="news-header">Latest Business News</h1>
-    
-    <div id="news-list" class="news-grid">
+    <div class="news-grid">
         
     </div>
+
     
-    <p id="no-news" class="no-news-message" style="display: none;">No news available at the moment. Please check back later.</p>
+    <div class="pagination">
+        
+        
+    </div>
 </div>
-
-<script>
-fetch("/news.json")
-    .then(response => response.json())
-    .then(news => {
-        let newsList = document.getElementById("news-list");
-        let noNewsMessage = document.getElementById("no-news");
-
-        if (news.length === 0) {
-            noNewsMessage.style.display = "block";
-        } else {
-            news.forEach((article, index) => {
-                let newsItem = `
-                    <div class="news-item">
-                        <a href="http://localhost:1313/news/${index}" class="news-link">
-                            <img src="${article.urlToImage || '/default-image.jpg'}" alt="${article.title}" class="news-img">
-                            <h2 class="news-title">${article.title}</h2>
-                        </a>
-                        <p class="news-author">By ${article.author || 'Unknown'}</p>
-                        <p class="news-description">${article.description || 'No description available.'}</p>
-                    </div>
-                `;
-                newsList.innerHTML += newsItem;
-            });
-        }
-    })
-    .catch(error => {
-        document.getElementById("no-news").innerText = "Error loading news. Please try again later.";
-        document.getElementById("no-news").style.display = "block";
-        console.error("❌ Error loading news:", error);
-    });
-</script>
-
-<style>
- 
-.news-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-.news-header {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-.news-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-.news-item {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s;
-}
-.news-item:hover {
-    transform: translateY(-5px);
-}
-.news-img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-.news-title {
-    font-size: 1.2rem;
-    padding: 10px;
-}
-.news-author, .news-description {
-    padding: 0 10px;
-    font-size: 0.9rem;
-    color: #555;
-}
-.no-news-message {
-    text-align: center;
-    font-size: 1.2rem;
-    color: #888;
-    margin-top: 20px;
-}
-</style>
 
     </main>
 
@@ -289,6 +219,6 @@ fetch("/news.json")
         });
       </script>
     
-    <script src="http://localhost:1313/js/script.js"></script>
+    <script src="https://businessmasters.netlify.app/js/script.js"></script>
 </body>
 </html>

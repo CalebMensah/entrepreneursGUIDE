@@ -21,7 +21,15 @@ OneSignal.push(async function() {
             appId: "3684ab0f-136e-404a-ab10-8206040c0129", // Replace with your OneSignal App ID
             allowLocalhostAsSecureOrigin: true, // Optional: For testing on localhost
             notifyButton: { enable: true }, // Enable the default notification prompt
-            promptOptions: {autoPrompt: false}
+            promptOptions: {
+              slidedown: {
+                enabled: true,
+                autoPrompt: true,
+                actionMessage: "We'd like to show you notifications for the latest news and updates.",
+                acceptButtonText: "ALLOW",
+                cancelButtonText: "NO THANKS"
+              }
+            }
         });
 
         console.log("OneSignal initialized successfully");

@@ -1,81 +1,9 @@
 {{ define "main" }}
-<div class="news-article">
-    <h1 id="news-title" class="news-title"></h1>
-    <img id="news-image" src="/default-image.jpg" alt="News Image" class="news-img">
-    <p id="news-author" class="news-author"></p>
-    <p id="news-content" class="news-content"></p>
-    <a id="news-source" href="#" class="news-source" target="_blank">Read Full Article</a>
-</div>
-
-<p id="no-news" class="no-news-message" style="display: none;">News article not found.</p>
-
-<script>
-const newsIndex = window.location.pathname.split("/").pop();
-
-fetch("/news.json")
-    .then(response => response.json())
-    .then(news => {
-        let article = news[newsIndex];
-
-        if (article) {
-            document.getElementById("news-title").innerText = article.title;
-            document.getElementById("news-image").src = article.urlToImage || "/default-image.jpg";
-            document.getElementById("news-author").innerText = "By " + (article.author || "Unknown");
-            document.getElementById("news-content").innerText = article.content || "No content available.";
-            document.getElementById("news-source").href = article.url;
-        } else {
-            document.getElementById("no-news").style.display = "block";
-            document.querySelector(".news-article").style.display = "none";
-        }
-    })
-    .catch(error => {
-        document.getElementById("no-news").innerText = "Error loading news. Please try again later.";
-        document.getElementById("no-news").style.display = "block";
-        document.querySelector(".news-article").style.display = "none";
-        console.error("❌ Error loading news:", error);
-    });
-</script>
-
-<style>
-.news-article {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-}
-.news-title {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-.news-img {
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-.news-author, .news-content {
-    font-size: 1rem;
-    color: #555;
-}
-.news-source {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 15px;
-    background-color: #0073e6;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-.news-source:hover {
-    background-color: #005bb5;
-}
-.no-news-message {
-    text-align: center;
-    font-size: 1.2rem;
-    color: #888;
-    margin-top: 20px;
-}
-</style>
+<article class="news-article">
+    <h1 class="news-title">{{ .Title }}</h1>
+    <img src="{{ .Params.image }}" alt="News Image" class="news-img">
+    <p class="news-author">By {{ .Params.author }}</p>
+    <p class="news-content">{{ .Content }}</p>
+    <a href="{{ .Params.source }}" class="news-source" target="_blank">Read Full Article</a>
+</article>
 {{ end }}
