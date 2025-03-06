@@ -1,33 +1,37 @@
-name: Fetch News and Update Hugo Site
+name: Fetch Latest News & Deploy to Netlify
 
 on:
   schedule:
-    - cron: "0 */4 * * *" # Runs every 6 hours
-  workflow_dispatch: # Allows manual trigger from GitHub Actions
+    - cron: "0 */4 * * *"  # Runs every 4 hours
+  workflow_dispatch:  # Allows manual triggering
 
 jobs:
-  update-news:
+  fetch-news:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Install Node.js
-        uses: actions/setup-node@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: 18
 
-      - name: Fetch News
-        run: node fetchNews.js
+      - name: Install dependencies
+        run: npm install  # Ensure you have dependencies installed
 
-      - name: Commit and Push Changes
+      - name: Fetch latest news
+        run: node fetchnews.js  # Runs your script to fetch and save news
+
+      - name: Commit and push if changed
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          git add content/news.json
-          git commit -m "Updated news feed" || echo "No changes to commit"
+          git add content/news static/news.json
+          git diff --quiet && git diff --staged --quiet || git commit -m "🔄 Auto-update news"
           git push
 
-      - name: Trigger Netlify Deployment
-        run: curl -X POST -d {} "https://api.netlify.com/build_hooks/67ac94a272816b3c58cb328e"
+      - name: Trigger Netlify Build
+        run: |
+          curl -X POST -d '{}' "https://api.netlify.com/build_hooks/67ac94a272816b3c58cb328e"
+          
