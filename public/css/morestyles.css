@@ -473,7 +473,7 @@ nav[aria-label ="breadcrumb"] li:last-child::after {
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .txt{
-        font-size: 3rem;
+        font-size: 2rem;
         text-align: center;
     }
     .post-ros{
