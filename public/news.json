@@ -1,107 +1,94 @@
 [
   {
     "source": {
-      "id": "cnn",
-      "name": "CNN"
+      "id": null,
+      "name": "Financial Times"
     },
-    "author": "Clare Duffy",
-    "title": "Trump announces Taiwanese chipmaking giant TSMC to invest $100 billion in US manufacturing - CNN",
-    "description": "Chipmaking giant Taiwan Semiconductor Manufacturing Company plans to invest at least $100 billion to grow its US manufacturing operations, President Donald Trump announced from the White House on Monday alongside the firm’s CEO C.C. Wei, Commerce Secretary Ho…",
-    "url": "https://www.cnn.com/2025/03/03/tech/tsmc-trump-meeting-chipmaking-investment/index.html",
-    "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/2024-08-20t091505z-1496083605-rc2lj9ae8ah6-rtrmadp-3-tsmc-germany-scholz.jpg?c=16x9&q=w_800,c_fill",
-    "publishedAt": "2025-03-04T02:19:00Z",
-    "content": "Chipmaking giant Taiwan Semiconductor Manufacturing Company plans to invest at least $100 billion to grow its US manufacturing operations, President Donald Trump announced from the White House on Mon… [+4734 chars]"
+    "author": "Eleanor Olcott, Kathrin Hille, Joe Leahy",
+    "title": "China sets annual economic growth target of 5% - Financial Times",
+    "description": "Goal comes despite slowdown in domestic economy and mounting trade tensions with US",
+    "url": "https://www.ft.com/content/e4070348-6e6f-478d-97a0-c595b42b3698",
+    "urlToImage": "https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F8f382bf8-d933-452a-b580-4a723e1120f7.jpg?source=next-barrier-page",
+    "publishedAt": "2025-03-05T01:50:20Z",
+    "content": "Complete digital access to quality analysis and expert insights, complemented with our award-winning Weekend Print edition.\r\n<ul><li></li>Everything in Print<li></li>Weekday Print Edition<li></li>FT … [+202 chars]"
   },
   {
     "source": {
-      "id": "the-washington-post",
-      "name": "The Washington Post"
+      "id": "the-wall-street-journal",
+      "name": "The Wall Street Journal"
     },
-    "author": "Matt Clough",
-    "title": "Tracking Trump: Tariff threats send stocks tumbling; fallout from the Trump-Zelensky meeting; and more - The Washington Post",
-    "description": "The 7 follows President Donald Trump’s first 100 days.",
-    "url": "https://www.washingtonpost.com/the-seven-trump/2025/03/03/tracking-trump-actions-tariffs-canada-mexico-ukraine-russia-relations/",
-    "urlToImage": "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/NQYZSRWWQFGSJPVEXGDXS54QD4_size-normalized.jpg&w=1440",
-    "publishedAt": "2025-03-04T02:08:57Z",
-    "content": "President Donald Trump said tariffs on Canada and Mexico begin tomorrow.\r\nTrumps desire to test spending powers may trigger a government shutdown.\r\n<ul><li>\r\nLooming deadline: Congress has less than … [+1043 chars]"
-  },
-  {
-    "source": {
-      "id": "abc-news",
-      "name": "ABC News"
-    },
-    "author": "ABC News",
-    "title": "Stocks fall as Trump says tariffs on Mexico, Canada will go into effect - ABC News",
-    "description": null,
-    "url": "https://abcnews.go.com/Business/tariffs-effect/story?id\\\\u003d119380711",
-    "urlToImage": null,
-    "publishedAt": "2025-03-04T01:07:30Z",
+    "author": "Costas Paris, Jack Pitcher, James T. Areddy",
+    "title": "BlackRock Strikes Deal for Panama Ports After U.S. Pressure - The Wall Street Journal",
+    "description": "$22.8 billion acquisition from Hong Kong-based CK Hutchison includes dozens of other ports across the globe",
+    "url": "https://www.wsj.com/business/logistics/blackrock-strikes-23-billion-deal-for-ports-on-both-sides-of-panama-canal-d42a5b5e",
+    "urlToImage": "https://images.wsj.net/im-53090201/social",
+    "publishedAt": "2025-03-05T01:35:00Z",
     "content": null
-  },
-  {
-    "source": {
-      "id": "the-washington-post",
-      "name": "The Washington Post"
-    },
-    "author": "Jaclyn Peiser, Taylor Telford",
-    "title": "Kroger CEO resigns abruptly after investigation into personal conduct - The Washington Post",
-    "description": "The Kroger grocery chain’s board determined Rodney McMullen’s personal conduct was “inconsistent” with its ethics policies but didn’t specify what the conduct was.",
-    "url": "https://www.washingtonpost.com/business/2025/03/03/kroger-ceo-rodney-mcmullen-resigns/",
-    "urlToImage": "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/QEJYDF3X5RDITMGPVV7TEAETB4.jpg&w=1440",
-    "publishedAt": "2025-03-03T23:31:36Z",
-    "content": "Kroger chief executive Rodney McMullen resigned Monday after an inquiry determined his personal conduct was inconsistent with the retailers ethics policies, bringing an abrupt end to a career spannin… [+5567 chars]"
   },
   {
     "source": {
       "id": "axios",
       "name": "Axios"
     },
-    "author": "Ivana Saric",
-    "title": "Trump tariffs will cause price hikes on these everyday goods - Axios",
-    "description": "The tariffs have spurred fears of a potential trade war between the U.S. and its top trading partners.",
-    "url": "https://www.axios.com/2025/03/03/trump-tariffs-price-hikes-goods",
-    "urlToImage": "https://images.axios.com/ZaW2lU_GwBs3dt2qbD8WsmJCMmc=/0x148:4000x2398/1366x768/2025/03/03/1741040564922.jpg",
-    "publishedAt": "2025-03-03T22:47:45Z",
-    "content": "President Trump confirmed Monday that his long-promised tariffs on goods from Mexico and Canada will go into effect on Tuesday.\r\nWhy it matters: The announcement sent financial markets tumbling in an… [+3009 chars]"
-  },
-  {
-    "source": {
-      "id": "techcrunch",
-      "name": "TechCrunch"
-    },
-    "author": "Charles Rollet",
-    "title": "Singapore arrests alleged Nvidia chip smugglers - TechCrunch",
-    "description": "Singapore just arrested 3 men for allegedly smuggling Nvidia chips.",
-    "url": "https://techcrunch.com/2025/03/03/singapore-arrests-alleged-nvidia-chip-smugglers/",
-    "urlToImage": "https://techcrunch.com/wp-content/uploads/2024/11/GettyImages-2183848501.jpg?resize=1200,800",
-    "publishedAt": "2025-03-03T22:44:32Z",
-    "content": "Theres lots of scrutiny involving China obtaining advanced Nvidia chips despite strict U.S. export controls, with Chinese merchants already reportedly ordering Nvidias powerful Blackwell GPUs.\r\nOn Th… [+830 chars]"
+    "author": "Joann Muller",
+    "title": "Automakers tap COVID playbook to cope with Trump tariffs - Axios",
+    "description": "The trade war is hitting at the same time they're juggling technological change, regulatory pressures and Chinese competition.",
+    "url": "https://www.axios.com/2025/03/04/trump-tariffs-cars",
+    "urlToImage": "https://images.axios.com/UCjWLIb2lowvu_bPx7tYs_sitrs=/0x0:1920x1080/1366x768/2025/03/04/1741129212416.jpg",
+    "publishedAt": "2025-03-04T23:39:10Z",
+    "content": "After weeks of stalled decision-making, the global trade war automakers were hoping to avoid is now here, providing a measure of clarity that had been missing.\r\n<ul><li>While significant disruption i… [+3471 chars]"
   },
   {
     "source": {
       "id": null,
-      "name": "Barron's"
+      "name": "Eater"
     },
-    "author": "Teresa Rivas",
-    "title": "Tariffs Are an ‘Act of War,’ Buffett Says. What They Mean for the Stock Market. - Barron's",
-    "description": "",
-    "url": "https://www.barrons.com/articles/trump-tariffs-warren-buffett-stock-market-a27a2b95",
-    "urlToImage": "https://images.barrons.com/im-33994537/social",
-    "publishedAt": "2025-03-03T21:47:00Z",
-    "content": null
+    "author": "Matthew Kang",
+    "title": "The Original Pantry Cafe’s Former Owner Wanted It to Be Open Forever. His Family Trust Had Other Plans. - Eater LA",
+    "description": "The closure of 101-year-old Downtown diner the Original Pantry Cafe is a huge loss for Los Angeles",
+    "url": "https://la.eater.com/2025/3/4/24377986/the-original-pantry-cafe-why-it-closed-los-angeles-2025",
+    "urlToImage": "https://cdn.vox-cdn.com/thumbor/HwjnEWX36ssZxA7UlxRQnKS29y8=/0x286:2000x1333/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/25897442/pantrycafe_3.jpg",
+    "publishedAt": "2025-03-04T23:03:41Z",
+    "content": "If you buy something from an Eater link, Vox Media may earn a commission. See our ethics policy.On March 2, 2025, one of Los Angeless cultural institutions and most beloved restaurants, the Original … [+8516 chars]"
   },
   {
     "source": {
       "id": null,
-      "name": "OregonLive"
+      "name": "The Mercury News"
     },
-    "author": "Lizzy Acker | The Oregonian/OregonLive",
-    "title": "Popular burger chain with multiple Oregon locations considers closing dozens of restaurants - OregonLive",
-    "description": "The company is evaluating 70 underperforming restaurants.",
-    "url": "https://www.oregonlive.com/food/2025/03/popular-burger-chain-with-multiple-oregon-locations-considers-closing-dozens-of-restaurants.html",
-    "urlToImage": "https://www.oregonlive.com/resizer/v2/63IG3EUTPZCN5DEESXZF276JQY.jpg?auth=e8c86da931e6daa9fd04c2584030e27128c7aded452d352614265320d4dc4f45&width=1280&quality=90",
-    "publishedAt": "2025-03-03T21:05:00Z",
-    "content": "Red Robin Gourmet Burgers may close as many as 15 locations in an effort to continue the companys post-COVID recovery.\r\nWhile our improvement has been substantial, we have not yet reached the potenti… [+958 chars]"
+    "author": "Kate Talerico",
+    "title": "Trump’s tariffs would make housing more expensive in the Bay Area. How much? It depends on what you’re building — and where - The Mercury News",
+    "description": "These charts explain how Trump’s tariffs on China — plus threatened tariffs to Canada and Mexico — will increase building costs.",
+    "url": "https://www.mercurynews.com/2025/03/04/trumps-tariffs-housing-costs/",
+    "urlToImage": "https://www.mercurynews.com/wp-content/uploads/2025/03/SJM-L-TARIFFS-0305-90.jpg?w=1024&h=653",
+    "publishedAt": "2025-03-04T23:01:00Z",
+    "content": "High interest rates and increasing construction costs had already put a strain on efforts to increase the Bay Area’s inadequate housing supply. Now, as President Donald Trump places sweeping tariffs … [+6917 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "CoinDesk"
+    },
+    "author": null,
+    "title": "Effort to Kill IRS Crypto Rule Clears U.S. Senate Hurdle - CoinDesk",
+    "description": "With a split among Democrats, the congressional resolution to erase the IRS crypto broker rule passed with a massive majority and is now up to the House.",
+    "url": "https://www.coindesk.com/policy/2025/03/04/effort-to-kill-irs-crypto-rule-clears-u-s-senate-hurdle",
+    "urlToImage": "https://cdn.sanity.io/images/s3y3vcno/production/b356e507b1981aadbc02879aa616c0346cbd2c86-4030x2267.jpg?auto=format",
+    "publishedAt": "2025-03-04T22:59:00Z",
+    "content": "Strong support from many Democrats helped win a victory for a U.S. Senate effort to erase a Biden administration crypto tax rule on Tuesday, clearing what may have been the most difficult hurdle towa… [+2316 chars]"
+  },
+  {
+    "source": {
+      "id": "the-verge",
+      "name": "The Verge"
+    },
+    "author": "Emma Roth",
+    "title": "Best Buy and Target CEOs say prices are about to go up because of tariffs - The Verge",
+    "description": "Target and Best Buy both said Trump’s tariffs on Mexico, Canada, and China will likely raise prices for consumers.",
+    "url": "https://www.theverge.com/news/624254/best-buy-target-raise-prices-tariffs",
+    "urlToImage": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/02/STKS488_TARIFFS_CVirginia_D.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
+    "publishedAt": "2025-03-04T22:43:33Z",
+    "content": "Target relies on produce from Mexico during the winter, while Best Buy sources most of its products from Mexico and China.\r\nTarget relies on produce from Mexico during the winter, while Best Buy sour… [+1554 chars]"
   },
   {
     "source": {
@@ -109,128 +96,128 @@
       "name": "Investopedia"
     },
     "author": "Colin Laidley",
-    "title": "Nvidia Stock Leads AI Selloff as Trump Tariffs Shake Wall Street - Investopedia",
-    "description": "The AI trade continued to falter on Monday, with Nvidia stock slumping into bear territory. Equities nosedived after President Trump reiterated plans for a 25% tariff on Canadian and Mexican imports starting tomorrow.",
-    "url": "https://www.investopedia.com/nvidia-stock-leads-ai-selloff-as-trump-tariffs-shake-wall-street-markets-11689936",
-    "urlToImage": "https://www.investopedia.com/thmb/c72lBfVPInfXt2sRKRSeoaktUqA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-2203071815-df2e4af189ba427296df30334cce7d7b.jpg",
-    "publishedAt": "2025-03-03T20:56:43Z",
-    "content": "<ul><li>Shares of Nvidia fell more than 8% Monday, slipping into bear market territory.</li><li>The company's latest quarterly financial results raised questions about what was next for the stockand … [+2323 chars]"
+    "title": "Nvidia Leads AI Stock Rebound After Shaking Off Trump Tariff Fears - Investopedia",
+    "description": "Nvidia stock rebounded from an early morning slump on Tuesday as AI stocks shook off the tariff shock to lead Nasdaq gainers.",
+    "url": "https://www.investopedia.com/nvidia-leads-ai-stock-rebound-after-shaking-off-trump-tariff-fears-11690801",
+    "urlToImage": "https://www.investopedia.com/thmb/npu34JG5DepHJn8U81fwc5QVrm0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-2203254184-b5baea5d4f1f4fbd82af73e7ec4d9abf.jpg",
+    "publishedAt": "2025-03-04T22:39:02Z",
+    "content": "Nvidia (NVDA) stock rebounded from an early-morning slump on Tuesday as AI stocks shook off the tariff shock that sent the broader market reeling.\r\nNvidia shares rose 1.7% Tuesday after tumbling more… [+1823 chars]"
   },
   {
     "source": {
       "id": null,
-      "name": "Forbes"
+      "name": "New York Post"
     },
-    "author": "Iain Martin",
-    "title": "How Underage Creators Became A Threat To Lucy Guo’s OnlyFans Rival - Forbes",
-    "description": "The Scale AI cofounder’s second startup Passes banned creators under 18 ahead of being sued for allegedly hosting child sexual abuse material, which Guo has denied.",
-    "url": "https://www.forbes.com/sites/iainmartin/2025/03/03/how-underage-creators-became-a-threat-to-lucy-guos-onlyfans-rival/",
-    "urlToImage": "https://imageio.forbes.com/specials-images/imageserve/67c235023d69a9f0f09f06d0/0x0.jpg?format=jpg&crop=2000,1125,x0,y199,safe&height=900&width=1600&fit=bounds",
-    "publishedAt": "2025-03-03T20:39:12Z",
-    "content": "The Scale AI cofounders second startup Passes banned creators under 18 ahead of being sued for allegedly hosting child sexual abuse material, which Guo has denied.\r\nLucy Guos first startup hit, AI un… [+14375 chars]"
+    "author": "Ariel Zilber, Lisa Fickenscher",
+    "title": "Tariffs to spike prices on produce, electronics, gas and toys — with some hikes this week - New York Post ",
+    "description": "Target CEO Brian Cornell was among the first to raise the alarm after the Trump administration on Tuesday levied 25% duties on products from Canada and Mexico, as well as doubling the toll on China…",
+    "url": "https://nypost.com/2025/03/04/business/tariffs-to-spike-prices-on-produce-electronics-gas-and-toys-with-some-hikes-this-week/",
+    "urlToImage": "https://nypost.com/wp-content/uploads/sites/2/2025/03/trump-tariffs.jpg?quality=75&strip=all&1741105582&w=1024",
+    "publishedAt": "2025-03-04T22:05:00Z",
+    "content": "Shoppers can expect to see higher prices at the checkout counter on goods ranging from avocados to computers to Tonka trucks with some hikes from the new tariffs coming as early as the end of the wee… [+3235 chars]"
   },
   {
     "source": {
-      "id": "abc-news",
-      "name": "ABC News"
+      "id": null,
+      "name": "CNBC"
     },
-    "author": "ABC News",
-    "title": "Judge wants to hear from top Consumer Financial Protection Bureau official about the agency's dismantling - ABC News",
-    "description": null,
-    "url": "https://abcnews.go.com/Politics/judge-hear-top-consumer-financial-protection-bureau-official/story?id\\\\u003d119398594",
-    "urlToImage": null,
-    "publishedAt": "2025-03-03T19:55:45Z",
+    "author": "Alex Harring, Lisa Kailai Han",
+    "title": "Dow tumbles again, loses more than 1,300 points in two days as Trump ignites trade war: Live updates - CNBC",
+    "description": "President Donald Trump's tariffs on Canada, Mexico and China took effect on Tuesday.",
+    "url": "https://www.cnbc.com/2025/03/03/stock-market-today-live-updates.html",
+    "urlToImage": "https://image.cnbcfm.com/api/v1/image/108109923-1741018164031-gettyimages-2203071815-wallst594567_83nkfhp0.jpeg?v=1741018201&w=1920&h=1080",
+    "publishedAt": "2025-03-04T21:33:00Z",
+    "content": "The Dow Jones Industrial Average tumbled for a second day as President Donald Trump's tariffs left investors fearful of potential shockwaves for the economy.\r\nThe blue-chip average dropped 670.25 poi… [+2698 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "New York Post"
+    },
+    "author": "Ariel Zilber",
+    "title": "Walgreens on verge of being sold to private-equity firm for $10B: report - New York Post ",
+    "description": "Negotiations are in advanced stages, with both sides aiming to seal the agreement as soon as Thursday, according to the Wall Street Journal.",
+    "url": "https://nypost.com/2025/03/04/business/walgreens-about-to-be-sold-to-private-equity-firm-for-10b-report/",
+    "urlToImage": "https://nypost.com/wp-content/uploads/sites/2/2025/03/99759722.jpg?quality=75&strip=all&w=1024",
+    "publishedAt": "2025-03-04T20:28:00Z",
+    "content": "Walgreens Boots Alliance is on the verge of finalizing a deal with private-equity firm Sycamore Partners to take the embattled drugstore chain private in a transaction valued at approximately $10 bil… [+3125 chars]"
+  },
+  {
+    "source": {
+      "id": "wired",
+      "name": "Wired"
+    },
+    "author": "Zeyi Yang",
+    "title": "Trump Still Considering Tariffs on Taiwanese Chips, Despite $100 Billion TSMC Deal - WIRED",
+    "description": "Enforcing the tariffs on Taiwan would be difficult, and they wouldn’t necessarily be enough to meaningfully increase semiconductor manufacturing in the United States, experts told WIRED.",
+    "url": "https://www.wired.com/story/tsmc-tariffs-trump-impacts/",
+    "urlToImage": "https://media.wired.com/photos/67bcb1fc9109def5b360448c/191:100/w_1280,c_limit/TSMC-Chips-Tariffs-Business-2185201056.jpg",
+    "publishedAt": "2025-03-04T20:27:09Z",
+    "content": "Second, tariffs can only make foreign companies start producing chips in the US if it becomes cheaper than doing it somewhere else. But higher American labor costs and the countrys lack of a sophisti… [+3425 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Barron's"
+    },
+    "author": "Megan Leonhardt",
+    "title": "New York Fed President John Williams Sees Tariffs Feeding Inflation - Barron's",
+    "description": "",
+    "url": "https://www.barrons.com/articles/ny-feds-williams-sees-tariffs-feeding-inflation-df2171ae",
+    "urlToImage": "https://images.barrons.com/im-82876979/social",
+    "publishedAt": "2025-03-04T20:09:00Z",
     "content": null
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Financial Times"
+    },
+    "author": "Mari Novik, George Steer",
+    "title": "US stocks erase post-election gains on Trump tariff fears - Financial Times",
+    "description": "President’s protectionist moves spark concerns about retaliation and damage from escalating trade war",
+    "url": "https://www.ft.com/content/029e4d9e-cdac-41ce-abbe-fc741890d44a",
+    "urlToImage": "https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fad5ab2fb-9524-450c-9585-3e0d14687ba8.jpg?source=next-barrier-page",
+    "publishedAt": "2025-03-04T18:57:17Z",
+    "content": "White House Watch newsletter\r\nRegister for your free guide to the new US administration, with cabinet announcements, policy plans and exclusive election insights.\r\nUS Presidential Election 2024 hub\r\n… [+357 chars]"
+  },
+  {
+    "source": {
+      "id": "associated-press",
+      "name": "Associated Press"
+    },
+    "author": "Michael Liedtke",
+    "title": "Uber teams up with Waymo to start selling driverless rides in Austin, Texas - The Associated Press",
+    "description": "Uber is shifting into a new gear in Austin, Texas where its ride-hailing service will begin dispatching self-driving cars to pick up passengers looking for a way to get around that city. The autonomous option starting Tuesday is being provided through partner…",
+    "url": "https://apnews.com/article/uber-waymo-robotaxis-austin-texas-988aba46988e649be8cf59979587a8e5",
+    "urlToImage": "https://dims.apnews.com/dims4/default/a4b6138/2147483647/strip/true/crop/2970x1671+0+155/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fa6%2F19%2F9d8fc0d5b58e05438a8fbda92fa2%2Fdf3aba2d40ba4dda8de7fe3efc56fd89",
+    "publishedAt": "2025-03-04T18:45:00Z",
+    "content": "Uber will shift into a new gear in Austin, Texas, on Tuesday when its ride-hailing service will begin dispatching self-driving cars to pick up passengers.\r\nThe autonomous option is being provided thr… [+3096 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Ca.gov"
+    },
+    "author": null,
+    "title": "California Supreme Court Issues Statement on February Bar Exam - California Courts Newsroom",
+    "description": "The California Supreme Court has issued a statement on the \"troubling reports of technical failures, delays, and other irregularities\" in last week's administration of the California Bar Examination.",
+    "url": "https://newsroom.courts.ca.gov/news/california-supreme-court-issues-statement-february-bar-exam",
+    "urlToImage": "https://newsroom.courts.ca.gov/sites/default/files/newsroom/styles/max_650x650/public/news/SupremeCourtSeal2013_webSmall_0.png?itok=Cobw_f_T",
+    "publishedAt": "2025-03-04T18:17:45Z",
+    "content": "The California Supreme Court on Tuesday issued the following statement about the administration of the February 2025 California Bar Examination:The court is deeply concerned by the troubling reports … [+854 chars]"
   },
   {
     "source": {
       "id": "bloomberg",
       "name": "Bloomberg"
     },
-    "author": "Grant Smith, Fiona MacDonald, Salma El Wardany",
-    "title": "OPEC+ to Begin Long-Delayed Supply Hike Amid Trump Pressure - Bloomberg",
-    "description": "OPEC+ will proceed with plans to revive halted oil production after repeated delays, amid pressure from President Donald Trump to lower oil prices.",
-    "url": "https://www.bloomberg.com/news/articles/2025-03-03/opec-to-begin-long-delayed-supply-restart-amid-trump-pressure",
-    "urlToImage": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iT0V80utItoo/v1/1200x800.jpg",
-    "publishedAt": "2025-03-03T18:46:43Z",
-    "content": "OPEC+ will proceed with plans to revive halted oil production after repeated delays, amid pressure from President Donald Trump to lower oil prices.\r\nIn a surprise move that sent crude tumbling, the g… [+334 chars]"
-  },
-  {
-    "source": {
-      "id": "techcrunch",
-      "name": "TechCrunch"
-    },
-    "author": "Kyle Wiggers",
-    "title": "Anthropic raises $3.5B to fuel its AI ambitions - TechCrunch",
-    "description": "AI startup Anthropic has raised $3.5 billion in a Series E at a $61.5 billion post-money valuation, led by Lightspeed Venture Partners.",
-    "url": "https://techcrunch.com/2025/03/03/anthropic-raises-3-5b-to-fuel-its-ai-ambitions/",
-    "urlToImage": "https://techcrunch.com/wp-content/uploads/2025/02/Anthropic-Dario-Amodei.jpeg?w=1182",
-    "publishedAt": "2025-03-03T17:02:43Z",
-    "content": "AI startup Anthropic on Monday announced it raised $3.5 billion at a $61.5 billion post-money valuation, led by Lightspeed Venture Partners.\r\nThe Series E, which also had participation from Bessemer … [+3007 chars]"
-  },
-  {
-    "source": {
-      "id": null,
-      "name": "ZDNet"
-    },
-    "author": "Kerry Wan",
-    "title": "Best of MWC 2025: The 7 most impressive products you don't want to miss - ZDNet",
-    "description": "Mobile World Congress kicked off today with some big announcements from across the industry. Here's the best of the show so far.",
-    "url": "https://www.zdnet.com/article/best-of-mwc-2025-the-7-most-impressive-products-you-dont-want-to-miss/",
-    "urlToImage": "https://www.zdnet.com/a/img/resize/803ed2ac32f8edced479956da5bab6dff9f12fcc/2025/03/03/5ec3507b-8f42-4589-be04-dd7b3883493c/dsc04256.jpg?auto=webp&fit=crop&height=675&width=1200",
-    "publishedAt": "2025-03-03T16:39:00Z",
-    "content": "ZDNET\r\nWe're not even through day one at Mobile World Congress (MWC), but the news cycle is already churning. Hot on the heels of Samsung and OnePlus' recent smartphone launches, expect more announce… [+7037 chars]"
-  },
-  {
-    "source": {
-      "id": null,
-      "name": "Electrek"
-    },
-    "author": "Fred Lambert",
-    "title": "EU gives automakers breathing room, slashes Tesla’s emission credit revenue - Electrek",
-    "description": "The European Commission has decided to give automakers breathing room in achieving its zero-emission target, which is going to enable them...",
-    "url": "http://electrek.co/2025/03/03/eu-gives-automakers-breathing-room-slashes-teslas-emission-credit-revenue/",
-    "urlToImage": "https://i0.wp.com/electrek.co/wp-content/uploads/sites/3/2023/07/Chinese-EV-Europe.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1",
-    "publishedAt": "2025-03-03T16:32:00Z",
-    "content": "The European Commission has decided to give automakers breathing room in achieving its zero-emission target, which is going to enable them to buy fewer emission credits from Tesla and other all-elect… [+2313 chars]"
-  },
-  {
-    "source": {
-      "id": null,
-      "name": "11Alive.com WXIA"
-    },
-    "author": "Jonathan Raymond (11Alive)",
-    "title": "Atlanta Fed model forecasts nearly -3% GDP growth in first quarter of this year - 11Alive.com WXIA",
-    "description": "The Atlanta Fed's GDPNow model updated on Monday.",
-    "url": "https://www.11alive.com/article/money/economy/atlanta-fed-model-forecast-gdpnow-negative-growth/85-ff0ee0d9-a199-4e0f-8560-a086df88d80e",
-    "urlToImage": "https://media.11alive.com/assets/WXIA/images/cdf8c5f3-d19b-4c90-84e6-033d782fff6c/20250302T164838/cdf8c5f3-d19b-4c90-84e6-033d782fff6c_1140x641.jpg",
-    "publishedAt": "2025-03-03T16:27:00Z",
-    "content": "ATLANTA A model utilized by the Federal Reserve Bank of Atlanta updated Monday to forecast an even steeper economic contraction, after first showing negative growth in its update last Friday.\r\nThe At… [+1355 chars]"
-  },
-  {
-    "source": {
-      "id": "cnn",
-      "name": "CNN"
-    },
-    "author": "Jordan Valinsky",
-    "title": "Domino’s Pizza loses millions of customers to rivals. Here’s how it’s fixing that - CNN",
-    "description": "Adding a stuffed crust to a pizza chain’s menu doesn’t seem like a big deal. But for Domino’s Pizza, it’s more than three decades in the making.",
-    "url": "https://www.cnn.com/2025/03/03/food/dominos-pizza-stuffed-crust-launch/index.html",
-    "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/3-20250227171326361.jpg?c=16x9&q=w_800,c_fill",
-    "publishedAt": "2025-03-03T12:00:00Z",
-    "content": "Adding a stuffed crust to a pizza chains menu doesnt seem like a big deal. But for Dominos Pizza, its more than three decades in the making.\r\nThe option was introduced in 1995 by Pizza Hut launching … [+2951 chars]"
-  },
-  {
-    "source": {
-      "id": null,
-      "name": "Yahoo Entertainment"
-    },
-    "author": "Reuters",
-    "title": "US Treasury Department says it will not enforce anti-money laundering law - Yahoo",
-    "description": "The Trump administration has opposed the Biden-era Corporate Transparency Act on the grounds that it is a burden on low-risk entities.  In a statement, the...",
-    "url": "https://ca.finance.yahoo.com/news/us-treasury-department-says-not-015049621.html",
-    "urlToImage": "https://media.zenfs.com/en/reuters.com/e823af5d135eeef07319efc8fcdbd9b2",
-    "publishedAt": "2025-03-03T01:50:00Z",
-    "content": "(Reuters) - The U.S. Treasury Department said on Sunday it would not enforce an anti-money laundering law that obliges millions of business entities to disclose the identities of their real beneficia… [+926 chars]"
+    "author": "Biz Carson, Tom Maloney",
+    "title": "Anthropic’s Mega Valuation Mints Seven New AI Billionaires - Bloomberg",
+    "description": "Anthropic’s latest funding round has made the OpenAI rival one of the most valuable startups in the world. It’s also turned its founders into billionaires.",
+    "url": "https://www.bloomberg.com/news/articles/2025-03-04/anthropic-co-founders-become-billionaires-after-massive-funding-round",
+    "urlToImage": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iYmbUTtNtLLA/v0/1200x800.jpg",
+    "publishedAt": "2025-03-04T18:09:25Z",
+    "content": "Anthropics latest funding round has made the OpenAI rival one of the most valuable startups in the world. Its also turned its founders into billionaires.\r\nThe San Francisco-based firm on Monday close… [+266 chars]"
   }
 ]

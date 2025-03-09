@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="https://businessmasters.netlify.app/images/favicon-512.png">
+    <link rel="icon" type="image/x-icon" href="http://localhost:1313/images/favicon-512.png">
     <title> Common Myths About Entrepreneurs and Challenges Faced By Entrepreneurs </title>
 
-    <link rel="stylesheet" href="https://businessmasters.netlify.app/css/style.css">
-    <link rel="stylesheet" href="https://businessmasters.netlify.app/css/morestyles.css">
+    <link rel="stylesheet" href="http://localhost:1313/css/style.css">
+    <link rel="stylesheet" href="http://localhost:1313/css/morestyles.css">
 
     <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
 
@@ -77,7 +77,7 @@ OneSignal.push(function() {
           "@type":"Article",
           "mainEntityOfPage": {
               "@type": "webPage",
-              "@id": "https://businessmasters.netlify.app/post/myth-challenges/"
+              "@id": "http://localhost:1313/post/myth-challenges/"
           },
           "headline": " Common Myths About Entrepreneurs and Challenges Faced By Entrepreneurs ",
           "image": [
@@ -104,16 +104,15 @@ OneSignal.push(function() {
 <body>
 
     <header>
-        <img src="https://businessmasters.netlify.app/images/logo.webp" alt="businessmasters" loading="lazy">
+        <img src="http://localhost:1313/images/logo.webp" alt="businessmasters" loading="lazy">
         <button class="toggle-menu" aria-label="Toggle menu">
             &#9776
         </button>
         <nav class="nav-links">
-            <a href="https://businessmasters.netlify.app/">Home</a>
-            <a href="https://businessmasters.netlify.app/post">Post</a>
-            <a href="https://businessmasters.netlify.app/news/">News</a>
-            <a href="https://businessmasters.netlify.app/about/">About</a>
-            <a href="https://businessmasters.netlify.app/contact">Contact Us</a>
+            <a href="http://localhost:1313/">Home</a>
+            <a href="http://localhost:1313/post">Post</a>
+            <a href="http://localhost:1313/about/">About</a>
+            <a href="http://localhost:1313/contact">Contact Us</a>
         </nav>
     </header>
 
@@ -121,18 +120,16 @@ OneSignal.push(function() {
     
     <main class="wrapper">
         
+<div class="ebook-download-section" id="index-ebook">
+    <p class="ebook-download-text" id="index-ebook-p">
+        <a href="#" id="download-ebook-trigger">Download Our Free eBook: From Idea To Launch: A Step-By-Step Guide For Startups</a>
+    </p>
+</div>
 
 <div class="main-container1">
     <div class="post-page-single">
-        
-        <div class="ebook-download-section" id="index-ebook">
-            <p class="ebook-download-text" id="index-ebook-p">
-                <a href="#" id="download-ebook-trigger">Download Our Free eBook: From Idea To Launch: A Step-By-Step Guide For Startups</a>
-            </p>
-        </div>
-
         <h1 class="page-header"> Common Myths About Entrepreneurs and Challenges Faced By Entrepreneurs </h1>
-        <img src="https://businessmasters.netlify.app/images/biggestmyths.png" alt="entrepreneur" class="post-img" loading="lazy">
+        <img src="http://localhost:1313/images/biggestmyths.png" alt="entrepreneur" class="post-img" loading="lazy">
        
         <div class="post-metadata">
             <small>Published on August 22, 2024</small>
@@ -169,186 +166,10 @@ OneSignal.push(function() {
 <p>The demands of running a business can be overwhelming, often leading to long hours, stress, and burnout. Entrepreneurs are typically deeply invested in their ventures, which can make it difficult to maintain a healthy work-life balance. The pressure to succeed can lead to neglecting personal relationships, health, and well-being. Entrepreneurs need to learn how to manage their time effectively, delegate tasks, and set boundaries to avoid burnout and ensure they can sustain their efforts over the long term.</p>
 <h4 id="4-dealing-with-failure">4. Dealing with Failure</h4>
 <p>Failure is a common experience in entrepreneurship, and how one handles it can determine future success. Many entrepreneurs face setbacks, whether it’s a product that doesn’t sell, a partnership that falls apart, or a business that fails to take off. The ability to learn from failure, adapt, and try again is critical. Resilience and a growth mindset are essential qualities that help entrepreneurs overcome obstacles and continue to pursue their goals despite challenges.</p>
-<hr>
-<h2 id="related-articles">Related Articles</h2>
-<div class="related-articles">
- <a href="https://businessmasters.netlify.app/post/myth-challenges">Common Myths About Entrepreneurs</a>
- <a href="https://businessmasters.netlify.app/post/entrepreneur-mindset">The Entrepreneurial Mindset</a>
- <a href="https://businessmasters.netlify.app/post/who-is-an-entrepreneur">Who is an Entrepreneur?</a>
- <a href="https://businessmasters.netlify.app/post/validating-your-business-idea">Validating your business idea</a>
- </div>
- 
-
-<hr>
-<div class="subscribe-form">
-   <p>Subscribe to our newsletter and get exclusive tips delivered to your inbox</p>
-   <form id="subscribeForm">
-     <input type="email" name="email" placeholder="Enter your email here" required id="email">
-     <button type="submit">Subscribe Now</button>
-     <p id="responseMessage"></p>
-   </form>
- </div>
- 
- <script>
-   document.getElementById("subscribeForm").addEventListener("submit", async (e) => {
-     e.preventDefault();
-     const email = document.getElementById("email").value.trim();
-     const responseMessage = document.getElementById("responseMessage");
- 
-     
-     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-     if (!emailPattern.test(email)) {
-       responseMessage.innerHTML = "Enter a valid email address.";
-       responseMessage.style.color = "red";
-       return;
-     }
- 
-     responseMessage.innerHTML = "Checking...";
-     responseMessage.style.color = "green";
- 
-     try {
-       
-       const checkResponse = await fetch(
-         `https://sheetdb.io/api/v1/w7eydswfjd972/search?Email=${encodeURIComponent(email)}`
-       )
-       
-       if (!checkResponse.ok) throw new Error("Check failed");
-       
-       const existingData = await checkResponse.json();
-       console.log("API Response:", existingData); 
-       
-       if (existingData.length > 0) {
-         responseMessage.innerHTML = "Email already subscribed!";
-         responseMessage.style.color = "red";
-         return;
-       }
- 
-       
-       responseMessage.innerHTML = "Submitting...";
-       const postResponse = await fetch("https://sheetdb.io/api/v1/w7eydswfjd972", {
-         method: "POST",
-         headers: { "Content-Type": "application/json" },
-         body: JSON.stringify({
-           data: [{ 
-             Email: email, 
-             Joined_at: new Date().toLocaleString() 
-           }]
-         }),
-       });
- 
-       if (postResponse.ok) {
-         responseMessage.innerHTML = "Subscription successful!";
-         responseMessage.style.color = "green";
-       } else {
-         responseMessage.innerHTML = "Error. Try again.";
-         responseMessage.style.color = "red";
-       }
-     } catch (error) {
-       responseMessage.innerHTML = "Failed to submit. Please try again.";
-       responseMessage.style.color = "red";
-     }
-   });
- </script>
 
         </div>
       
     </div>
-
-    
-<div class="comments-section">
-    <h2>Comments</h2>
-    <script src="https://giscus.app/client.js"
-        data-repo="CalebMensah/entrepreneursGUIDE"
-        data-repo-id="R_kgDOMpPjIg"
-        data-category="General"
-        data-category-id="DIC_kwDOMpPjIs4Cnedi"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="1"
-        data-input-position="top"
-        data-theme="light_high_contrast"
-        data-lang="en"
-        data-loading="lazy"
-        crossorigin="anonymous"
-        async>
-    </script>
-</div>
-
-   
-   <section class="latest-post">
-    <div class="latest-post-container">
-        <h1>Latest post</h1>
-        <div class="post-rows">
-        
-        <div class="post-summary1">
-            <div class="post-image1">
-                <a href="https://businessmasters.netlify.app/post/business-to-start-today/">
-                    <img src="https://businessmasters.netlify.app/images/business-ideas.webp" alt="10 Low-Cost Businesses You Can Start Today">
-                </a>
-            </div>
-            <div class="post-content1">
-                <h2><a href="https://businessmasters.netlify.app/post/business-to-start-today/">10 Low-Cost Businesses You Can Start Today</a></h2>
-                <span><a href="https://businessmasters.netlify.app/post/business-to-start-today/">Discover 10 profitable low-cost businesses you can start today with minimal investment and high earning potential.</a></span>
-                <h3> <a href="https://businessmasters.netlify.app/post/business-to-start-today/">read more</a></h3>
-            </div>
-        </div>
-        
-        <div class="post-summary1">
-            <div class="post-image1">
-                <a href="https://businessmasters.netlify.app/post/personal-brand/">
-                    <img src="https://businessmasters.netlify.app/images/personal-branding.png" alt="How to Build a Personal Brand as an Entrepreneur">
-                </a>
-            </div>
-            <div class="post-content1">
-                <h2><a href="https://businessmasters.netlify.app/post/personal-brand/">How to Build a Personal Brand as an Entrepreneur</a></h2>
-                <span><a href="https://businessmasters.netlify.app/post/personal-brand/">Learn how to build a strong personal brand as an entrepreneur and increase your visibility using proven strategies.</a></span>
-                <h3> <a href="https://businessmasters.netlify.app/post/personal-brand/">read more</a></h3>
-            </div>
-        </div>
-        
-        <div class="post-summary1">
-            <div class="post-image1">
-                <a href="https://businessmasters.netlify.app/post/validating-your-business-idea/">
-                    <img src="https://businessmasters.netlify.app/images/validate.png" alt="  How to Validate Your Business Idea Before Launching">
-                </a>
-            </div>
-            <div class="post-content1">
-                <h2><a href="https://businessmasters.netlify.app/post/validating-your-business-idea/">  How to Validate Your Business Idea Before Launching</a></h2>
-                <span><a href="https://businessmasters.netlify.app/post/validating-your-business-idea/">Learn how to validate your business idea before launching.</a></span>
-                <h3> <a href="https://businessmasters.netlify.app/post/validating-your-business-idea/">read more</a></h3>
-            </div>
-        </div>
-        
-        <div class="post-summary1">
-            <div class="post-image1">
-                <a href="https://businessmasters.netlify.app/post/overcome-barriers/">
-                    <img src="https://businessmasters.netlify.app/images/overcome.jpg" alt="  Overcoming Barriers to Developing an Entrepreneurial Mindset">
-                </a>
-            </div>
-            <div class="post-content1">
-                <h2><a href="https://businessmasters.netlify.app/post/overcome-barriers/">  Overcoming Barriers to Developing an Entrepreneurial Mindset</a></h2>
-                <span><a href="https://businessmasters.netlify.app/post/overcome-barriers/"> Developing an entrepreneurial mindset is crucial for anyone aspiring to create, innovate, and lead successfully. ...</a></span>
-                <h3> <a href="https://businessmasters.netlify.app/post/overcome-barriers/">read more</a></h3>
-            </div>
-        </div>
-        
-        <div class="post-summary1">
-            <div class="post-image1">
-                <a href="https://businessmasters.netlify.app/post/mindset-examples/">
-                    <img src="https://businessmasters.netlify.app/images/realmindset.webp" alt="Real life examples of entrepreneur mindset">
-                </a>
-            </div>
-            <div class="post-content1">
-                <h2><a href="https://businessmasters.netlify.app/post/mindset-examples/">Real life examples of entrepreneur mindset</a></h2>
-                <span><a href="https://businessmasters.netlify.app/post/mindset-examples/">The entrepreneurial mindset isn’t just a theoretical concept; it’s a powerful approach to life and business that...</a></span>
-                <h3> <a href="https://businessmasters.netlify.app/post/mindset-examples/">read more</a></h3>
-            </div>
-        </div>
-        
-    </div>
-    </div>
-</section>
 
 
 
@@ -365,9 +186,183 @@ OneSignal.push(function() {
 </div>
 
 
-<script type="module" src="https://businessmasters.netlify.app/js/ebook.js"></script>
+<script type="module" src="http://localhost:1313/js/ebook.js"></script>
 
 </div>
+
+<div class="subscribe-form">
+    <p>Subscribe to our newsletter and get exclusive tips delivered to your inbox</p>
+    <form id="subscribeForm">
+      <input type="email" name="email" placeholder="Enter your email here" required id="email">
+      <button type="submit">Subscribe Now</button>
+      <p id="responseMessage"></p>
+    </form>
+  </div>
+  
+  <script>
+    document.getElementById("subscribeForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const email = document.getElementById("email").value.trim();
+      const responseMessage = document.getElementById("responseMessage");
+  
+      
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+        responseMessage.innerHTML = "Enter a valid email address.";
+        responseMessage.style.color = "red";
+        return;
+      }
+  
+      responseMessage.innerHTML = "Checking...";
+      responseMessage.style.color = "green";
+  
+      try {
+        
+        const checkResponse = await fetch(
+          `https://sheetdb.io/api/v1/w7eydswfjd972/search?Email=${encodeURIComponent(email)}`
+        )
+        
+        if (!checkResponse.ok) throw new Error("Check failed");
+        
+        const existingData = await checkResponse.json();
+        console.log("API Response:", existingData); 
+        
+        if (existingData.length > 0) {
+          responseMessage.innerHTML = "Email already subscribed!";
+          responseMessage.style.color = "red";
+          return;
+        }
+  
+        
+        responseMessage.innerHTML = "Submitting...";
+        const postResponse = await fetch("https://sheetdb.io/api/v1/w7eydswfjd972", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            data: [{ 
+              Email: email, 
+              Joined_at: new Date().toLocaleString() 
+            }]
+          }),
+        });
+  
+        if (postResponse.ok) {
+          responseMessage.innerHTML = "Subscription successful!";
+          responseMessage.style.color = "green";
+        } else {
+          responseMessage.innerHTML = "Error. Try again.";
+          responseMessage.style.color = "red";
+        }
+      } catch (error) {
+        responseMessage.innerHTML = "Failed to submit. Please try again.";
+        responseMessage.style.color = "red";
+      }
+    });
+  </script>
+
+<div class="related-articles">
+    <h3>Related Articles</h3>
+    <a href="http://localhost:1313/post/myth-challenges">Common Myths About Entrepreneurs</a>
+    <a href="http://localhost:1313/post/entrepreneur-mindset">The Entrepreneurial Mindset</a>
+    <a href="http://localhost:1313/post/who-is-an-entrepreneur">Who is an Entrepreneur?</a>
+    <a href="http://localhost:1313/post/validating-your-business-idea">Validating your business idea</a>
+    </div>
+
+    
+    <div class="comments-section">
+        <h2>Comments</h2>
+        <script src="https://giscus.app/client.js"
+            data-repo="CalebMensah/entrepreneursGUIDE"
+            data-repo-id="R_kgDOMpPjIg"
+            data-category="General"
+            data-category-id="DIC_kwDOMpPjIs4Cnedi"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="1"
+            data-input-position="top"
+            data-theme="light_high_contrast"
+            data-lang="en"
+            data-loading="lazy"
+            crossorigin="anonymous"
+            async>
+        </script>
+    </div>
+
+   
+   <section class="latest-post">
+    <div class="latest-post-container">
+        <h1>Latest post</h1>
+        <div class="post-rows">
+        
+        <div class="post-summary1">
+            <div class="post-image1">
+                <a href="http://localhost:1313/post/business-to-start-today/">
+                    <img src="http://localhost:1313/images/business-ideas.webp" alt="10 Low-Cost Businesses You Can Start Today">
+                </a>
+            </div>
+            <div class="post-content1">
+                <h2><a href="http://localhost:1313/post/business-to-start-today/">10 Low-Cost Businesses You Can Start Today</a></h2>
+                <span><a href="http://localhost:1313/post/business-to-start-today/">Discover 10 profitable low-cost businesses you can start today with minimal investment and high earning potential.</a></span>
+                <h3> <a href="http://localhost:1313/post/business-to-start-today/">read more</a></h3>
+            </div>
+        </div>
+        
+        <div class="post-summary1">
+            <div class="post-image1">
+                <a href="http://localhost:1313/post/personal-brand/">
+                    <img src="http://localhost:1313/images/personal-branding.png" alt="How to Build a Personal Brand as an Entrepreneur">
+                </a>
+            </div>
+            <div class="post-content1">
+                <h2><a href="http://localhost:1313/post/personal-brand/">How to Build a Personal Brand as an Entrepreneur</a></h2>
+                <span><a href="http://localhost:1313/post/personal-brand/">Learn how to build a strong personal brand as an entrepreneur and increase your visibility using proven strategies.</a></span>
+                <h3> <a href="http://localhost:1313/post/personal-brand/">read more</a></h3>
+            </div>
+        </div>
+        
+        <div class="post-summary1">
+            <div class="post-image1">
+                <a href="http://localhost:1313/post/validating-your-business-idea/">
+                    <img src="http://localhost:1313/images/validate.png" alt="  How to Validate Your Business Idea Before Launching">
+                </a>
+            </div>
+            <div class="post-content1">
+                <h2><a href="http://localhost:1313/post/validating-your-business-idea/">  How to Validate Your Business Idea Before Launching</a></h2>
+                <span><a href="http://localhost:1313/post/validating-your-business-idea/">Learn how to validate your business idea before launching.</a></span>
+                <h3> <a href="http://localhost:1313/post/validating-your-business-idea/">read more</a></h3>
+            </div>
+        </div>
+        
+        <div class="post-summary1">
+            <div class="post-image1">
+                <a href="http://localhost:1313/post/overcome-barriers/">
+                    <img src="http://localhost:1313/images/overcome.jpg" alt="  Overcoming Barriers to Developing an Entrepreneurial Mindset">
+                </a>
+            </div>
+            <div class="post-content1">
+                <h2><a href="http://localhost:1313/post/overcome-barriers/">  Overcoming Barriers to Developing an Entrepreneurial Mindset</a></h2>
+                <span><a href="http://localhost:1313/post/overcome-barriers/"> Developing an entrepreneurial mindset is crucial for anyone aspiring to create, innovate, and lead successfully. ...</a></span>
+                <h3> <a href="http://localhost:1313/post/overcome-barriers/">read more</a></h3>
+            </div>
+        </div>
+        
+        <div class="post-summary1">
+            <div class="post-image1">
+                <a href="http://localhost:1313/post/mindset-examples/">
+                    <img src="http://localhost:1313/images/realmindset.webp" alt="Real life examples of entrepreneur mindset">
+                </a>
+            </div>
+            <div class="post-content1">
+                <h2><a href="http://localhost:1313/post/mindset-examples/">Real life examples of entrepreneur mindset</a></h2>
+                <span><a href="http://localhost:1313/post/mindset-examples/">The entrepreneurial mindset isn’t just a theoretical concept; it’s a powerful approach to life and business that...</a></span>
+                <h3> <a href="http://localhost:1313/post/mindset-examples/">read more</a></h3>
+            </div>
+        </div>
+        
+    </div>
+    </div>
+</section>
 
 
     </main>
@@ -455,6 +450,6 @@ OneSignal.push(function() {
         });
       </script>
     
-    <script src="https://businessmasters.netlify.app/js/script.js"></script>
+    <script src="http://localhost:1313/js/script.js"></script>
 </body>
 </html>

@@ -2,83 +2,80 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://businessmasters.netlify.app/post/business-to-start-today/</loc>
+    <loc>http://localhost:1313/post/business-to-start-today/</loc>
     <lastmod>2025-03-02T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://businessmasters.netlify.app/post/</loc>
+    <loc>http://localhost:1313/post/</loc>
     <lastmod>2025-03-02T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://businessmasters.netlify.app/categories/business/</loc>
+    <loc>http://localhost:1313/categories/business/</loc>
     <lastmod>2025-03-02T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://businessmasters.netlify.app/tags/business-growth/</loc>
+    <loc>http://localhost:1313/tags/business-growth/</loc>
     <lastmod>2025-03-02T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://businessmasters.netlify.app/tags/business-ideas/</loc>
+    <loc>http://localhost:1313/tags/business-ideas/</loc>
     <lastmod>2025-03-02T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://businessmasters.netlify.app/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
     <lastmod>2025-03-02T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://businessmasters.netlify.app/tags/entrepreneurship/</loc>
+    <loc>http://localhost:1313/tags/entrepreneurship/</loc>
     <lastmod>2025-03-02T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://businessmasters.netlify.app/categories/entrepreneurship/</loc>
+    <loc>http://localhost:1313/categories/entrepreneurship/</loc>
     <lastmod>2025-03-02T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://businessmasters.netlify.app/post/personal-brand/</loc>
+    <loc>http://localhost:1313/post/personal-brand/</loc>
     <lastmod>2025-03-02T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://businessmasters.netlify.app/tags/low-investment-businesses/</loc>
+    <loc>http://localhost:1313/tags/low-investment-businesses/</loc>
     <lastmod>2025-03-02T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://businessmasters.netlify.app/tags/marketing/</loc>
+    <loc>http://localhost:1313/tags/marketing/</loc>
     <lastmod>2025-03-02T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://businessmasters.netlify.app/categories/marketing/</loc>
+    <loc>http://localhost:1313/categories/marketing/</loc>
     <lastmod>2025-03-02T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://businessmasters.netlify.app/tags/personal-branding/</loc>
+    <loc>http://localhost:1313/tags/personal-branding/</loc>
     <lastmod>2025-03-02T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://businessmasters.netlify.app/tags/side-hustles/</loc>
+    <loc>http://localhost:1313/tags/side-hustles/</loc>
     <lastmod>2025-03-02T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://businessmasters.netlify.app/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-03-02T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://businessmasters.netlify.app/post/validating-your-business-idea/</loc>
+    <loc>http://localhost:1313/post/validating-your-business-idea/</loc>
     <lastmod>2025-01-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://businessmasters.netlify.app/tags/startups/</loc>
+    <loc>http://localhost:1313/tags/startups/</loc>
     <lastmod>2025-01-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://businessmasters.netlify.app/tags/validate/</loc>
+    <loc>http://localhost:1313/tags/validate/</loc>
     <lastmod>2025-01-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://businessmasters.netlify.app/post/overcome-barriers/</loc>
+    <loc>http://localhost:1313/post/overcome-barriers/</loc>
     <lastmod>2024-09-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://businessmasters.netlify.app/post/mindset-examples/</loc>
+    <loc>http://localhost:1313/post/mindset-examples/</loc>
     <lastmod>2024-08-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://businessmasters.netlify.app/post/who-is-an-entrepreneur/</loc>
+    <loc>http://localhost:1313/post/who-is-an-entrepreneur/</loc>
     <lastmod>2024-08-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://businessmasters.netlify.app/post/entrepreneur-mindset/</loc>
+    <loc>http://localhost:1313/post/entrepreneur-mindset/</loc>
     <lastmod>2024-08-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://businessmasters.netlify.app/post/myth-challenges/</loc>
+    <loc>http://localhost:1313/post/myth-challenges/</loc>
     <lastmod>2024-08-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://businessmasters.netlify.app/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2024-08-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://businessmasters.netlify.app/news/</loc>
-    <lastmod>2023-02-20T06:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/about/</loc>
   </url><url>
-    <loc>https://businessmasters.netlify.app/about/</loc>
-  </url><url>
-    <loc>https://businessmasters.netlify.app/contact/</loc>
+    <loc>http://localhost:1313/contact/</loc>
   </url>
 </urlset>

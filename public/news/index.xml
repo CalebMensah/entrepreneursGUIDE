@@ -1,12 +1,124 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Business News on My Entrepreneurship and Business Blog</title>
-    <link>https://businessmasters.netlify.app/news/</link>
-    <description>Recent content in Business News on My Entrepreneurship and Business Blog</description>
+    <title>News on My Entrepreneurship and Business Blog</title>
+    <link>http://localhost:1313/news/</link>
+    <description>Recent content in News on My Entrepreneurship and Business Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate></lastBuildDate>
-    <atom:link href="https://businessmasters.netlify.app/news/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 06 Mar 2025 03:06:24 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/news/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Anthropic’s Mega Valuation Mints Seven New AI Billionaires - Bloomberg</title>
+      <link>http://localhost:1313/news/17/</link>
+      <pubDate>Thu, 06 Mar 2025 03:06:24 +0000</pubDate>
+      <guid>http://localhost:1313/news/17/</guid>
+      <description>Anthropics latest funding round has made the OpenAI rival one of the most valuable startups in the world. Its also turned its founders into billionaires. The San Francisco-based firm on Monday close… [+266 chars]</description>
+    </item>
+    <item>
+      <title>Automakers tap COVID playbook to cope with Trump tariffs - Axios</title>
+      <link>http://localhost:1313/news/3/</link>
+      <pubDate>Thu, 06 Mar 2025 03:06:24 +0000</pubDate>
+      <guid>http://localhost:1313/news/3/</guid>
+      <description>After weeks of stalled decision-making, the global trade war automakers were hoping to avoid is now here, providing a measure of clarity that had been missing.</description>
+    </item>
+    <item>
+      <title>Best Buy and Target CEOs say prices are about to go up because of tariffs - The Verge</title>
+      <link>http://localhost:1313/news/7/</link>
+      <pubDate>Thu, 06 Mar 2025 03:06:24 +0000</pubDate>
+      <guid>http://localhost:1313/news/7/</guid>
+      <description>Target relies on produce from Mexico during the winter, while Best Buy sources most of its products from Mexico and China. Target relies on produce from Mexico during the winter, while Best Buy sour… [+1554 chars]</description>
+    </item>
+    <item>
+      <title>BlackRock Strikes Deal for Panama Ports After U.S. Pressure - The Wall Street Journal</title>
+      <link>http://localhost:1313/news/2/</link>
+      <pubDate>Thu, 06 Mar 2025 03:06:24 +0000</pubDate>
+      <guid>http://localhost:1313/news/2/</guid>
+      <description>Content not available.</description>
+    </item>
+    <item>
+      <title>Dow tumbles again, loses more than 1,300 points in two days as Trump ignites trade war: Live updates - CNBC</title>
+      <link>http://localhost:1313/news/10/</link>
+      <pubDate>Thu, 06 Mar 2025 03:06:24 +0000</pubDate>
+      <guid>http://localhost:1313/news/10/</guid>
+      <description>The Dow Jones Industrial Average tumbled for a second day as President Donald Trump&amp;rsquo;s tariffs left investors fearful of potential shockwaves for the economy. The blue-chip average dropped 670.25 poi… [+2698 chars]</description>
+    </item>
+    <item>
+      <title>Effort to Kill IRS Crypto Rule Clears U.S. Senate Hurdle - CoinDesk</title>
+      <link>http://localhost:1313/news/6/</link>
+      <pubDate>Thu, 06 Mar 2025 03:06:24 +0000</pubDate>
+      <guid>http://localhost:1313/news/6/</guid>
+      <description>Strong support from many Democrats helped win a victory for a U.S. Senate effort to erase a Biden administration crypto tax rule on Tuesday, clearing what may have been the most difficult hurdle towa… [+2316 chars]</description>
+    </item>
+    <item>
+      <title>New York Fed President John Williams Sees Tariffs Feeding Inflation - Barron&#39;s</title>
+      <link>http://localhost:1313/news/13/</link>
+      <pubDate>Thu, 06 Mar 2025 03:06:24 +0000</pubDate>
+      <guid>http://localhost:1313/news/13/</guid>
+      <description>Content not available.</description>
+    </item>
+    <item>
+      <title>Nvidia Leads AI Stock Rebound After Shaking Off Trump Tariff Fears - Investopedia</title>
+      <link>http://localhost:1313/news/8/</link>
+      <pubDate>Thu, 06 Mar 2025 03:06:24 +0000</pubDate>
+      <guid>http://localhost:1313/news/8/</guid>
+      <description>Nvidia (NVDA) stock rebounded from an early-morning slump on Tuesday as AI stocks shook off the tariff shock that sent the broader market reeling. Nvidia shares rose 1.7% Tuesday after tumbling more… [+1823 chars]</description>
+    </item>
+    <item>
+      <title>Tariffs to spike prices on produce, electronics, gas and toys — with some hikes this week - New York Post </title>
+      <link>http://localhost:1313/news/9/</link>
+      <pubDate>Thu, 06 Mar 2025 03:06:24 +0000</pubDate>
+      <guid>http://localhost:1313/news/9/</guid>
+      <description>Shoppers can expect to see higher prices at the checkout counter on goods ranging from avocados to computers to Tonka trucks with some hikes from the new tariffs coming as early as the end of the wee… [+3235 chars]</description>
+    </item>
+    <item>
+      <title>The Original Pantry Cafe’s Former Owner Wanted It to Be Open Forever. His Family Trust Had Other Plans. - Eater LA</title>
+      <link>http://localhost:1313/news/4/</link>
+      <pubDate>Thu, 06 Mar 2025 03:06:24 +0000</pubDate>
+      <guid>http://localhost:1313/news/4/</guid>
+      <description>If you buy something from an Eater link, Vox Media may earn a commission. See our ethics policy.On March 2, 2025, one of Los Angeless cultural institutions and most beloved restaurants, the Original … [+8516 chars]</description>
+    </item>
+    <item>
+      <title>Trump Still Considering Tariffs on Taiwanese Chips, Despite $100 Billion TSMC Deal - WIRED</title>
+      <link>http://localhost:1313/news/12/</link>
+      <pubDate>Thu, 06 Mar 2025 03:06:24 +0000</pubDate>
+      <guid>http://localhost:1313/news/12/</guid>
+      <description>Second, tariffs can only make foreign companies start producing chips in the US if it becomes cheaper than doing it somewhere else. But higher American labor costs and the countrys lack of a sophisti… [+3425 chars]</description>
+    </item>
+    <item>
+      <title>Trump’s tariffs would make housing more expensive in the Bay Area. How much? It depends on what you’re building — and where - The Mercury News</title>
+      <link>http://localhost:1313/news/5/</link>
+      <pubDate>Thu, 06 Mar 2025 03:06:24 +0000</pubDate>
+      <guid>http://localhost:1313/news/5/</guid>
+      <description>High interest rates and increasing construction costs had already put a strain on efforts to increase the Bay Area’s inadequate housing supply. Now, as President Donald Trump places sweeping tariffs … [+6917 chars]</description>
+    </item>
+    <item>
+      <title>Uber teams up with Waymo to start selling driverless rides in Austin, Texas - The Associated Press</title>
+      <link>http://localhost:1313/news/15/</link>
+      <pubDate>Thu, 06 Mar 2025 03:06:24 +0000</pubDate>
+      <guid>http://localhost:1313/news/15/</guid>
+      <description>Uber will shift into a new gear in Austin, Texas, on Tuesday when its ride-hailing service will begin dispatching self-driving cars to pick up passengers. The autonomous option is being provided thr… [+3096 chars]</description>
+    </item>
+    <item>
+      <title>US stocks erase post-election gains on Trump tariff fears - Financial Times</title>
+      <link>http://localhost:1313/news/14/</link>
+      <pubDate>Thu, 06 Mar 2025 03:06:24 +0000</pubDate>
+      <guid>http://localhost:1313/news/14/</guid>
+      <description>White House Watch newsletter Register for your free guide to the new US administration, with cabinet announcements, policy plans and exclusive election insights. US Presidential Election 2024 hub … [+357 chars]</description>
+    </item>
+    <item>
+      <title>Walgreens on verge of being sold to private-equity firm for $10B: report - New York Post </title>
+      <link>http://localhost:1313/news/11/</link>
+      <pubDate>Thu, 06 Mar 2025 03:06:24 +0000</pubDate>
+      <guid>http://localhost:1313/news/11/</guid>
+      <description>Walgreens Boots Alliance is on the verge of finalizing a deal with private-equity firm Sycamore Partners to take the embattled drugstore chain private in a transaction valued at approximately $10 bil… [+3125 chars]</description>
+    </item>
+    <item>
+      <title>China sets annual economic growth target of 5% - Financial Times</title>
+      <link>http://localhost:1313/news/1/</link>
+      <pubDate>Thu, 06 Mar 2025 03:06:23 +0000</pubDate>
+      <guid>http://localhost:1313/news/1/</guid>
+      <description>Complete digital access to quality analysis and expert insights, complemented with our award-winning Weekend Print edition.</description>
+    </item>
   </channel>
 </rss>

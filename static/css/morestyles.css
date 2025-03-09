@@ -1,16 +1,15 @@
 .post-img {
-    width: 80%;
+    width: 100%;
     height: 300px;
-    margin-left: 10%;
 }
 
 .subscribe-form {
-    background: #f9cd52;
-    padding: 20px;
-    border-radius: 8px;
-    margin: 20px 0;
+    background: linear-gradient(135deg, #2a2a72 0%, #009ffd 100%);
+    padding: 2.5rem;
+    border-radius: 10px;
+    margin: 3rem ;
     text-align: center;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 .subscribe-form h3 {
     font-size: 1.2rem;
@@ -18,31 +17,56 @@
     color: #051e58;
 }
 .subscribe-form p {
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-    color: #051e58;
+    font-size: 1.2rem;
+    margin-bottom: 1.5px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: white;
 }
-.subscribe-form input[type="email"] {
-    width: 100%;
-    max-width: 300px;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #051e58;
-    border-radius: 4px;
-    font-size: 0.9rem;
+#subscribeForm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+#subscribeForm input[type="email"] {
+    flex: 1 1 320px;
+    padding: 0.9rem 1.2rem;
+    border:  none;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+#subscribeForm input[type="email"]:focus {
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
 }
 .subscribe-form button {
-    background: #051e58;
+    flex: 0 0 auto;
+    background: #ff6b6b;
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
+    padding: 0.9rem 1.8rem;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 0.9rem;
-    transition: background-color 0.3 ease;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3 ease, transform 0.1s ease;
 }
 .subscribe-form button:hover{
-    background-color: #0056b3;
+    background-color: #ff5252;
+}
+#subscribeForm button:active {
+    transform: scale(0.98);
+}
+#responseMessage {
+    width: 100%;
+    margin-top: 1rem;
+    font-size:  0.95rem;
 }
 
 /* post metadata */
@@ -64,104 +88,40 @@
     content: "#";
 }
 
-/* News Page Styles */
-.news-container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 2rem;
-}
-
-.news-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.news-card {
-    background: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.news-card:hover {
-    transform: translateY(-5px);
-}
-
-.news-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.news-content {
-    padding: 15px;
-}
-
-.news-content h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.news-content h3 a {
-    text-decoration: none;
-    color: #007bff;
-}
-
-.news-content h3 a:hover {
-    color: #0056b3;
-}
-
-.news-content p {
-    font-size: 1rem;
-    color: #555;
-}
-
-.news-content small {
-    display: block;
-    margin-top: 10px;
-    font-size: 0.85rem;
-    color: #777;
-}
-
 /* Comments Section Styling */
 .comments-section {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background: #f9f9f9;
+    margin: 4rem 0;
+    padding: 2rem;
+    background: #fff;
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
 }
 
-/* Comments Section Title */
 .comments-section h2 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
     color: #333;
+    position: relative;
+    text-align: center;
 }
+
 
 /* Giscus iframe customization */
 .giscus {
     width: 100%;
 }
+.comments-section > div {
+    margin-top: 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
 
 /* ebook popup */
 
 .ebook-download-text {
-    margin-top: 20px;
     text-align: center;
     color: red;
-    margin-bottom: 20px;
 }
 .ebook-download-text a {
     text-align: center;
@@ -244,14 +204,38 @@ color: rgb(111, 15, 15);
 }
 .icons {
     display: flex;
-    color: white;
-    font-size: 20px;
-    gap: 8px;
-    margin-top: 10px;
-    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
     justify-content: center;
 }
-
+.icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+.icons a:hover {
+    background-color: #ff6b6b;
+    transform: scale(-3px);
+}
+.icons a:nth-child(1):hover {
+    background-color: #3b5998;
+}
+.icons a:nth-child(2):hover{
+    background: radial-gradient(circle at 30% 107%, #fdf497);
+}
+.icons a:nth-child(3):hover {
+    background: linear-gradient(90deg, #25f4ee, #fe2c55, #000000);
+}
+.icons a:nth-child(4):hover{
+    background-color: #1da1f2;
+}
 .spinner_overlay {
     position: fixed;
     top: 0;
@@ -489,7 +473,7 @@ nav[aria-label ="breadcrumb"] li:last-child::after {
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .txt{
-        margin-top: 70px;
+        font-size: 3rem;
         text-align: center;
     }
     .post-ros{
@@ -516,5 +500,20 @@ nav[aria-label ="breadcrumb"] li:last-child::after {
         max-width: 150px;
         margin: 0 auto;
         font-size: 0.9rem;
+    }
+    .post-rows {
+        grid-template-columns: 1fr;
+    }
+    .post-image1 {
+        height: 200px;
+    }
+    .latest-post h1 {
+        font-size: 1.8rem;
+    }
+    .latest-post {
+        padding: 2rem 1rem;
+    }
+    .post-img{
+        height: 250px;
     }
 }

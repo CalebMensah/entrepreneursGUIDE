@@ -1,9 +1,0 @@
-{{ define "main" }}
-<article class="news-article">
-    <h1 class="news-title">{{ .Title }}</h1>
-    <img src="{{ .Params.image }}" alt="News Image" class="news-img">
-    <p class="news-author">By {{ .Params.author }}</p>
-    <p class="news-content">{{ .Content }}</p>
-    <a href="{{ .Params.source }}" class="news-source" target="_blank">Read Full Article</a>
-</article>
-{{ end }}

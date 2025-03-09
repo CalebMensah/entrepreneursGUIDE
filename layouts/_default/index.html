@@ -1,17 +1,17 @@
 {{ define "main" }}
+<div class="ebook-download-section" id="index-ebook">
+    <p class="ebook-download-text" id="index-ebook-p">
+        <a href="/files/ebook.pdf" id="download-ebook-trigger">Download Our Free eBook: From Idea To Launch: A Step-By-Step Guide For Startups</a>
+    </p>
+</div>
+
 <div class="main-container1">
-<section class="home-container">
     <div class="post-page-single">
         <!-- Hugo Template for Latest Post -->
         {{ $featuredPost := first 1 (where .Site.RegularPages "Section" "post") }}
         {{ range $featuredPost }}
         <article><!-- display image if available -->
 
-            <div class="ebook-download-section" id="index-ebook">
-                <p class="ebook-download-text" id="index-ebook-p">
-                    <a href="/files/ebook.pdf" id="download-ebook-trigger">Download Our Free eBook: From Idea To Launch: A Step-By-Step Guide For Startups</a>
-                </p>
-            </div>
             <h2 class="txt">{{ .Title }}</h2>
             {{ if .Params.image }}
             
@@ -32,7 +32,29 @@
         </article>
         {{ end }}
     </div>
-</section>
+
+
+
+ <!--- pop up form for email collection -->
+<div id="ebook-popup" class="ebook-popup" style="display: none;">
+    <div class="popup-content">
+        <span class="close-popup">&times;</span>
+        <h2>Enter Your Email Address</h2>
+        <form id="ebook-download-form" method='POST'>
+            <input type="email" id="user-email" placeholder="Your Email Address">
+            <button type="submit">Download eBook</button>
+        </form>
+        <p id="thank-you-message" style="display: none;">Thank you! Your download will start automatically.</p>
+    </div>
+</div>
+
+
+
+ <!-- link to external javascript file -->
+ <script src="/js/ebook.js"></script>
+
+
+</div>
 
    <!-- Comments Section (Giscus) -->
    <div class="comments-section">
@@ -54,7 +76,6 @@
         async>
     </script>
 </div>
-
 
 <!-- Optional: Display More Posts Below the Latest Post -->
 <section class="latest-post">
@@ -80,25 +101,4 @@
 </section>
 
 
-
- <!--- pop up form for email collection -->
-<div id="ebook-popup" class="ebook-popup" style="display: none;">
-    <div class="popup-content">
-        <span class="close-popup">&times;</span>
-        <h2>Enter Your Email Address</h2>
-        <form id="ebook-download-form" method='POST'>
-            <input type="email" id="user-email" placeholder="Your Email Address">
-            <button type="submit">Download eBook</button>
-        </form>
-        <p id="thank-you-message" style="display: none;">Thank you! Your download will start automatically.</p>
-    </div>
-</div>
-
-
-
- <!-- link to external javascript file -->
- <script src="/js/ebook.js"></script>
-
-
-</div>
 {{ end }}

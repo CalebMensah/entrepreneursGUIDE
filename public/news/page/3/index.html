@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="http://localhost:1313/images/favicon-512.png">
+    <title>News</title>
+
+    <link rel="stylesheet" href="http://localhost:1313/css/style.css">
+    <link rel="stylesheet" href="http://localhost:1313/css/morestyles.css">
+
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+
+    <script>
+
+
+window.OneSignal = window.OneSignal || [];
+OneSignal.push(async function() {
+    try {
+        await OneSignal.init({
+            appId: "3684ab0f-136e-404a-ab10-8206040c0129", 
+            allowLocalhostAsSecureOrigin: true, 
+            notifyButton: { enable: true }, 
+            promptOptions: {
+              slidedown: {
+                enabled: true,
+                autoPrompt: true,
+                actionMessage: "We'd like to show you notifications for the latest news and updates.",
+                acceptButtonText: "ALLOW",
+                cancelButtonText: "NO THANKS"
+              }
+            }
+        });
+
+        console.log("OneSignal initialized successfully");
+
+        
+        const isSubscribed = await OneSignal.isPushNotificationsEnabled();
+        console.log("Notification enabled:", isSubscribed);
+
+        if(!isSubscribed) {
+          console.log("showing notification prompt")
+          setTimeout(() => {
+            OneSignal.showSlidedownPrompt()
+          }, 3000)
+        }
+
+        
+        const userId = await OneSignal.getUserId();
+        console.log("OneSignal User ID:", userId);
+    } catch (error) {
+        console.error("OneSignal Initialization Error:", error);
+    }
+});
+
+
+OneSignal.push(function() {
+    OneSignal.on('subscriptionChange', function(isSubscribed) {
+        if (isSubscribed) {
+            console.log("User subscribed to notifications");
+        } else {
+            console.log("User unsubscribed from notifications");
+        }
+    });
+});
+
+    </script>
+
+    <script src="https://kit.fontawesome.com/8749291112.js" crossorigin="anonymous"></script>
+
+    <script async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2859143237615606'crossorigin='anonymous'></script>
+     <meta name='google-adsense-account' content='ca-pub-2859143237615606'>
+
+     <script type="application/ld+json">
+      {
+          "@context": "https://schema.org",
+          "@type":"Article",
+          "mainEntityOfPage": {
+              "@type": "webPage",
+              "@id": "http://localhost:1313/news/"
+          },
+          "headline": "News",
+          "image": [
+          ""
+          ],
+          "datePublished": "2025-3-06T03:06:24Z",
+          "dateModified": "2025-3-06T03:06:24Z",
+          "author": {
+              "@type": 'Organization',
+              "name": "businessMasters",
+              "logo": {
+                  "@type": "ImageObject",
+                  "url": "/images/logo1.png",
+                  "width": 192,
+                  "height": 60
+              }
+          },
+          "description": ""
+      }
+  </script>
+
+    
+</head>
+<body>
+
+    <header>
+        <img src="http://localhost:1313/images/logo.webp" alt="businessmasters" loading="lazy">
+        <button class="toggle-menu" aria-label="Toggle menu">
+            &#9776
+        </button>
+        <nav class="nav-links">
+            <a href="http://localhost:1313/">Home</a>
+            <a href="http://localhost:1313/post">Post</a>
+            <a href="http://localhost:1313/news/">News</a>
+            <a href="http://localhost:1313/about/">About</a>
+            <a href="http://localhost:1313/contact">Contact Us</a>
+        </nav>
+    </header>
+
+   
+    
+    <main class="wrapper">
+        
+<div class="news-container">
+    <h1 class="news-header">Latest Business News</h1>
+    <div class="news-grid">
+        
+        <div class="news-item">
+            <a href="http://localhost:1313/news/12/" class="news-link">
+                <img src="https://media.wired.com/photos/67bcb1fc9109def5b360448c/191:100/w_1280,c_limit/TSMC-Chips-Tariffs-Business-2185201056.jpg" alt="Trump Still Considering Tariffs on Taiwanese Chips, Despite $100 Billion TSMC Deal - WIRED" class="news-img">
+                <h2 class="news-title">Trump Still Considering Tariffs on Taiwanese Chips, Despite $100 Billion TSMC Deal - WIRED</h2>
+            </a>
+            <p class="news-author">By Zeyi Yang</p>
+            <p class="news-description">Enforcing the tariffs on Taiwan would be difficult, and they wouldn’t necessarily be enough to meaningfully increase semiconductor manufacturing in the United States, experts told WIRED.</p>
+        </div>
+        
+        <div class="news-item">
+            <a href="http://localhost:1313/news/5/" class="news-link">
+                <img src="https://www.mercurynews.com/wp-content/uploads/2025/03/SJM-L-TARIFFS-0305-90.jpg?w=1024&amp;h=653" alt="Trump’s tariffs would make housing more expensive in the Bay Area. How much? It depends on what you’re building — and where - The Mercury News" class="news-img">
+                <h2 class="news-title">Trump’s tariffs would make housing more expensive in the Bay Area. How much? It depends on what you’re building — and where - The Mercury News</h2>
+            </a>
+            <p class="news-author">By Kate Talerico</p>
+            <p class="news-description">These charts explain how Trump’s tariffs on China — plus threatened tariffs to Canada and Mexico — will increase building costs.</p>
+        </div>
+        
+        <div class="news-item">
+            <a href="http://localhost:1313/news/15/" class="news-link">
+                <img src="https://dims.apnews.com/dims4/default/a4b6138/2147483647/strip/true/crop/2970x1671&#43;0&#43;155/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fa6%2F19%2F9d8fc0d5b58e05438a8fbda92fa2%2Fdf3aba2d40ba4dda8de7fe3efc56fd89" alt="Uber teams up with Waymo to start selling driverless rides in Austin, Texas - The Associated Press" class="news-img">
+                <h2 class="news-title">Uber teams up with Waymo to start selling driverless rides in Austin, Texas - The Associated Press</h2>
+            </a>
+            <p class="news-author">By Michael Liedtke</p>
+            <p class="news-description">Uber is shifting into a new gear in Austin, Texas where its ride-hailing service will begin dispatching self-driving cars to pick up passengers looking for a way to get around that city. The autonomous option starting Tuesday is being provided through partner…</p>
+        </div>
+        
+        <div class="news-item">
+            <a href="http://localhost:1313/news/14/" class="news-link">
+                <img src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fad5ab2fb-9524-450c-9585-3e0d14687ba8.jpg?source=next-barrier-page" alt="US stocks erase post-election gains on Trump tariff fears - Financial Times" class="news-img">
+                <h2 class="news-title">US stocks erase post-election gains on Trump tariff fears - Financial Times</h2>
+            </a>
+            <p class="news-author">By Mari Novik, George Steer</p>
+            <p class="news-description">President’s protectionist moves spark concerns about retaliation and damage from escalating trade war</p>
+        </div>
+        
+        <div class="news-item">
+            <a href="http://localhost:1313/news/11/" class="news-link">
+                <img src="https://nypost.com/wp-content/uploads/sites/2/2025/03/99759722.jpg?quality=75&amp;strip=all&amp;w=1024" alt="Walgreens on verge of being sold to private-equity firm for $10B: report - New York Post " class="news-img">
+                <h2 class="news-title">Walgreens on verge of being sold to private-equity firm for $10B: report - New York Post </h2>
+            </a>
+            <p class="news-author">By Ariel Zilber</p>
+            <p class="news-description">Negotiations are in advanced stages, with both sides aiming to seal the agreement as soon as Thursday, according to the Wall Street Journal.</p>
+        </div>
+        
+    </div>
+
+    
+    <div class="pagination">
+        
+        <a href="http://localhost:1313/news/page/2/" class="page-link">← Previous</a>
+        
+        
+        <a href="http://localhost:1313/news/page/4/" class="page-link">Next →</a>
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer>
+        
+        <div class="subscribe-form1">
+          <p>Subscribe to our newsletter and get exclusive tips delivered to your inbox</p>
+          <form id="subscribeForm" method="POST" > 
+          <input type="email" name="email" placeholder="Enter your email here"/>
+          <button type="submit">Subscribe Now</button>
+          </form>
+          </div>
+          
+          <div class="icons">
+            <a href="https://www.facebook.com/businessmasters"><i class="fa-brands fa-facebook"></i></a>
+           <a href="https://www.instagram.com/businessmasters.gh"> <i class="fa-brands fa-instagram"></i></a>
+            <a href="https://tiktok.com/@businessmasters5"><i class="fa-brands fa-tiktok"></i></a>
+            <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+
+          <p>&copy; 2024 entrepreneursGUIDE</p>
+    </footer>
+
+    
+
+    <script>
+        document.getElementById("subscribeForm").addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const email = document.getElementById("email").value.trim();
+          const responseMessage = document.getElementById("responseMessage");
+      
+          
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailPattern.test(email)) {
+            responseMessage.innerHTML = "Enter a valid email address.";
+            responseMessage.style.color = "red";
+            return;
+          }
+      
+          responseMessage.innerHTML = "Checking...";
+          responseMessage.style.color = "green";
+      
+          try {
+            
+            const checkResponse = await fetch(
+              `https://sheetdb.io/api/v1/w7eydswfjd972/search?Email=${encodeURIComponent(email)}`
+            )
+            
+            if (!checkResponse.ok) throw new Error("Check failed");
+            
+            const existingData = await checkResponse.json();
+            console.log("API Response:", existingData); 
+            
+            if (existingData.length > 0) {
+              responseMessage.innerHTML = "Email already subscribed!";
+              responseMessage.style.color = "red";
+              return;
+            }
+      
+            
+            responseMessage.innerHTML = "Submitting...";
+            const postResponse = await fetch("https://sheetdb.io/api/v1/w7eydswfjd972", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                data: [{ 
+                  Email: email, 
+                  Joined_at: new Date().toLocaleString() 
+                }]
+              }),
+            });
+      
+            if (postResponse.ok) {
+              responseMessage.innerHTML = "Subscription successful!";
+              responseMessage.style.color = "green";
+            } else {
+              responseMessage.innerHTML = "Error. Try again.";
+              responseMessage.style.color = "red";
+            }
+          } catch (error) {
+            responseMessage.innerHTML = "Failed to submit. Please try again.";
+            responseMessage.style.color = "red";
+          }
+        });
+      </script>
+    
+    <script src="http://localhost:1313/js/script.js"></script>
+</body>
+</html>

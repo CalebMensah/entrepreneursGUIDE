@@ -1,14 +1,12 @@
 {{ define "main"}}
+<div class="ebook-download-section" id="index-ebook">
+    <p class="ebook-download-text" id="index-ebook-p">
+        <a href="#" id="download-ebook-trigger">Download Our Free eBook: From Idea To Launch: A Step-By-Step Guide For Startups</a>
+    </p>
+</div>
 
 <div class="main-container1">
     <div class="post-page-single">
-        
-        <div class="ebook-download-section" id="index-ebook">
-            <p class="ebook-download-text" id="index-ebook-p">
-                <a href="#" id="download-ebook-trigger">Download Our Free eBook: From Idea To Launch: A Step-By-Step Guide For Startups</a>
-            </p>
-        </div>
-
         <h1 class="page-header">{{ .Title }}</h1>
         <img src="{{ .Params.image}}" alt="entrepreneur" class="post-img" loading="lazy">
        
@@ -28,26 +26,123 @@
       
     </div>
 
-    <!-- Comments Section (Giscus) -->
-<div class="comments-section">
-    <h2>Comments</h2>
-    <script src="https://giscus.app/client.js"
-        data-repo="CalebMensah/entrepreneursGUIDE"
-        data-repo-id="R_kgDOMpPjIg"
-        data-category="General"
-        data-category-id="DIC_kwDOMpPjIs4Cnedi"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="1"
-        data-input-position="top"
-        data-theme="light_high_contrast"
-        data-lang="en"
-        data-loading="lazy"
-        crossorigin="anonymous"
-        async>
-    </script>
+
+<!--- pop-up form for email collection -->
+<div id="ebook-popup" class="ebook-popup" style="display: none;">
+    <div class="popup-content">
+        <span class="close-popup">&times;</span>
+        <h2>Enter Your Email Address</h2>
+        <form id="ebook-download-form" method='POST'>
+            <input type="email" id="user-email" placeholder="Your Email Address">
+            <button type="submit">Download eBook</button>
+        </form>
+        <p id="thank-you-message" style="display: none;">Thank you! Your download will start automatically.</p>
+    </div>
 </div>
+
+<!-- link to external javascript file -->
+<script type="module" src="/js/ebook.js"></script>
+
+</div>
+
+<div class="subscribe-form">
+    <p>Subscribe to our newsletter and get exclusive tips delivered to your inbox</p>
+    <form id="subscribeForm">
+      <input type="email" name="email" placeholder="Enter your email here" required id="email">
+      <button type="submit">Subscribe Now</button>
+      <p id="responseMessage"></p>
+    </form>
+  </div>
+  
+  <script>
+    document.getElementById("subscribeForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const email = document.getElementById("email").value.trim();
+      const responseMessage = document.getElementById("responseMessage");
+  
+      // Email validation
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+        responseMessage.innerHTML = "Enter a valid email address.";
+        responseMessage.style.color = "red";
+        return;
+      }
+  
+      responseMessage.innerHTML = "Checking...";
+      responseMessage.style.color = "green";
+  
+      try {
+        // Check if email already exists
+        const checkResponse = await fetch(
+          `https://sheetdb.io/api/v1/w7eydswfjd972/search?Email=${encodeURIComponent(email)}`
+        )
+        
+        if (!checkResponse.ok) throw new Error("Check failed");
+        
+        const existingData = await checkResponse.json();
+        console.log("API Response:", existingData); // Add this log to see the API response
+        
+        if (existingData.length > 0) {
+          responseMessage.innerHTML = "Email already subscribed!";
+          responseMessage.style.color = "red";
+          return;
+        }
+  
+        // Proceed to submit if email is new
+        responseMessage.innerHTML = "Submitting...";
+        const postResponse = await fetch("https://sheetdb.io/api/v1/w7eydswfjd972", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            data: [{ 
+              Email: email, 
+              Joined_at: new Date().toLocaleString() // Fixed typo (toLocalString → toLocaleString)
+            }]
+          }),
+        });
+  
+        if (postResponse.ok) {
+          responseMessage.innerHTML = "Subscription successful!";
+          responseMessage.style.color = "green";
+        } else {
+          responseMessage.innerHTML = "Error. Try again.";
+          responseMessage.style.color = "red";
+        }
+      } catch (error) {
+        responseMessage.innerHTML = "Failed to submit. Please try again.";
+        responseMessage.style.color = "red";
+      }
+    });
+  </script>
+
+<div class="related-articles">
+    <h3>Related Articles</h3>
+    <a href="/post/myth-challenges">Common Myths About Entrepreneurs</a>
+    <a href="/post/entrepreneur-mindset">The Entrepreneurial Mindset</a>
+    <a href="/post/who-is-an-entrepreneur">Who is an Entrepreneur?</a>
+    <a href="/post/validating-your-business-idea">Validating your business idea</a>
+    </div>
+
+    <!-- Comments Section (Giscus) -->
+    <div class="comments-section">
+        <h2>Comments</h2>
+        <script src="https://giscus.app/client.js"
+            data-repo="CalebMensah/entrepreneursGUIDE"
+            data-repo-id="R_kgDOMpPjIg"
+            data-category="General"
+            data-category-id="DIC_kwDOMpPjIs4Cnedi"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="1"
+            data-input-position="top"
+            data-theme="light_high_contrast"
+            data-lang="en"
+            data-loading="lazy"
+            crossorigin="anonymous"
+            async>
+        </script>
+    </div>
 
    <!-- Optional: Display More Posts Below the Latest Post -->
    <section class="latest-post">
@@ -71,24 +166,5 @@
     </div>
     </div>
 </section>
-
-
-<!--- pop-up form for email collection -->
-<div id="ebook-popup" class="ebook-popup" style="display: none;">
-    <div class="popup-content">
-        <span class="close-popup">&times;</span>
-        <h2>Enter Your Email Address</h2>
-        <form id="ebook-download-form" method='POST'>
-            <input type="email" id="user-email" placeholder="Your Email Address">
-            <button type="submit">Download eBook</button>
-        </form>
-        <p id="thank-you-message" style="display: none;">Thank you! Your download will start automatically.</p>
-    </div>
-</div>
-
-<!-- link to external javascript file -->
-<script type="module" src="/js/ebook.js"></script>
-
-</div>
 
 {{ end }}
