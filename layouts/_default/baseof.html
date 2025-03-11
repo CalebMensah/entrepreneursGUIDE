@@ -9,10 +9,9 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/morestyles.css">
 
-    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+      <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
 
-    <script>
-
+<script>
 // Initialize OneSignal
 window.OneSignal = window.OneSignal || [];
 OneSignal.push(async function() {
@@ -34,20 +33,15 @@ OneSignal.push(async function() {
 
         console.log("OneSignal initialized successfully");
 
-        // Check if the user is already subscribed
-        const isSubscribed = await OneSignal.isPushNotificationsEnabled();
-        console.log("Notification enabled:", isSubscribed);
-
-        if(!isSubscribed) {
-          console.log("showing notification prompt")
-          setTimeout(() => {
-            OneSignal.showSlidedownPrompt()
-          }, 3000)
-        }
-
         // Retrieve the user's player ID
         const userId = await OneSignal.getUserId();
         console.log("OneSignal User ID:", userId);
+
+        // Always show the subscription prompt after 3 seconds
+        setTimeout(() => {
+            OneSignal.showSlidedownPrompt();
+        }, 3000);
+
     } catch (error) {
         console.error("OneSignal Initialization Error:", error);
     }
@@ -63,41 +57,7 @@ OneSignal.push(function() {
         }
     });
 });
-
-    </script>
-
-    <script src="https://kit.fontawesome.com/8749291112.js" crossorigin="anonymous"></script>
-
-    <script async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2859143237615606'crossorigin='anonymous'></script>
-     <meta name='google-adsense-account' content='ca-pub-2859143237615606'>
-
-     <script type="application/ld+json">
-      {
-          "@context": "https://schema.org",
-          "@type":"Article",
-          "mainEntityOfPage": {
-              "@type": "webPage",
-              "@id": {{ .Permalink }}
-          },
-          "headline": "{{ .Title }}",
-          "image": [
-          "{{ .Params.image }}"
-          ],
-          "datePublished": "{{ .Date.Format "2006-1-02T15:04:05Z" }}",
-          "dateModified": "{{.Lastmod.Format "2006-1-02T15:04:05Z" }}",
-          "author": {
-              "@type": 'Organization',
-              "name": "businessMasters",
-              "logo": {
-                  "@type": "ImageObject",
-                  "url": "/images/logo1.png",
-                  "width": 192,
-                  "height": 60
-              }
-          },
-          "description": "{{ .Description }}"
-      }
-  </script>
+</script>
 
     
 </head>
